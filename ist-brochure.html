@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>InsightsTap — Company Brochure 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Poppins:wght@400;500;600&family=Inter:wght@400;500;600&family=Jost:ital,wght@0,400;1,400;1,500&family=Questrial&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   InsightsTap Company Brochure — vertical (A4 portrait, 17pp)
+   Brand system per insightstap.com/docs/pdf/brand-guidelines
+   ============================================================ */
+:root{
+  --cyan:#0DCFCF; --cyan-dark:#009C9B; --cyan-light:#6AE3E1; --cyan-wash:#ECFFFF;
+  --teal:#066D6D; --teal-deep:#025252;
+  --ink:#0A0A0A; --body:#3C3C3C; --muted:#6F6F6F;
+  --line-strong:rgba(10,10,10,.14); --line:rgba(10,10,10,.08);
+  --gold:#F4B740; --gold-tint:#FAD27D; --gold-shade:#D99A23; --gold-text:#946F27;
+  --violet:#6C5CE7; --violet-tint:#A29BFE; --violet-shade:#5541D6;
+  --pad:14mm;
+  --hex:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 2 L93 26 L93 74 L50 98 L7 74 L7 26 Z' fill='none' stroke='%230DCFCF' stroke-width='1'/%3E%3C/svg%3E");
+  --hexw:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 2 L93 26 L93 74 L50 98 L7 74 L7 26 Z' fill='none' stroke='%236AE3E1' stroke-width='1'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{background:#d9dee2;font-family:'Inter',sans-serif;color:var(--body)}
+
+/* ---- Page shell ---- */
+.page{position:relative;width:210mm;height:297mm;margin:0 auto;background:#fff;overflow:hidden;page-break-after:always;break-after:page;color:var(--body)}
+.screen .page{margin:8mm auto;box-shadow:0 18px 50px rgba(0,0,0,.22)}
+.inner{position:relative;z-index:3;height:100%;padding:var(--pad);display:flex;flex-direction:column}
+
+/* ---- Typography ---- */
+.kicker{font-family:'Poppins',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.16em;font-size:10.5px;color:var(--cyan-dark)}
+.display{font-family:'Raleway',sans-serif;font-weight:800;color:var(--ink);line-height:1.04;letter-spacing:-.015em}
+.h1{font-family:'Raleway',sans-serif;font-weight:700;color:var(--ink);line-height:1.08;letter-spacing:-.01em;font-size:30px}
+.h2{font-family:'Raleway',sans-serif;font-weight:600;color:var(--ink);line-height:1.15;font-size:21px}
+.h3{font-family:'Raleway',sans-serif;font-weight:600;color:var(--ink);line-height:1.2;font-size:16px}
+.subh{font-family:'Poppins',sans-serif;font-weight:500;font-size:13px;color:var(--ink)}
+.lead{font-family:'Inter',sans-serif;font-weight:400;font-size:14px;line-height:1.6;color:var(--body)}
+.body{font-family:'Inter',sans-serif;font-weight:400;font-size:12px;line-height:1.58;color:var(--body)}
+.small{font-size:11px;line-height:1.5;color:var(--muted)}
+.quote{font-family:'Jost',sans-serif;font-style:italic;font-weight:400;line-height:1.45;color:var(--ink)}
+.cap{font-family:'Questrial',sans-serif;font-size:10px;letter-spacing:.02em;color:var(--muted)}
+.mono{font-family:'Space Mono',monospace}
+.cyan{color:var(--cyan-dark)} .tealc{color:var(--teal)} .inkc{color:var(--ink)} .goldc{color:var(--gold-text)} .violetc{color:var(--violet-shade)}
+
+/* ---- Header / footer chrome ---- */
+.head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6mm}
+.head .secno{font-family:'Space Mono',monospace;font-size:11px;color:var(--cyan-dark);letter-spacing:.05em}
+.foot{margin-top:12px;display:flex;justify-content:space-between;align-items:center;
+  font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.04em;color:var(--muted);padding-top:3mm;border-top:1px solid var(--line)}
+.foot .dot{color:var(--cyan)}
+.brandmark{display:flex;align-items:center;gap:7px}
+
+/* ---- Decorative layers ---- */
+.dotgrid{position:absolute;inset:0;z-index:1;background-image:radial-gradient(circle,rgba(13,207,207,.10) 1px,transparent 1px);background-size:22px 22px}
+.dotgrid.w{background-image:radial-gradient(circle,rgba(255,255,255,.10) 1px,transparent 1px)}
+.linegrid{position:absolute;inset:0;z-index:1;background-image:linear-gradient(rgba(10,10,10,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(10,10,10,.03) 1px,transparent 1px);background-size:34px 34px}
+.hexwm{position:absolute;z-index:1;background:var(--hex) center/contain no-repeat;pointer-events:none}
+.hexwm.lite{background:var(--hexw) center/contain no-repeat}
+.wash{background:linear-gradient(180deg,#fff 0%,var(--cyan-wash) 100%)}
+
+/* ---- Dark pages ---- */
+.dark{color:#e9fdfd;background:
+  radial-gradient(110% 70% at 12% -5%, rgba(13,207,207,.28) 0%, transparent 45%),
+  radial-gradient(90% 80% at 100% 110%, rgba(106,227,225,.22) 0%, transparent 50%),
+  linear-gradient(150deg,#0a8a8a 0%, #066d6d 42%, #045252 72%, #023a3a 100%)}
+.dark .h1,.dark .h2,.dark .h3,.dark .display{color:#fff}
+.dark .lead,.dark .body{color:rgba(233,253,253,.86)}
+.dark .kicker{color:var(--cyan-light)}
+.dark .foot{color:rgba(233,253,253,.62);border-top-color:rgba(255,255,255,.16)}
+.dark .small{color:rgba(233,253,253,.74)}
+.dark .cap{color:rgba(233,253,253,.6)}
+.dark .head .secno{color:var(--cyan-light)}
+
+/* ---- Components ---- */
+.rule{height:3px;width:46px;background:var(--cyan);border-radius:2px}
+.rule.gold{background:var(--gold)} .rule.violet{background:var(--violet)} .rule.teal{background:var(--teal)}
+.dark .rule{background:var(--cyan-light)}
+.pill{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line-strong);border-radius:999px;padding:5px 12px;font-family:'Poppins',sans-serif;font-weight:500;font-size:11px;color:var(--ink);background:#fff}
+/* Top-Rated Fiverr Pro trust badge (gold accent, used sparingly) */
+.fvbadge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 12px;font-family:'Poppins',sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.02em;color:var(--gold-text);background:linear-gradient(120deg,#fff7e6,#fde9c2);border:1px solid var(--gold-tint);white-space:nowrap}
+.fvbadge .st{color:var(--gold-shade)}
+.dark .fvbadge{color:#1a1300;background:linear-gradient(120deg,#FAD27D,#F4B740);border-color:rgba(255,255,255,.35)}
+.dark .fvbadge .st{color:#7a5800}
+.card{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line-strong);border-radius:14px;padding:16px}
+.card.soft{background:var(--cyan-wash);border-color:transparent}
+.card>*{position:relative;z-index:1}
+.dark .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16);backdrop-filter:blur(2px)}
+.idx{font-family:'Space Mono',monospace;font-size:12px;color:var(--cyan-dark)}
+
+/* big faint index numeral that fills a tall card's negative space */
+.bignum{position:absolute;right:10px;bottom:-12px;font-family:'Space Mono',monospace;font-weight:700;font-size:62px;line-height:1;color:rgba(13,207,207,.07);letter-spacing:-.04em;z-index:0;pointer-events:none}
+.dark .bignum{color:rgba(106,227,225,.08)}
+
+/* capability line-icon */
+.cic{width:34px;height:34px;border-radius:9px;background:var(--cyan-wash);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.cic svg{width:18px;height:18px;stroke:var(--teal);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.dark .cic{background:rgba(255,255,255,.09)} .dark .cic svg{stroke:var(--cyan-light)}
+
+/* stat */
+.statnum{font-family:'Space Mono',monospace;font-weight:700;color:var(--cyan-dark);line-height:1;letter-spacing:-.02em}
+.dark .statnum{color:var(--cyan-light)}
+.statlabel{font-family:'Poppins',sans-serif;font-weight:500;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.dark .statlabel{color:rgba(233,253,253,.72)}
+
+/* tech chips — one unified shell; icon-backed show teal-masked icon, text-only show a cyan marker */
+.techgrid{display:flex;flex-wrap:wrap;gap:7px}
+.tech{display:inline-flex;align-items:center;gap:7px;padding:6px 11px;border:1px solid var(--line-strong);border-radius:999px;background:#fff;font-family:'Inter',sans-serif;font-weight:500;font-size:11.5px;color:var(--ink)}
+.tech i{width:16px;height:16px;display:inline-block;background:var(--teal);-webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat;flex:none}
+.tech.txt{font-family:'Space Mono',monospace;font-size:10.5px;color:var(--teal);letter-spacing:.01em}
+.tech.txt::before{content:'';width:6px;height:6px;background:var(--cyan);transform:rotate(45deg);flex:none}
+
+/* logo wall */
+.logowall{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.logowall .cell{display:flex;align-items:center;justify-content:center;padding:38px 14px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+.logowall img{max-height:30px;max-width:118px;object-fit:contain;filter:grayscale(1);opacity:.62}
+.dark .logowall{border-color:rgba(255,255,255,.14)}
+.dark .logowall .cell{background:rgba(255,255,255,.92);border-color:rgba(255,255,255,.14)}
+
+/* leader card */
+.leader{position:relative;overflow:hidden;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line-strong);border-radius:14px;padding:12px}
+.leader .ph{width:100%;aspect-ratio:1/1;border-radius:10px;object-fit:cover;object-position:top center;filter:grayscale(1) contrast(1.02);background:var(--cyan-wash)}
+.leader .nm{font-family:'Raleway',sans-serif;font-weight:700;font-size:14px;color:var(--ink);margin-top:10px}
+.leader .rl{font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5px;color:var(--cyan-dark);text-transform:uppercase;letter-spacing:.05em;margin-top:2px}
+
+/* helpers */
+.flex{display:flex} .col{display:flex;flex-direction:column} .grow{flex:1} .mt-auto{margin-top:auto}
+.region{flex:1;min-height:0;display:flex;flex-direction:column}
+.fillrows{grid-auto-rows:1fr;align-content:stretch}
+.cardflex{display:flex;flex-direction:column;justify-content:space-between}
+.tcard .col{flex:1;justify-content:center}
+.tick{color:var(--cyan-dark);font-weight:700}
+ul.clean{list-style:none}
+ul.clean li{position:relative;padding-left:18px;margin-bottom:9px;line-height:1.4}
+ul.clean li::before{content:'';position:absolute;left:0;top:6px;width:7px;height:7px;border-radius:2px;background:var(--cyan);transform:rotate(45deg)}
+.dark ul.clean li::before{background:var(--cyan-light)}
+
+/* bottom micro-tag inside a card */
+.ctag{display:flex;align-items:center;gap:7px;margin-top:13px;padding-top:11px;border-top:1px solid var(--line);font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.03em;color:var(--cyan-dark)}
+.dark .ctag{border-top-color:rgba(255,255,255,.16);color:var(--cyan-light)}
+
+/* ---- Imagery (brand-consistent treatments) ---- */
+.tile{position:relative;overflow:hidden;border-radius:12px;background:var(--cyan-wash)}
+.tile img{display:block;width:100%;height:100%;object-fit:cover}
+.tile .gr{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(2,40,40,0) 28%,rgba(2,40,40,.74))}
+.tile .gr.teal{background:linear-gradient(150deg,rgba(4,82,82,.30),rgba(2,40,40,.78))}
+.tile .lbl{position:absolute;left:12px;right:12px;bottom:10px;z-index:2;color:#fff;font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5px;letter-spacing:.01em;line-height:1.25;text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.tile .lbl .s{display:block;font-family:'Space Mono',monospace;font-weight:400;font-size:8.5px;letter-spacing:.06em;color:var(--cyan-light);margin-top:2px;text-transform:uppercase}
+.tile .tag{position:absolute;left:10px;top:10px;z-index:2;font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:.06em;color:#fff;background:rgba(2,40,40,.55);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:3px 9px;backdrop-filter:blur(2px)}
+/* image used as a side banner inside a card/spread */
+.imgband{position:relative;overflow:hidden;border-radius:14px;min-height:0}
+.imgband img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.imgband .ov{position:absolute;inset:0;z-index:1}
+.imgband .ov.teal{background:linear-gradient(120deg,rgba(4,82,82,.84) 0%,rgba(6,109,109,.50) 55%,rgba(2,40,40,.30) 100%)}
+.imgband .ov.dark{background:linear-gradient(120deg,rgba(2,40,40,.80),rgba(10,10,10,.45))}
+.imgband .ct{position:relative;z-index:2}
+/* full-bleed cover/hero photo layer */
+.bgphoto{position:absolute;inset:0;z-index:0;overflow:hidden}
+.bgphoto img{width:100%;height:100%;object-fit:cover}
+.bgphoto .grad{position:absolute;inset:0}
+/* thin photo strip (e.g., a horizontal accent) */
+.thumb{border-radius:10px;overflow:hidden;background:var(--cyan-wash)}
+.thumb img{display:block;width:100%;height:100%;object-fit:cover}
+
+@media print{
+  body{background:#fff}
+  .screen .page{margin:0;box-shadow:none}
+  .page{margin:0}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  img{image-rendering:auto}
+}
+@page{size:A4 portrait;margin:0}
+</style>
+</head>
+<body class="screen">
+
+<!-- ====================== 01 · COVER ====================== -->
+<section class="page dark">
+  <div class="bgphoto">
+    <img src="assets/unsplash/cover-hero.jpg" alt="" style="opacity:.42;object-position:center right"/>
+    <div class="grad" style="background:
+      radial-gradient(120% 80% at 8% 0%, rgba(13,207,207,.30) 0%, transparent 46%),
+      linear-gradient(150deg, rgba(6,109,109,.62) 0%, rgba(4,82,82,.78) 46%, rgba(2,40,40,.92) 100%)"></div>
+  </div>
+  <div class="dotgrid w" style="opacity:.4"></div>
+  <div class="hexwm" style="width:150mm;height:150mm;right:-55mm;top:-34mm;opacity:.26"></div>
+  <!-- faint loop-ring motif foreshadowing the DARK Loop, anchoring the lower-right -->
+  <svg viewBox="0 0 400 400" style="position:absolute;right:-110px;bottom:-120px;width:360px;height:360px;z-index:1;opacity:.9">
+    <circle cx="200" cy="200" r="150" fill="none" stroke="rgba(106,227,225,.28)" stroke-width="1.5"/>
+    <circle cx="200" cy="50" r="13" fill="none" stroke="rgba(106,227,225,.28)" stroke-width="1.5"/>
+    <circle cx="350" cy="200" r="13" fill="none" stroke="rgba(106,227,225,.28)" stroke-width="1.5"/>
+    <circle cx="200" cy="350" r="13" fill="none" stroke="rgba(106,227,225,.28)" stroke-width="1.5"/>
+    <circle cx="50" cy="200" r="13" fill="none" stroke="rgba(106,227,225,.28)" stroke-width="1.5"/>
+  </svg>
+  <div class="inner">
+    <div class="flex" style="justify-content:space-between;align-items:center">
+      <img src="assets/brand/logo-white.png" alt="InsightsTap" style="height:30px" />
+      <span class="fvbadge"><span class="st">★</span> Top Rated · Fiverr Pro</span>
+    </div>
+
+    <div class="grow" style="display:flex;flex-direction:column;justify-content:center;max-width:172mm">
+      <span class="kicker" style="color:var(--cyan-light);letter-spacing:.2em">B2B · AI Engineering × GTM Engineering</span>
+      <div class="rule" style="margin:14px 0 18px"></div>
+      <h1 class="display" style="font-size:49px;color:#fff">
+        Build AI apps, AI agents<br/>&amp; <span style="color:var(--cyan-light)">signal-led GTM engines</span><br/>for B2B companies.
+      </h1>
+      <p class="quote" style="color:#fff;font-size:18px;margin-top:16px;max-width:150mm">
+        Run your B2B tech company <span style="color:var(--cyan-light)">like an e-commerce store.</span>
+      </p>
+      <p class="lead" style="color:rgba(233,253,253,.9);font-size:14.5px;margin-top:14px;max-width:150mm">
+        From custom AI development to signal-led growth systems — we connect buyer signals, AI automation,
+        and multi-channel outreach into one engine that turns data and intent into measurable revenue.
+      </p>
+      <div class="flex" style="gap:10px;margin-top:22px">
+        <span class="pill" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.28);color:#fff">Build</span>
+        <span class="pill" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.28);color:#fff">Grow</span>
+        <span class="pill" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.28);color:#fff">Integrate</span>
+      </div>
+    </div>
+
+    <!-- proof micro-stat band anchors the lower third -->
+    <div class="flex" style="gap:0;border-top:1px solid rgba(255,255,255,.18);padding-top:16px;margin-bottom:16px">
+      <div class="col" style="flex:1;gap:3px"><span class="statnum mono" style="font-size:24px;color:#fff">18+</span><span class="cap" style="color:rgba(233,253,253,.6)">Years with F500s &amp; startups</span></div>
+      <div class="col" style="flex:1;gap:3px"><span class="statnum mono" style="font-size:24px;color:#fff">1,000+</span><span class="cap" style="color:rgba(233,253,253,.6)">B2B transformations</span></div>
+      <div class="col" style="flex:1;gap:3px"><span class="statnum mono" style="font-size:24px;color:#fff">600+</span><span class="cap" style="color:rgba(233,253,253,.6)">Products shipped</span></div>
+    </div>
+
+    <div class="flex" style="justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(255,255,255,.18);padding-top:14px">
+      <div class="col" style="gap:2px">
+        <span class="mono" style="font-size:12px;color:#fff">www.insightstap.com</span>
+        <span class="cap" style="color:rgba(233,253,253,.6)">Founded by Ritesh Osta</span>
+      </div>
+      <span class="mono" style="font-size:11px;color:var(--cyan-light)">DR013 · v3</span>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 02 · CONTENTS ====================== -->
+<section class="page">
+  <div class="linegrid"></div>
+  <div class="hexwm" style="width:130mm;height:130mm;right:-50mm;bottom:-30mm;opacity:.08"></div>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px">
+        <span class="kicker">Inside this brochure</span>
+        <h2 class="h1" style="font-size:34px">Contents</h2>
+        <div class="rule"></div>
+      </div>
+      <span class="secno">00</span>
+    </div>
+    <p class="lead" style="max-width:155mm;margin-bottom:6mm">Eighteen sections — who we are, what we build, how we grow your revenue, the proof, and the people behind it.</p>
+
+    <div class="region" style="display:grid;grid-template-columns:1fr 1fr;column-gap:16mm">
+      <div class="col" style="justify-content:space-between">
+        <div class="toc"><span class="idx">01</span><div class="t"><span class="nm">Who We Are</span><span class="ds">The InsightsTap advantage</span></div><span class="pg">03</span></div>
+        <div class="toc"><span class="idx">02</span><div class="t"><span class="nm">Our Unique Position</span><span class="ds">Build · Grow · Integrate</span></div><span class="pg">04</span></div>
+        <div class="toc"><span class="idx">03</span><div class="t"><span class="nm">Why InsightsTap</span><span class="ds">Fewer claims, stronger proof</span></div><span class="pg">05</span></div>
+        <div class="toc"><span class="idx">04</span><div class="t"><span class="nm">What We Build</span><span class="ds">Five capabilities, one engine</span></div><span class="pg">06</span></div>
+        <div class="toc"><span class="idx">05</span><div class="t"><span class="nm">The DARK Loop™ Framework</span><span class="ds">Detect · Augment · Reach · Kaizen</span></div><span class="pg">07</span></div>
+        <div class="toc"><span class="idx">06</span><div class="t"><span class="nm">AI Development Portfolio</span><span class="ds">OneGPT · AetherPilot · Ava AI</span></div><span class="pg">08</span></div>
+        <div class="toc"><span class="idx">07</span><div class="t"><span class="nm">GTM Engineering Services</span><span class="ds">JobFeeder &amp; the revenue engine</span></div><span class="pg">09</span></div>
+        <div class="toc"><span class="idx">08</span><div class="t"><span class="nm">Product Highlights</span><span class="ds">Tools we built ourselves</span></div><span class="pg">10</span></div>
+        <div class="toc"><span class="idx">09</span><div class="t"><span class="nm">Case Study Highlights</span><span class="ds">Built. Shipped. Measured.</span></div><span class="pg">11</span></div>
+      </div>
+      <div class="col" style="justify-content:space-between">
+        <div class="toc"><span class="idx">10</span><div class="t"><span class="nm">Technology Stack</span><span class="ds">From models to revenue</span></div><span class="pg">12</span></div>
+        <div class="toc"><span class="idx">11</span><div class="t"><span class="nm">Service Packages</span><span class="ds">AI · GTM · Performance · Full-Stack</span></div><span class="pg">13</span></div>
+        <div class="toc"><span class="idx">12</span><div class="t"><span class="nm">Industries &amp; Use Cases</span><span class="ds">Where we create leverage</span></div><span class="pg">14</span></div>
+        <div class="toc"><span class="idx">13</span><div class="t"><span class="nm">Implementation Methodology</span><span class="ds">How an engagement runs</span></div><span class="pg">15</span></div>
+        <div class="toc"><span class="idx">14</span><div class="t"><span class="nm">Proven Results</span><span class="ds">The numbers we move</span></div><span class="pg">16</span></div>
+        <div class="toc"><span class="idx">15</span><div class="t"><span class="nm">Leadership &amp; Delivery Team</span><span class="ds">The people behind the work</span></div><span class="pg">17</span></div>
+        <div class="toc"><span class="idx">16</span><div class="t"><span class="nm">Engagement Models &amp; Trust</span><span class="ds">Work with us your way</span></div><span class="pg">18</span></div>
+        <div class="toc"><span class="idx">17</span><div class="t"><span class="nm">Founder Spotlight</span><span class="ds">Ritesh Osta · Top 2% Fiverr Pro</span></div><span class="pg">19</span></div>
+        <div class="toc"><span class="idx">18</span><div class="t"><span class="nm">Connect — Websites &amp; Social</span><span class="ds">Start the conversation</span></div><span class="pg">20</span></div>
+      </div>
+    </div>
+
+    <div class="card soft" style="display:flex;gap:18px;align-items:center;margin-top:7mm">
+      <img src="assets/brand/mark-round.png" alt="" style="height:60px;flex:none" />
+      <div class="col" style="gap:5px">
+        <span class="kicker">Our promise</span>
+        <p class="h3" style="font-weight:600">One team that builds your custom AI <span class="cyan">and</span> runs your GTM engine — under one roof, accountable to outcomes.</p>
+      </div>
+    </div>
+    <div class="foot"><span>InsightsTap · Company Brochure</span><span><span class="dot">●</span> www.insightstap.com</span><span>02</span></div>
+  </div>
+  <style>.toc{display:flex;align-items:center;gap:13px;padding:9px 0;border-bottom:1px solid var(--line)}
+  .toc .idx{flex:none;width:22px}
+  .toc .t{flex:1;display:flex;flex-direction:column;gap:1px}
+  .toc .t .nm{font-family:'Raleway',sans-serif;font-weight:600;font-size:14.5px;color:var(--ink);line-height:1.15}
+  .toc .t .ds{font-family:'Space Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.01em}
+  .toc .pg{font-family:'Space Mono',monospace;font-size:12px;color:var(--cyan-dark)}</style>
+</section>
+
+<!-- ====================== 03 · WHO WE ARE ====================== -->
+<section class="page">
+  <div class="dotgrid" style="opacity:.5"></div>
+  <div class="hexwm" style="width:120mm;height:120mm;right:-46mm;top:40mm;opacity:.08"></div>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">03 — Who We Are</span><h2 class="h1">A GTM engineering &amp; AI consultancy<br/>built for B2B revenue.</h2><div class="rule"></div></div>
+      <span class="secno">03</span>
+    </div>
+
+    <p class="lead" style="max-width:172mm;margin-bottom:5mm">
+      A full-stack <b class="inkc">AI development studio</b> + <b class="inkc">GTM engineering consultancy</b> — we connect
+      <b class="inkc">buyer signals</b>, <b class="inkc">AI automation</b>, and <b class="inkc">multi-channel outreach</b> into a single
+      engine that finds, qualifies, and converts accounts before your competitors even know they're in-market.
+    </p>
+
+    <div class="region" style="display:grid;grid-template-columns:1.12fr 1fr;gap:14px">
+      <div class="col" style="gap:13px">
+        <div class="imgband" style="flex:1;min-height:148px">
+          <img src="assets/unsplash/team-office.jpg" alt="The InsightsTap team collaborating in a modern office"/>
+          <div class="ov teal"></div>
+          <div class="ct" style="padding:17px;height:100%;display:flex;flex-direction:column;justify-content:flex-end">
+            <span class="kicker" style="color:var(--cyan-light)">The InsightsTap advantage</span>
+            <p class="h3" style="color:#fff;margin-top:7px;font-size:17px">One team that builds your custom AI <span style="color:var(--cyan-light)">and</span> runs your GTM engine — under one roof.</p>
+          </div>
+        </div>
+        <div class="card soft" style="display:flex;gap:13px;align-items:center;padding:13px 15px">
+          <img src="assets/leaders/ritesh.jpg" alt="Ritesh Osta" style="width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:top center;flex:none"/>
+          <div class="col" style="gap:2px">
+            <span class="subh" style="font-size:12.5px">Led by Ritesh Osta</span>
+            <span class="small" style="font-size:10.5px">18+ years · 1,000+ B2B transformations</span>
+          </div>
+          <span class="fvbadge" style="margin-left:auto"><span class="st">★</span> Top 2% Fiverr Pro</span>
+        </div>
+      </div>
+
+      <div class="col" style="gap:11px">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:9px">
+          <div class="card" style="padding:14px 10px"><div class="statnum" style="font-size:23px">18<span style="font-size:14px">+</span></div><div class="statlabel" style="margin-top:6px;font-size:8.5px;letter-spacing:.03em">Years · F500 &amp; startups</div></div>
+          <div class="card" style="padding:14px 10px"><div class="statnum" style="font-size:23px;white-space:nowrap">1,000<span style="font-size:14px">+</span></div><div class="statlabel" style="margin-top:6px;font-size:8.5px;letter-spacing:.03em">B2B transformations</div></div>
+          <div class="card" style="padding:14px 10px"><div class="statnum" style="font-size:23px">600<span style="font-size:14px">+</span></div><div class="statlabel" style="margin-top:6px;font-size:8.5px;letter-spacing:.03em">Products shipped</div></div>
+        </div>
+        <div class="card soft cardflex" style="flex:1"><div class="col" style="gap:7px"><span class="kicker">Our mission</span><p class="body" style="font-size:12px">Empower B2B companies with cutting-edge AI and signal-driven GTM that transform how they build products and grow revenue — bridging AI innovation and real business outcomes.</p></div></div>
+        <div class="card cardflex" style="flex:1"><div class="col" style="gap:7px"><span class="kicker">Our vision</span><p class="body" style="font-size:12px">Become the global leader in unified AI development and GTM engineering — where every B2B company turns intent signals into revenue through intelligent automation and world-class AI.</p></div></div>
+        <div class="flex" style="gap:7px;flex-wrap:wrap">
+          <span class="pill" style="font-size:10px;padding:4px 10px"><span class="tick">✓</span> Product engineering</span>
+          <span class="pill" style="font-size:10px;padding:4px 10px"><span class="tick">✓</span> AI &amp; automation</span>
+          <span class="pill" style="font-size:10px;padding:4px 10px"><span class="tick">✓</span> GTM strategy</span>
+          <span class="pill" style="font-size:10px;padding:4px 10px"><span class="tick">✓</span> Revenue systems</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot"><span>03 · Who We Are</span><span><span class="dot">●</span> www.insightstap.com</span><span>03</span></div>
+  </div>
+</section>
+
+<!-- ====================== 04 · UNIQUE POSITION ====================== -->
+<section class="page wash">
+  <div class="hexwm" style="width:96mm;height:96mm;left:-36mm;top:120mm;opacity:.07"></div>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">04 — Our Unique Position</span><h2 class="h1">Build · Grow · Integrate</h2><div class="rule"></div></div>
+      <span class="secno">04</span>
+    </div>
+    <p class="lead" style="max-width:165mm;margin-bottom:6mm">A simple, memorable spine. We don't just deliver software — we connect what we build to how you grow, then wire it all into one operating layer.</p>
+
+    <div class="region" style="display:grid;grid-template-columns:repeat(3,1fr);gap:13px">
+      <div class="card cardflex" style="padding:0">
+        <span class="bignum">01</span>
+        <div style="background:linear-gradient(160deg,#0a8a8a,#066d6d);padding:18px 18px 16px;color:#fff">
+          <div class="cic" style="background:rgba(255,255,255,.16)"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" stroke="#fff"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3" stroke="#fff"/></svg></div>
+          <div class="h2" style="color:#fff;margin-top:10px">Build</div>
+        </div>
+        <div style="padding:16px;display:flex;flex-direction:column;flex:1">
+          <p class="subh" style="margin-bottom:6px">Custom AI solutions that solve real problems.</p>
+          <ul class="clean body" style="flex:1;display:flex;flex-direction:column;justify-content:flex-start;gap:11px;margin:6px 0 0"><li>AI apps &amp; AI agents</li><li>Internal tools &amp; automation platforms</li><li>Custom software, shipped to production</li><li>From MVP to production-grade scale</li></ul>
+          <div class="ctag">→ SHIPPED TO PRODUCTION</div>
+        </div>
+      </div>
+      <div class="card cardflex" style="padding:0">
+        <span class="bignum">02</span>
+        <div style="background:linear-gradient(160deg,#0fb6b6,#0a9a9a);padding:18px 18px 16px;color:#fff">
+          <div class="cic" style="background:rgba(255,255,255,.16)"><svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 3 8-9" stroke="#fff"/><path d="M21 6v5h-5" stroke="#fff"/></svg></div>
+          <div class="h2" style="color:#fff;margin-top:10px">Grow</div>
+        </div>
+        <div style="padding:16px;display:flex;flex-direction:column;flex:1">
+          <p class="subh" style="margin-bottom:6px">Signal-led GTM engines that scale revenue.</p>
+          <ul class="clean body" style="flex:1;display:flex;flex-direction:column;justify-content:flex-start;gap:11px;margin:6px 0 0"><li>Identify real buyer intent</li><li>Activate precision outreach</li><li>Support predictable revenue growth</li><li>Outbound, inbound &amp; paid, in concert</li></ul>
+          <div class="ctag">→ PIPELINE THAT COMPOUNDS</div>
+        </div>
+      </div>
+      <div class="card cardflex" style="padding:0">
+        <span class="bignum" style="color:rgba(108,92,231,.08)">03</span>
+        <div style="background:linear-gradient(160deg,#7a6bec,#6C5CE7);padding:18px 18px 16px;color:#fff">
+          <div class="cic" style="background:rgba(255,255,255,.18)"><svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2" stroke="#fff"/><circle cx="19" cy="6" r="2" stroke="#fff"/><circle cx="12" cy="18" r="2" stroke="#fff"/><path d="M7 6h10M6 8l5 8M18 8l-5 8" stroke="#fff"/></svg></div>
+          <div class="h2" style="color:#fff;margin-top:10px">Integrate</div>
+        </div>
+        <div style="padding:16px;display:flex;flex-direction:column;flex:1">
+          <p class="subh" style="margin-bottom:6px">Seamless connection between AI &amp; growth.</p>
+          <ul class="clean body" style="flex:1;display:flex;flex-direction:column;justify-content:flex-start;gap:11px;margin:6px 0 0"><li>AI · CRM · automation · analytics</li><li>Outreach &amp; growth workflows</li><li>Unified into one operating layer</li><li>Real-time data across every tool</li></ul>
+          <div class="ctag" style="color:var(--violet-shade)">→ ONE OPERATING LAYER</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:6mm;display:flex;gap:16px;align-items:center;background:#fff">
+      <span class="mono" style="font-size:11px;color:var(--cyan-dark);white-space:nowrap;letter-spacing:.04em">THE OUTCOME →</span>
+      <p class="h3" style="font-weight:600">Not just software delivery — <span class="cyan">business growth and operational leverage.</span></p>
+    </div>
+    <div class="foot"><span>04 · Our Unique Position</span><span><span class="dot">●</span> www.insightstap.com</span><span>04</span></div>
+  </div>
+</section>
+
+<!-- ====================== 05 · WHY INSIGHTSTAP ====================== -->
+<section class="page">
+  <div class="linegrid"></div>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">05 — Why InsightsTap</span><h2 class="h1">Fewer claims. Stronger proof.</h2><div class="rule"></div></div>
+      <span class="secno">05</span>
+    </div>
+    <p class="lead" style="max-width:165mm;margin-bottom:6mm">Four reasons B2B teams pick us — each one backed by something real, not a slide.</p>
+
+    <div class="region" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div class="card cardflex tcard" style="border-top:3px solid var(--cyan)">
+        <span class="bignum">01</span>
+        <div class="col" style="gap:9px">
+          <div class="cic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#066d6d"/><circle cx="9" cy="7" r="4" stroke="#066d6d"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#066d6d"/></svg></div>
+          <div class="h3">One team for AI <span class="cyan">and</span> GTM</div>
+          <p class="body">We're the only team that builds Custom AI and runs your GTM engine — engineering, automation, strategy, and revenue execution under one roof, in one engagement.</p>
+        </div>
+        <div class="ctag">AI + GTM · ONE ENGAGEMENT</div>
+      </div>
+      <div class="card cardflex tcard" style="border-top:3px solid var(--cyan)">
+        <span class="bignum">02</span>
+        <div class="col" style="gap:9px">
+          <div class="cic"><svg viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke="#066d6d"/></svg></div>
+          <div class="h3">Real product builders</div>
+          <p class="body">We've shipped our own tools — <b class="inkc">JobFeeder</b> and <b class="inkc">OneGPT</b>. The work is grounded in real shipping experience, not slideware.</p>
+        </div>
+        <div class="ctag">JOBFEEDER · ONEGPT</div>
+      </div>
+      <div class="card cardflex tcard" style="border-top:3px solid var(--gold)">
+        <span class="bignum" style="color:rgba(244,183,64,.10)">03</span>
+        <div class="col" style="gap:9px">
+          <div class="cic" style="background:#fff7e8"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 20.5l1.6-6.8L2 9.1l7-.6z" stroke="#D99A23"/></svg></div>
+          <div class="h3">Trusted delivery</div>
+          <p class="body">Top 2% Fiverr Pro, 5.0 stars — every client, every time. End-to-end execution from first idea to the last mile. No handoffs.</p>
+        </div>
+        <div class="ctag" style="color:var(--gold-text)">TOP 2% FIVERR PRO · 5.0★</div>
+      </div>
+      <div class="card cardflex tcard" style="border-top:3px solid var(--cyan)">
+        <span class="bignum">04</span>
+        <div class="col" style="gap:9px">
+          <div class="cic"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#066d6d"/><path d="M22 4L12 14.01l-3-3" stroke="#066d6d"/></svg></div>
+          <div class="h3">Outcome accountability</div>
+          <p class="body">Every engagement starts with clear metrics — and we stay accountable to them until the results are shown. We don't walk away after onboarding.</p>
+        </div>
+        <div class="ctag">METRICS AGREED UP FRONT</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:6mm;display:flex;align-items:center;gap:18px;background:linear-gradient(120deg,#fffaf0,#fff);border-color:var(--gold-tint)">
+      <div class="col" style="align-items:center;padding-right:18px;border-right:1px solid var(--gold-tint)">
+        <div class="statnum" style="font-size:30px;color:var(--gold-text)">5.0★</div>
+        <span class="cap" style="color:var(--gold-text)">Top 2% Fiverr Pro</span>
+      </div>
+      <p class="quote" style="font-size:14.5px">“InsightsTap cleared the mind-blocks and confusion most startups face. Their dual expertise in AI development and GTM strategy is unmatched.”
+        <span class="cap" style="display:block;margin-top:8px;font-style:normal">— Yew Friend · Tech Startup Founder, Canada</span></p>
+    </div>
+    <div class="foot"><span>05 · Why InsightsTap</span><span><span class="dot">●</span> www.insightstap.com</span><span>05</span></div>
+  </div>
+</section>
+
+<!-- ====================== 06 · WHAT WE BUILD ====================== -->
+<section class="page">
+  <div class="hexwm" style="width:110mm;height:110mm;left:-42mm;bottom:-24mm;opacity:.07"></div>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">06 — What We Build</span><h2 class="h1">Five capabilities, one engine.</h2><div class="rule"></div></div>
+      <span class="secno">06</span>
+    </div>
+    <p class="lead" style="max-width:165mm;margin-bottom:5mm">From custom AI products to the GTM systems that put them to work — each capability plugs into the same revenue operating layer.</p>
+
+    <div class="region" style="display:grid;grid-template-rows:repeat(5,1fr);gap:11px">
+      <div class="svc">
+        <div class="cic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3"/></svg></div>
+        <div class="t"><div class="h3">AI-Powered GTM Strategy</div><p class="body">Signal-led go-to-market — intent detection, account scoring, and the playbooks that turn buying signals into pipeline.</p></div>
+        <span class="tag mono">INTENT · SCORING · PLAYBOOKS</span>
+      </div>
+      <div class="svc">
+        <div class="cic"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg></div>
+        <div class="t"><div class="h3">Custom AI Development</div><p class="body">LLM apps, AI agents, voice AI, RAG and multi-agent systems — engineered, integrated, and shipped to production.</p></div>
+        <span class="tag mono">LLM · AGENTS · RAG · VOICE</span>
+      </div>
+      <div class="svc">
+        <div class="cic"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="19" cy="17" r="2"/></svg></div>
+        <div class="t"><div class="h3">CRM, Enrichment &amp; Automation</div><p class="body">A connected stack — enrichment, scoring, and workflow automation across HubSpot, Salesforce, Clay and beyond.</p></div>
+        <span class="tag mono">ENRICH · SCORE · AUTOMATE</span>
+      </div>
+      <div class="svc">
+        <div class="cic"><svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 3 8-9"/><path d="M21 6v5h-5"/></svg></div>
+        <div class="t"><div class="h3">Performance Marketing &amp; ABM</div><p class="body">PPC, paid social and account-based campaigns where every dollar spent is traceable to pipeline and revenue.</p></div>
+        <span class="tag mono">PPC · PAID SOCIAL · ABM</span>
+      </div>
+      <div class="svc">
+        <div class="cic"><svg viewBox="0 0 24 24"><rect x="4" y="13" width="3" height="7"/><rect x="10.5" y="8" width="3" height="12"/><rect x="17" y="4" width="3" height="16"/></svg></div>
+        <div class="t"><div class="h3">Data, Analytics &amp; Reporting</div><p class="body">Pipelines, dashboards and attribution that make outcomes visible — from first signal to closed revenue.</p></div>
+        <span class="tag mono">PIPELINES · DASHBOARDS · ATTRIBUTION</span>
+      </div>
+    </div>
+    <div class="foot"><span>06 · What We Build</span><span><span class="dot">●</span> www.insightstap.com</span><span>06</span></div>
+  </div>
+  <style>.svc{position:relative;display:grid;grid-template-columns:34px 1fr auto;gap:15px;align-items:center;background:#fff;border:1px solid var(--line-strong);border-radius:14px;padding:0 18px}
+  .svc .t{align-self:center}
+  .svc .tag{align-self:center;font-size:9px;color:var(--cyan-dark);letter-spacing:.04em;white-space:nowrap;text-align:right}</style>
+</section>
+
+<!-- ====================== 07 · DARK LOOP ====================== -->
+<section class="page dark">
+  <div class="bgphoto"><img src="assets/unsplash/brand-network.jpg" alt="" style="opacity:.20;object-position:center"/><div class="grad" style="background:linear-gradient(150deg,rgba(8,138,138,.52),rgba(4,82,82,.78) 55%,rgba(2,40,40,.93))"></div></div>
+  <div class="dotgrid w" style="opacity:.28"></div>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">07 — How We Work</span><h2 class="h1">The DARK Loop™ Framework</h2><div class="rule"></div></div>
+      <span class="secno">07</span>
+    </div>
+    <p class="lead" style="max-width:160mm;margin-bottom:5mm">A signal-led GTM engine that detects real buying intent, activates precision outreach, and automates your entire revenue pipeline — so you reach the right accounts before your competitors do.</p>
+
+    <div class="region" style="display:grid;grid-template-columns:1.04fr .96fr;gap:18px;align-items:stretch">
+      <div style="display:grid;grid-template-rows:repeat(4,1fr);gap:12px">
+        <div class="loopcard"><div class="ll">D</div><div class="lc"><div class="h3" style="color:#fff">Detect</div><p class="small">Surface in-market buyers using dark-funnel signals — intent data, job changes, and funding triggers — before competitors even know they exist.</p></div></div>
+        <div class="loopcard"><div class="ll">A</div><div class="lc"><div class="h3" style="color:#fff">Augment</div><p class="small">Enrich every signal with AI. Score accounts by fit and timing. Connect your entire GTM stack into one automated system.</p></div></div>
+        <div class="loopcard"><div class="ll">R</div><div class="lc"><div class="h3" style="color:#fff">Reach</div><p class="small">Deploy personalized outreach across email, LinkedIn and paid ads — triggered by real buying signals, not guesswork.</p></div></div>
+        <div class="loopcard"><div class="ll">K</div><div class="lc"><div class="h3" style="color:#fff">Kaizen</div><p class="small">Analyze, test and refine every week. The loop compounds — your pipeline gets faster and more predictable over time.</p></div></div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px">
+        <span class="kicker" style="align-self:center">The loop, visualized</span>
+        <svg viewBox="0 0 300 300" style="width:100%;max-width:90mm">
+          <defs>
+            <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6AE3E1"/><stop offset="1" stop-color="#0DCFCF"/></linearGradient>
+            <marker id="ar" markerWidth="10" markerHeight="10" refX="5" refY="4" orient="auto"><path d="M0 0 L9 4 L0 8 Z" fill="#6AE3E1"/></marker>
+          </defs>
+          <circle cx="150" cy="150" r="106" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1"/>
+          <circle cx="150" cy="150" r="106" fill="none" stroke="url(#lg)" stroke-width="3" stroke-dasharray="470 196" stroke-linecap="round" marker-end="url(#ar)" transform="rotate(-90 150 150)"/>
+          <circle cx="150" cy="150" r="58" fill="rgba(13,207,207,.10)" stroke="rgba(13,207,207,.45)" stroke-width="1"/>
+          <text x="150" y="145" text-anchor="middle" fill="#fff" font-family="Space Mono" font-size="16" font-weight="700">DARK</text>
+          <text x="150" y="164" text-anchor="middle" fill="#6AE3E1" font-family="Poppins" font-size="9" letter-spacing="2.5">LOOP™</text>
+          <g font-family="Raleway" font-weight="700" font-size="17">
+            <circle cx="150" cy="44" r="21" fill="#0DCFCF"/><text x="150" y="51" text-anchor="middle" fill="#023a3a">D</text>
+            <circle cx="256" cy="150" r="21" fill="#0DCFCF"/><text x="256" y="157" text-anchor="middle" fill="#023a3a">A</text>
+            <circle cx="150" cy="256" r="21" fill="#0DCFCF"/><text x="150" y="263" text-anchor="middle" fill="#023a3a">R</text>
+            <circle cx="44" cy="150" r="21" fill="#0DCFCF"/><text x="44" y="157" text-anchor="middle" fill="#023a3a">K</text>
+          </g>
+        </svg>
+        <p class="small" style="text-align:center;max-width:70mm">Detect → Augment → Reach → Kaizen, on repeat — a compounding revenue loop.</p>
+      </div>
+    </div>
+    <div class="foot"><span>07 · The DARK Loop™ Framework</span><span><span class="dot" style="color:var(--cyan-light)">●</span> www.insightstap.com</span><span>07</span></div>
+  </div>
+  <style>.loopcard{display:grid;grid-template-columns:42px 1fr;gap:13px;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:13px 15px}
+  .loopcard .lc{display:flex;flex-direction:column;gap:3px}
+  .loopcard .ll{width:42px;height:42px;border-radius:11px;background:var(--cyan);color:#023a3a;font-family:'Raleway';font-weight:800;font-size:21px;display:flex;align-items:center;justify-content:center}</style>
+</section>
+
+<!-- ====================== 08 · AI DEVELOPMENT ====================== -->
+<section class="page">
+  <div class="dotgrid" style="opacity:.45"></div>
+  <div class="hexwm" style="width:108mm;height:108mm;right:-42mm;bottom:-26mm;opacity:.07"></div>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">08 — Build · AI Development Portfolio</span><h2 class="h1">AI Development Capabilities</h2><div class="rule"></div></div>
+      <span class="secno">08</span>
+    </div>
+    <p class="lead" style="max-width:165mm;margin-bottom:4mm">Production AI — designed, engineered and integrated. From a single agent to a multi-model platform, we build systems that ship and scale.</p>
+
+    <div class="imgband" style="height:23mm;margin-bottom:4mm">
+      <img src="assets/unsplash/voice-tech.jpg" alt="Abstract AI engineering signal"/>
+      <div class="ov teal"></div>
+      <div class="ct" style="padding:0 18px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <span class="kicker" style="color:var(--cyan-light)">Flagship AI products we've shipped</span>
+        <span class="subh" style="color:#fff;font-size:13px;text-align:right">OneGPT · AetherPilot · ConnectChat · Ava AI</span>
+      </div>
+    </div>
+
+    <div class="region" style="display:grid;grid-template-columns:1fr 1fr;gap:11px" >
+      <div class="card cardflex"><div class="col" style="gap:8px"><div class="cic"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-9 8.35 8.5 8.5 0 0 1-3.8-.9L3 21l1.05-3.15A8.38 8.38 0 0 1 3 11.5 8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg></div><div class="h3">LLM Applications &amp; Chat</div><p class="body">Multi-model interfaces, assistants and copilots across GPT-4o, Claude, Gemini and Llama — text, image, PDF, audio and video in.</p></div><div class="ctag">GPT-4O · CLAUDE · GEMINI · LLAMA</div></div>
+      <div class="card cardflex"><div class="col" style="gap:8px"><div class="cic"><svg viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="11" rx="2"/><path d="M12 8V4M9 4h6"/><circle cx="9" cy="13" r="1.2"/><circle cx="15" cy="13" r="1.2"/></svg></div><div class="h3">Autonomous AI Agents</div><p class="body">Agents that browse, decide and execute real online tasks — orchestrated with LangChain and guarded for production.</p></div><div class="ctag">LANGCHAIN · TOOL-USE · GUARDED</div></div>
+      <div class="card cardflex"><div class="col" style="gap:8px"><div class="cic"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div class="h3">Voice AI &amp; Telephony</div><p class="body">Inbound &amp; outbound voice agents on Twilio/VAPI — call handling, support and SDR/BDR workflows, 24/7.</p></div><div class="ctag">TWILIO · VAPI · 24/7</div></div>
+      <div class="card cardflex"><div class="col" style="gap:8px"><div class="cic"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><div class="h3">RAG &amp; Knowledge Systems</div><p class="body">Retrieval-augmented assistants grounded in your data — accurate, cited and access-controlled.</p></div><div class="ctag">GROUNDED · CITED · ACCESS-CONTROLLED</div></div>
+      <div class="card cardflex"><div class="col" style="gap:8px"><div class="cic"><svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M7 6h10M6 8l5 8M18 8l-5 8"/></svg></div><div class="h3">Multi-Agent Systems</div><p class="body">Coordinated agents that split, plan and complete complex workflows with tool-use and hand-offs.</p></div><div class="ctag">PLAN · SPLIT · EXECUTE</div></div>
+      <div class="card cardflex"><div class="col" style="gap:8px"><div class="cic"><svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></div><div class="h3">Computer Vision &amp; Multimodal</div><p class="body">Document understanding, extraction and multimodal pipelines wired into your apps and operations.</p></div><div class="ctag">OCR · EXTRACTION · MULTIMODAL</div></div>
+    </div>
+
+    <div class="card soft" style="margin-top:5mm">
+      <span class="kicker" style="display:block;margin-bottom:9px">Core AI &amp; LLM stack</span>
+      <div class="techgrid">
+        <span class="tech"><i style="--ic:url(assets/tech/openai.svg)"></i>OpenAI · GPT-4o</span>
+        <span class="tech"><i style="--ic:url(assets/tech/anthropic.svg)"></i>Claude</span>
+        <span class="tech"><i style="--ic:url(assets/tech/googlegemini.svg)"></i>Gemini</span>
+        <span class="tech txt">LLAMA</span>
+        <span class="tech"><i style="--ic:url(assets/tech/langchain.svg)"></i>LangChain</span>
+        <span class="tech txt">RAG</span>
+        <span class="tech txt">MULTI-AGENT</span>
+        <span class="tech txt">FINE-TUNING</span>
+        <span class="tech"><i style="--ic:url(assets/tech/twilio.svg)"></i>Twilio · Voice</span>
+      </div>
+    </div>
+    <div class="foot"><span>08 · AI Development Capabilities</span><span><span class="dot">●</span> www.insightstap.com</span><span>08</span></div>
+  </div>
+</section>
+
+<!-- ====================== 09 · GTM ENGINEERING ====================== -->
+<section class="page wash">
+  <div class="hexwm" style="width:108mm;height:108mm;left:-42mm;bottom:-26mm;opacity:.07"></div>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">09 — Grow · GTM Engineering Services</span><h2 class="h1">GTM Engineering Capabilities</h2><div class="rule"></div></div>
+      <span class="secno">09</span>
+    </div>
+    <p class="lead" style="max-width:165mm;margin-bottom:4mm">The revenue engine behind the DARK Loop — signal infrastructure, enrichment, and AI-driven outreach wired into your CRM.</p>
+
+    <div class="imgband" style="height:23mm;margin-bottom:4mm">
+      <img src="assets/unsplash/data-signals.jpg" alt="Real-time buyer-intent data signals"/>
+      <div class="ov dark"></div>
+      <div class="ct" style="padding:0 18px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <div class="col" style="gap:2px"><span class="kicker" style="color:var(--cyan-light)">Powered by JobFeeder — our signal engine</span><span class="subh" style="color:#fff;font-size:12.5px">Hiring signals · buyer intent · dark-funnel detection</span></div>
+        <span class="fvbadge" style="background:linear-gradient(120deg,#0DCFCF,#6AE3E1);color:#023a3a;border-color:transparent">Flagship Tool</span>
+      </div>
+    </div>
+
+    <div class="region" style="display:grid;grid-template-columns:1fr 1fr;gap:11px" >
+      <div class="card cardflex"><div class="col" style="gap:8px"><div class="cic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M4.93 19.07a10 10 0 0 1 0-14.14M19.07 4.93a10 10 0 0 1 0 14.14M7.76 16.24a6 6 0 0 1 0-8.48M16.24 7.76a6 6 0 0 1 0 8.48"/></svg></div><div class="h3">Signal Infrastructure</div><p class="body">Dark-funnel intent, website de-anonymization, job-change and funding triggers — captured and routed in real time.</p></div><div class="ctag">INTENT · DE-ANON · TRIGGERS</div></div>
+      <div class="card cardflex"><div class="col" style="gap:8px"><div class="cic"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div class="h3">Enrichment &amp; Scoring</div><p class="body">AI enrichment and fit-and-timing account scoring with Clay, Apollo, RB2B and CommonRoom.</p></div><div class="ctag">CLAY · APOLLO · RB2B</div></div>
+      <div class="card cardflex"><div class="col" style="gap:8px"><div class="cic"><svg viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div><div class="h3">CRM &amp; Workflow Automation</div><p class="body">HubSpot &amp; Salesforce automation — routing, sequences and hand-offs that never drop a signal.</p></div><div class="ctag">HUBSPOT · SALESFORCE</div></div>
+      <div class="card cardflex"><div class="col" style="gap:8px"><div class="cic"><svg viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></div><div class="h3">AI-Powered Outreach</div><p class="body">Personalized multi-channel outreach across email, LinkedIn and paid — triggered by real intent.</p></div><div class="ctag">EMAIL · LINKEDIN · PAID</div></div>
+      <div class="card cardflex"><div class="col" style="gap:8px"><div class="cic"><svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></div><div class="h3">AI SDR / BDR Agents</div><p class="body">Always-on agents that qualify, respond and book — extending your team without extra headcount.</p></div><div class="ctag">QUALIFY · RESPOND · BOOK</div></div>
+      <div class="card cardflex"><div class="col" style="gap:8px"><div class="cic"><svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 3 8-9"/><path d="M21 6v5h-5"/></svg></div><div class="h3">Performance Marketing &amp; ABM</div><p class="body">Paid media and account-based plays engineered so every dollar is traceable to pipeline.</p></div><div class="ctag">PPC · ABM · TRACEABLE</div></div>
+    </div>
+
+    <div class="card" style="margin-top:5mm;background:#fff">
+      <span class="kicker" style="display:block;margin-bottom:9px">Core GTM &amp; revenue stack</span>
+      <div class="techgrid">
+        <span class="tech"><i style="--ic:url(assets/tech/hubspot.svg)"></i>HubSpot</span>
+        <span class="tech"><i style="--ic:url(assets/tech/salesforce.svg)"></i>Salesforce</span>
+        <span class="tech txt">CLAY</span>
+        <span class="tech txt">APOLLO</span>
+        <span class="tech txt">RB2B</span>
+        <span class="tech txt">COMMONROOM</span>
+        <span class="tech txt">FACTORS.AI</span>
+        <span class="tech txt">LINKEDIN SALES NAV</span>
+      </div>
+    </div>
+    <div class="foot"><span>09 · GTM Engineering Capabilities</span><span><span class="dot">●</span> www.insightstap.com</span><span>09</span></div>
+  </div>
+</section>
+
+<!-- ====================== 10 · PRODUCT HIGHLIGHTS ====================== -->
+<section class="page">
+  <div class="linegrid"></div>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">10 — Product Highlights</span><h2 class="h1">Tools we built ourselves.</h2><div class="rule"></div></div>
+      <span class="secno">10</span>
+    </div>
+    <p class="lead" style="max-width:165mm;margin-bottom:5mm">We know what it takes to ship something real — because we've done it. A selection from our product portfolio.</p>
+
+    <div class="region" style="display:grid;grid-template-columns:1fr 1fr;gap:12px" >
+      <div class="card cardflex" style="padding:0;overflow:hidden">
+        <div class="thumb" style="flex:1;min-height:0;border-radius:0"><img src="assets/unsplash/ai-chat.jpg" alt="OneGPT AI chat hub"/></div>
+        <div style="padding:13px 16px 15px">
+          <div class="flex" style="justify-content:space-between;align-items:center;margin-bottom:5px"><div class="h3">OneGPT</div><span class="tech txt" style="font-size:9px">FLUTTER · NODE · MONGODB</span></div>
+          <p class="body">An all-in-one AI chat hub — one interface for GPT-4o, Gemini, o-series and Llama, with multimodal input and image generation.</p>
+          <div class="ctag"><b class="cyan">VALUE</b> · Removes the complexity of juggling multiple AI accounts</div>
+        </div>
+      </div>
+      <div class="card cardflex" style="padding:0;overflow:hidden">
+        <div class="thumb" style="flex:1;min-height:0;border-radius:0"><img src="assets/unsplash/ai-automation.jpg" alt="AetherPilot autonomous AI agent"/></div>
+        <div style="padding:13px 16px 15px">
+          <div class="flex" style="justify-content:space-between;align-items:center;margin-bottom:5px"><div class="h3">AetherPilot</div><span class="tech txt" style="font-size:9px">FASTAPI · REACT · LANGCHAIN</span></div>
+          <p class="body">An autonomous agent that browses, logs in and completes multi-step online tasks end to end — research, data entry and repetitive web workflows.</p>
+          <div class="ctag"><b class="cyan">VALUE</b> · An autonomous agent that saves real operating time</div>
+        </div>
+      </div>
+      <div class="card cardflex" style="padding:0;overflow:hidden">
+        <div class="thumb" style="flex:1;min-height:0;border-radius:0"><img src="assets/unsplash/ai-chatbot.jpg" alt="ConnectChat AI chatbot platform"/></div>
+        <div style="padding:13px 16px 15px">
+          <div class="flex" style="justify-content:space-between;align-items:center;margin-bottom:5px"><div class="h3">ConnectChat</div><span class="tech txt" style="font-size:9px">REACT · NODE · MONGODB</span></div>
+          <p class="body">Embeddable AI chatbots with a CRM-like panel — train on business data, capture visitor info, manage every conversation.</p>
+          <div class="ctag"><b class="cyan">VALUE</b> · More engagement, automated support, richer lead data</div>
+        </div>
+      </div>
+      <div class="card cardflex" style="padding:0;overflow:hidden">
+        <div class="thumb" style="flex:1;min-height:0;border-radius:0"><img src="assets/unsplash/voice-ai.jpg" alt="Ava AI voice assistant for call centers"/></div>
+        <div style="padding:13px 16px 15px">
+          <div class="flex" style="justify-content:space-between;align-items:center;margin-bottom:5px"><div class="h3">Ava AI</div><span class="tech txt" style="font-size:9px">NEXT.JS · PYTHON · TWILIO</span></div>
+          <p class="body">An AI voice assistant for call centers — automating support, inbound inquiries and outbound sales on GPT-4o + LangChain.</p>
+          <div class="ctag"><b class="cyan">VALUE</b> · 24/7 coverage, faster response, higher satisfaction</div>
+        </div>
+      </div>
+    </div>
+    <div class="card soft" style="margin-top:5mm;display:flex;gap:14px;align-items:center">
+      <span class="mono cyan" style="font-size:11px;white-space:nowrap;letter-spacing:.04em">ALSO BUILT →</span>
+      <p class="body" style="font-size:12.5px"><b class="inkc">JobFeeder</b> — the signal API that powers our GTM engine, surfacing hiring and growth triggers across the market.</p>
+    </div>
+    <div class="foot"><span>10 · Product Highlights</span><span><span class="dot">●</span> www.insightstap.com</span><span>10</span></div>
+  </div>
+</section>
+
+<!-- ====================== 11 · CASE STUDIES ====================== -->
+<section class="page">
+  <div class="dotgrid" style="opacity:.4"></div>
+  <div class="hexwm" style="width:118mm;height:118mm;right:-46mm;top:-28mm;opacity:.07"></div>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">11 — Case Study Highlights</span><h2 class="h1">Built. Shipped. Measured.</h2><div class="rule"></div></div>
+      <span class="secno">11</span>
+    </div>
+    <p class="lead" style="max-width:165mm;margin-bottom:5mm">Real platforms for real clients — each with an outcome we can point to.</p>
+
+    <div class="region" style="display:grid;grid-template-rows:repeat(4,1fr);gap:12px">
+      <div class="cstudy">
+        <div class="cs-out"><div class="statnum" style="font-size:21px">4–6h<span style="font-size:12px"> → </span>30m</div><span class="cap mono">TURNAROUND</span></div>
+        <div class="cs-body"><div class="flex" style="justify-content:space-between;align-items:baseline"><div class="h3">Manson Methods — AI Safety Report Generator</div><span class="tech txt" style="font-size:9px">PYTHON · AI</span></div>
+          <p class="body">An AI reporting tool for an occupational-hygiene consultancy that pulls lab data and runs regulatory calculations automatically.</p>
+          <div class="ctag" style="margin-top:9px;padding-top:9px">OUTCOME → <b class="inkc">ZERO COMPLIANCE ERRORS</b></div></div>
+      </div>
+      <div class="cstudy">
+        <div class="cs-out"><div class="statnum" style="font-size:22px">15–20h</div><span class="cap mono">SAVED / WEEK</span></div>
+        <div class="cs-body"><div class="flex" style="justify-content:space-between;align-items:baseline"><div class="h3">Elevate Health — AI Voice for OBGYN Follow-Up</div><span class="tech txt" style="font-size:9px">VOICE AI · HIPAA</span></div>
+          <p class="body">A HIPAA-ready voice agent that calls patients 24–48h post-discharge, handles lactation support and escalates to a nurse when needed.</p>
+          <div class="ctag" style="margin-top:9px;padding-top:9px">OUTCOME → <b class="inkc">15–20 NURSING HOURS RECLAIMED / WEEK</b></div></div>
+      </div>
+      <div class="cstudy">
+        <div class="cs-out"><div class="statnum" style="font-size:23px">10k+</div><span class="cap mono">PHARMACISTS</span></div>
+        <div class="cs-body"><div class="flex" style="justify-content:space-between;align-items:baseline"><div class="h3">E-Prescription.co.uk — eIDAS-Certified Platform</div><span class="tech txt" style="font-size:9px">REACT · FASTAPI</span></div>
+          <p class="body">A fully compliant UK e-prescription platform — NHS DM+D 100k-drug database, eIDAS Article 26 e-signatures, repeat-prescription engine. Delivered in 16 weeks.</p>
+          <div class="ctag" style="margin-top:9px;padding-top:9px">OUTCOME → <b class="inkc">ADMIN CUT UP TO 60%</b></div></div>
+      </div>
+      <div class="cstudy">
+        <div class="cs-out"><div class="statnum" style="font-size:20px">On&nbsp;time</div><span class="cap mono">DEC 2025</span></div>
+        <div class="cs-body"><div class="flex" style="justify-content:space-between;align-items:baseline"><div class="h3">Sentinel — Unified Communications Assistant</div><span class="tech txt" style="font-size:9px">FLUTTER · FASTAPI</span></div>
+          <p class="body">An AI personal assistant for executives — email, scheduling, messaging and tasks in one interface, with a WhatsApp bridge and UK-compliant infrastructure.</p>
+          <div class="ctag" style="margin-top:9px;padding-top:9px">DELIVERED → <b class="inkc">ON TIME, FULLY UK-COMPLIANT</b></div></div>
+      </div>
+    </div>
+    <div class="foot"><span>11 · Case Study Highlights</span><span><span class="dot">●</span> www.insightstap.com</span><span>11</span></div>
+  </div>
+  <style>.cstudy{display:grid;grid-template-columns:104px 1fr;gap:18px;align-items:center;background:#fff;border:1px solid var(--line-strong);border-radius:14px;padding:14px 18px}
+  .cs-out{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding-right:18px;border-right:1px solid var(--line);text-align:center}
+  .cs-out .cap{letter-spacing:.04em;font-size:8px;color:var(--cyan-dark)}
+  .cs-body{display:flex;flex-direction:column;gap:4px}</style>
+</section>
+
+<!-- ====================== 12 · TECHNOLOGY STACK ====================== -->
+<section class="page wash">
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">12 — Technology Stack</span><h2 class="h1">The stack behind the work.</h2><div class="rule"></div></div>
+      <span class="secno">12</span>
+    </div>
+    <p class="lead" style="max-width:165mm;margin-bottom:5mm">Four layers — from models to revenue systems — chosen to ship fast and scale safely.</p>
+
+    <div class="region" style="display:grid;grid-template-columns:1fr 1fr;gap:11px" >
+      <div class="card cardflex" style="background:#fff">
+        <div class="col" style="gap:12px">
+          <span class="kicker">AI &amp; LLM Engineering</span>
+          <div class="techgrid">
+            <span class="tech"><i style="--ic:url(assets/tech/openai.svg)"></i>OpenAI</span>
+            <span class="tech"><i style="--ic:url(assets/tech/anthropic.svg)"></i>Claude</span>
+            <span class="tech"><i style="--ic:url(assets/tech/googlegemini.svg)"></i>Gemini</span>
+            <span class="tech"><i style="--ic:url(assets/tech/langchain.svg)"></i>LangChain</span>
+            <span class="tech txt">RAG</span><span class="tech txt">MULTI-AGENT</span>
+          </div>
+        </div>
+        <div class="ctag">ORCHESTRATION · RAG · FINE-TUNING · EVALS</div>
+      </div>
+      <div class="card cardflex" style="background:#fff">
+        <div class="col" style="gap:12px">
+          <span class="kicker">Application Development</span>
+          <div class="techgrid">
+            <span class="tech"><i style="--ic:url(assets/tech/react.svg)"></i>React</span>
+            <span class="tech"><i style="--ic:url(assets/tech/nextdotjs.svg)"></i>Next.js</span>
+            <span class="tech"><i style="--ic:url(assets/tech/flutter.svg)"></i>Flutter</span>
+            <span class="tech"><i style="--ic:url(assets/tech/fastapi.svg)"></i>FastAPI</span>
+            <span class="tech"><i style="--ic:url(assets/tech/django.svg)"></i>Django</span>
+            <span class="tech"><i style="--ic:url(assets/tech/nodedotjs.svg)"></i>Node.js</span>
+            <span class="tech"><i style="--ic:url(assets/tech/spring.svg)"></i>Spring</span>
+          </div>
+        </div>
+        <div class="ctag">WEB · MOBILE · APIS — PRODUCTION-GRADE</div>
+      </div>
+      <div class="card cardflex" style="background:#fff">
+        <div class="col" style="gap:12px">
+          <span class="kicker">GTM &amp; Revenue Systems</span>
+          <div class="techgrid">
+            <span class="tech"><i style="--ic:url(assets/tech/hubspot.svg)"></i>HubSpot</span>
+            <span class="tech"><i style="--ic:url(assets/tech/salesforce.svg)"></i>Salesforce</span>
+            <span class="tech txt">CLAY</span><span class="tech txt">APOLLO</span>
+            <span class="tech txt">RB2B</span><span class="tech txt">COMMONROOM</span>
+            <span class="tech txt">FACTORS.AI</span>
+          </div>
+        </div>
+        <div class="ctag">SIGNAL CAPTURE · ENRICHMENT · ROUTING</div>
+      </div>
+      <div class="card cardflex" style="background:#fff">
+        <div class="col" style="gap:12px">
+          <span class="kicker">Automation &amp; Analytics</span>
+          <div class="techgrid">
+            <span class="tech"><i style="--ic:url(assets/tech/n8n.svg)"></i>n8n</span>
+            <span class="tech"><i style="--ic:url(assets/tech/make.svg)"></i>Make</span>
+            <span class="tech"><i style="--ic:url(assets/tech/zapier.svg)"></i>Zapier</span>
+            <span class="tech txt">WORKATO</span>
+            <span class="tech"><i style="--ic:url(assets/tech/tableau.svg)"></i>Tableau</span>
+            <span class="tech"><i style="--ic:url(assets/tech/looker.svg)"></i>Looker</span>
+            <span class="tech"><i style="--ic:url(assets/tech/mixpanel.svg)"></i>Mixpanel</span>
+          </div>
+        </div>
+        <div class="ctag">WORKFLOWS · DASHBOARDS · ATTRIBUTION</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:5mm;background:#fff">
+      <div class="flex" style="justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+        <span class="kicker">Languages, cloud &amp; data</span>
+        <div class="techgrid" style="justify-content:flex-end">
+          <span class="tech"><i style="--ic:url(assets/tech/python.svg)"></i>Python</span>
+          <span class="tech"><i style="--ic:url(assets/tech/typescript.svg)"></i>TypeScript</span>
+          <span class="tech"><i style="--ic:url(assets/tech/openjdk.svg)"></i>Java</span>
+          <span class="tech"><i style="--ic:url(assets/tech/amazonwebservices.svg)"></i>AWS</span>
+          <span class="tech"><i style="--ic:url(assets/tech/postgresql.svg)"></i>PostgreSQL</span>
+          <span class="tech"><i style="--ic:url(assets/tech/mongodb.svg)"></i>MongoDB</span>
+          <span class="tech"><i style="--ic:url(assets/tech/redis.svg)"></i>Redis</span>
+          <span class="tech"><i style="--ic:url(assets/tech/firebase.svg)"></i>Firebase</span>
+          <span class="tech"><i style="--ic:url(assets/tech/stripe.svg)"></i>Stripe</span>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span>12 · Technology Stack</span><span><span class="dot">●</span> www.insightstap.com</span><span>12</span></div>
+  </div>
+</section>
+
+<!-- ====================== 11 · SERVICE PACKAGES ====================== -->
+<section class="page">
+  <div class="dotgrid" style="opacity:.45"></div>
+  <div class="hexwm" style="width:112mm;height:112mm;right:-44mm;top:-26mm;opacity:.07"></div>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">13 — Service Packages</span><h2 class="h1">Engagements that scale with you.</h2><div class="rule"></div></div>
+      <span class="secno">13</span>
+    </div>
+    <p class="lead" style="max-width:166mm;margin-bottom:5mm">Two tracks — AI development and GTM engineering — plus performance marketing and a full-stack program that runs both as one engine.</p>
+
+    <div class="region" style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:12px">
+      <div class="card cardflex">
+        <div class="col" style="gap:10px;flex:1">
+          <div class="flex" style="justify-content:space-between;align-items:center"><div class="h3">AI Development Track</div><span class="tech txt" style="font-size:9px">BUILD</span></div>
+          <p class="body" style="font-size:11.5px;color:var(--muted)">Custom AI — from a first prototype to a production-grade SaaS platform.</p>
+          <div style="flex:1;display:flex;flex-direction:column;justify-content:space-evenly;gap:8px;margin-top:2px">
+            <div class="tier"><span class="tno">S</span><div class="body" style="font-size:12.5px"><b class="inkc">Starter</b> · Single AI agent or chatbot</div></div>
+            <div class="tier"><span class="tno">G</span><div class="body" style="font-size:12.5px"><b class="inkc">Growth</b> · Multi-agent system + integrations</div></div>
+            <div class="tier"><span class="tno">E</span><div class="body" style="font-size:12.5px"><b class="inkc">Enterprise</b> · Custom AI SaaS platform</div></div>
+          </div>
+        </div>
+        <div class="ctag">→ FROM A SINGLE AGENT TO A FULL PLATFORM</div>
+      </div>
+
+      <div class="card cardflex">
+        <div class="col" style="gap:10px;flex:1">
+          <div class="flex" style="justify-content:space-between;align-items:center"><div class="h3">GTM Engineering Track</div><span class="tech txt" style="font-size:9px">GROW</span></div>
+          <p class="body" style="font-size:11.5px;color:var(--muted)">A signal-led revenue engine, scaled in deliberate stages.</p>
+          <div style="flex:1;display:flex;flex-direction:column;justify-content:space-evenly;gap:8px;margin-top:2px">
+            <div class="tier"><span class="tno">F</span><div class="body" style="font-size:12.5px"><b class="inkc">Foundation</b> · Signals + basic automation</div></div>
+            <div class="tier"><span class="tno">A</span><div class="body" style="font-size:12.5px"><b class="inkc">Acceleration</b> · Full ABM + performance marketing</div></div>
+            <div class="tier"><span class="tno">T</span><div class="body" style="font-size:12.5px"><b class="inkc">Transformation</b> · Complete AI-powered GTM</div></div>
+          </div>
+        </div>
+        <div class="ctag">→ FROM FIRST SIGNALS TO A COMPLETE ENGINE</div>
+      </div>
+
+      <div class="card cardflex">
+        <div class="col" style="gap:10px;flex:1">
+          <div class="h3">Performance Ads, ABM &amp; Analytics</div>
+          <p class="body" style="font-size:11.5px;color:var(--muted)">Paid media and account-based plays, fully measured.</p>
+          <ul class="clean body" style="font-size:12.5px;flex:1;display:flex;flex-direction:column;justify-content:space-evenly;margin:2px 0"><li>Multichannel ads — Google, LinkedIn &amp; Meta</li><li>HubSpot management &amp; HubSpot ABM</li><li>Web &amp; product analytics · dedicated team</li></ul>
+        </div>
+        <div class="ctag">→ EVERY DOLLAR TRACEABLE TO PIPELINE</div>
+      </div>
+
+      <div class="card cardflex" style="background:linear-gradient(158deg,#0a8a8a 0%,#066d6d 60%,#045252 100%);border-color:transparent;color:#fff">
+        <span class="bignum" style="color:rgba(255,255,255,.10)">★</span>
+        <div class="col" style="gap:10px;flex:1">
+          <div class="flex" style="justify-content:space-between;align-items:center"><div class="h3" style="color:#fff">Full-Stack Package</div><span class="fvbadge" style="padding:3px 9px;font-size:9px"><span class="st">★</span> Most popular</span></div>
+          <p class="body" style="font-size:11.5px;color:rgba(255,255,255,.78)">Both tracks, run as one accountable engine.</p>
+          <ul class="clean" style="color:rgba(255,255,255,.94);font-size:12.5px;font-family:'Inter',sans-serif;flex:1;display:flex;flex-direction:column;justify-content:space-evenly;margin:2px 0"><li>Custom AI development</li><li>Complete GTM engineering</li><li>Performance ads + HubSpot ABM</li><li>Ongoing optimization · dedicated team</li></ul>
+        </div>
+        <div class="ctag" style="border-top-color:rgba(255,255,255,.22);color:var(--cyan-light)">→ EVERYTHING, UNDER ONE ROOF</div>
+      </div>
+    </div>
+    <div class="foot"><span>13 · Service Packages</span><span><span class="dot">●</span> www.insightstap.com</span><span>13</span></div>
+  </div>
+  <style>.tier{display:grid;grid-template-columns:24px 1fr;gap:11px;align-items:center}
+  .tier .tno{width:24px;height:24px;border-radius:7px;background:var(--cyan-wash);color:var(--cyan-dark);font-family:'Space Mono',monospace;font-weight:700;font-size:11px;display:flex;align-items:center;justify-content:center}
+  .card[style*="0a8a8a"] ul.clean li::before{background:var(--cyan-light)}</style>
+</section>
+
+<!-- ====================== 12 · INDUSTRIES & USE CASES ====================== -->
+<section class="page wash">
+  <div class="hexwm" style="width:104mm;height:104mm;left:-40mm;bottom:-26mm;opacity:.07"></div>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">14 — Industries &amp; Use Cases</span><h2 class="h1">Where we create leverage.</h2><div class="rule"></div></div>
+      <span class="secno">14</span>
+    </div>
+    <p class="lead" style="max-width:166mm;margin-bottom:5mm">The same AI + GTM engine, tuned to the realities of each sector — and the use cases that move the needle fastest.</p>
+
+    <div class="region" style="display:flex;flex-direction:column;gap:12px">
+      <div style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:11px">
+        <div class="tile"><img src="assets/unsplash/ind-saas.jpg" alt="B2B SaaS and cloud"/><div class="gr"></div><div class="lbl">B2B SaaS &amp; Cloud<span class="s">Cloud-native scale</span></div></div>
+        <div class="tile"><img src="assets/unsplash/ind-healthcare.jpg" alt="Healthcare and medtech"/><div class="gr"></div><div class="lbl">Healthcare &amp; MedTech<span class="s">Compliant · patient-first</span></div></div>
+        <div class="tile"><img src="assets/unsplash/ind-itservices.jpg" alt="IT services and MSPs"/><div class="gr"></div><div class="lbl">IT Services &amp; MSPs<span class="s">Managed delivery</span></div></div>
+        <div class="tile"><img src="assets/unsplash/ind-fintech.jpg" alt="Financial services"/><div class="gr"></div><div class="lbl">Financial Services<span class="s">Secure &amp; data-driven</span></div></div>
+        <div class="tile"><img src="assets/unsplash/ind-ecommerce.jpg" alt="E-commerce and retail"/><div class="gr"></div><div class="lbl">E-commerce &amp; Retail<span class="s">Conversion at scale</span></div></div>
+        <div class="tile"><img src="assets/unsplash/ind-manufacturing.jpg" alt="Manufacturing and logistics" style="filter:saturate(.72)"/><div class="gr teal"></div><div class="lbl">Manufacturing &amp; Logistics<span class="s">Operational leverage</span></div></div>
+      </div>
+
+      <div class="card" style="background:#fff">
+        <span class="kicker" style="display:block;margin-bottom:10px">Key use cases</span>
+        <div class="flex" style="gap:8px;flex-wrap:wrap">
+          <span class="pill"><span class="tick">→</span> Sales acceleration with AI SDRs</span>
+          <span class="pill"><span class="tick">→</span> Customer support automation</span>
+          <span class="pill"><span class="tick">→</span> Product-led growth systems</span>
+          <span class="pill"><span class="tick">→</span> Custom AI SaaS development</span>
+          <span class="pill"><span class="tick">→</span> Revenue operations optimization</span>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span>14 · Industries &amp; Use Cases</span><span><span class="dot">●</span> www.insightstap.com</span><span>14</span></div>
+  </div>
+</section>
+
+<!-- ====================== 13 · METHODOLOGY ====================== -->
+<section class="page">
+  <div class="dotgrid" style="opacity:.4"></div>
+  <div class="hexwm" style="width:120mm;height:120mm;right:-48mm;top:30mm;opacity:.07"></div>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">15 — Implementation Methodology</span><h2 class="h1">How an engagement runs.</h2><div class="rule"></div></div>
+      <span class="secno">15</span>
+    </div>
+    <p class="lead" style="max-width:165mm;margin-bottom:4mm">A predictable path from technical audit to a system that's live, monitored and improving.</p>
+
+    <div class="region" style="display:flex;flex-direction:column">
+      <div class="mile">
+        <div class="mile-node"><span class="mono">01</span></div>
+        <div class="mile-body"><div class="flex" style="justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px"><div class="h3">Discovery &amp; Architecture</div><span class="phase mono">WEEK 1</span></div><p class="body">Technical audit · API assessments · data-flow mapping · stack recommendations.</p></div>
+      </div>
+      <div class="mile">
+        <div class="mile-node"><span class="mono">02</span></div>
+        <div class="mile-body"><div class="flex" style="justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px"><div class="h3">Development</div><span class="phase mono">WEEKS 2–6</span></div><p class="body">Core system build · AI model training · integration setup · testing protocols.</p></div>
+      </div>
+      <div class="mile">
+        <div class="mile-node"><span class="mono">03</span></div>
+        <div class="mile-body"><div class="flex" style="justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px"><div class="h3">Deployment</div><span class="phase mono">GO-LIVE</span></div><p class="body">Production launch · team training · documentation · monitoring setup.</p></div>
+      </div>
+      <div class="mile last">
+        <div class="mile-node"><span class="mono">04</span></div>
+        <div class="mile-body"><div class="flex" style="justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px"><div class="h3">Optimization</div><span class="phase mono">ONGOING</span></div><p class="body">Performance tuning · A/B testing · scale testing · iteration planning.</p></div>
+      </div>
+    </div>
+
+    <div class="card soft" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center;margin-top:5mm">
+      <div class="col" style="gap:3px"><span class="kicker">Production</span><span class="body" style="font-size:11.5px">Scalable cloud architecture</span></div>
+      <div class="col" style="gap:3px"><span class="kicker">Secure</span><span class="body" style="font-size:11.5px">API &amp; data workflows</span></div>
+      <div class="col" style="gap:3px"><span class="kicker">Compliant</span><span class="body" style="font-size:11.5px">GDPR · SOC 2-aware</span></div>
+      <div class="col" style="gap:3px"><span class="kicker">Handover</span><span class="body" style="font-size:11.5px">Docs &amp; monitoring</span></div>
+    </div>
+    <div class="foot"><span>15 · Implementation Methodology</span><span><span class="dot">●</span> www.insightstap.com</span><span>15</span></div>
+  </div>
+  <style>.mile{display:grid;grid-template-columns:64px 1fr;gap:20px;align-items:start;position:relative;flex:1}
+  .mile::before{content:'';position:absolute;left:31px;top:50px;bottom:-2px;width:2px;background:linear-gradient(var(--cyan),var(--cyan-light))}
+  .mile.last::before{display:none}
+  .mile.last{flex:none}
+  .mile-node{width:64px;height:64px;border-radius:16px;background:var(--cyan-wash);border:1.5px solid var(--cyan);display:flex;align-items:center;justify-content:center;z-index:1}
+  .mile-node .mono{font-size:18px;font-weight:700;color:var(--cyan-dark)}
+  .mile-body{padding-top:14px}
+  .mile-body .phase{font-size:9.5px;color:var(--cyan-dark);letter-spacing:.08em;border:1px solid var(--line-strong);border-radius:999px;padding:3px 10px}</style>
+</section>
+
+<!-- ====================== 14 · CLIENT OUTCOMES ====================== -->
+<section class="page dark">
+  <div class="dotgrid w" style="opacity:.26"></div>
+  <div class="hexwm" style="width:120mm;height:120mm;left:-44mm;bottom:-34mm;opacity:.14"></div>
+  <div class="hexwm" style="width:80mm;height:80mm;right:-28mm;top:-20mm;opacity:.1"></div>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">16 — Proven Results</span><h2 class="h1">The numbers we move.</h2><div class="rule"></div></div>
+      <span class="secno">16</span>
+    </div>
+    <p class="lead" style="max-width:162mm;margin-bottom:4mm">Real outcomes from our AI &amp; GTM engagements — every figure starts as a metric we agree on, then stay accountable to.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin-bottom:4mm">
+      <div class="ocard"><div class="statnum">40%</div><div class="statlabel" style="margin-top:8px">Lower CAC <span style="opacity:.7">· in 60 days</span></div></div>
+      <div class="ocard"><div class="statnum">3×</div><div class="statlabel" style="margin-top:8px">Faster sales cycles</div></div>
+      <div class="ocard"><div class="statnum">6.43%</div><div class="statlabel" style="margin-top:8px">CTR · precision PPC</div></div>
+      <div class="ocard"><div class="statnum">42%</div><div class="statlabel" style="margin-top:8px">More in-market accounts</div></div>
+    </div>
+
+    <span class="kicker" style="color:var(--cyan-light);display:block;margin-bottom:9px">Featured case studies</span>
+    <div class="region" style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:11px">
+      <div class="card" style="display:grid;grid-template-columns:92px 1fr;padding:0;overflow:hidden;align-items:stretch">
+        <div class="tile" style="height:100%;border-radius:0"><img src="assets/unsplash/cs-realestate.jpg" alt="Real estate"/><div class="gr teal"></div></div>
+        <div class="col" style="gap:7px;padding:16px 17px;justify-content:center">
+          <div class="flex" style="justify-content:space-between;align-items:baseline"><div class="h3" style="color:#fff;font-size:15px">Real Estate CRM</div><span class="tech txt" style="font-size:8.5px">GTM</span></div>
+          <p class="small">Multi-channel outreach transformation across email, LinkedIn and paid — into one accountable pipeline.</p>
+          <span class="ctag" style="border:none;padding:0;margin:2px 0 0">→ FASTER, CLEANER PIPELINE</span>
+        </div>
+      </div>
+      <div class="card" style="display:grid;grid-template-columns:92px 1fr;padding:0;overflow:hidden;align-items:stretch">
+        <div class="tile" style="height:100%;border-radius:0"><img src="assets/unsplash/analytics-dashboard.jpg" alt="Performance marketing dashboard"/><div class="gr teal"></div></div>
+        <div class="col" style="gap:7px;padding:16px 17px;justify-content:center">
+          <div class="flex" style="justify-content:space-between;align-items:baseline"><div class="h3" style="color:#fff;font-size:15px">IT Service Provider</div><span class="tech txt" style="font-size:8.5px">PPC</span></div>
+          <p class="small">Precision performance marketing achieving a <b style="color:#fff">6.43% CTR</b> on highly targeted campaigns.</p>
+          <span class="ctag" style="border:none;padding:0;margin:2px 0 0">→ 6.43% CTR ACHIEVED</span>
+        </div>
+      </div>
+      <div class="card" style="display:grid;grid-template-columns:92px 1fr;padding:0;overflow:hidden;align-items:stretch">
+        <div class="tile" style="height:100%;border-radius:0"><img src="assets/unsplash/cs-healthcare.jpg" alt="Healthcare telehealth"/><div class="gr teal"></div></div>
+        <div class="col" style="gap:7px;padding:16px 17px;justify-content:center">
+          <div class="flex" style="justify-content:space-between;align-items:baseline"><div class="h3" style="color:#fff;font-size:15px">Healthcare AI</div><span class="tech txt" style="font-size:8.5px">VOICE</span></div>
+          <p class="small">AI voice agents automating patient communications — 24/7 coverage, hours reclaimed for nurses.</p>
+          <span class="ctag" style="border:none;padding:0;margin:2px 0 0">→ 24/7 PATIENT COVERAGE</span>
+        </div>
+      </div>
+      <div class="card" style="display:grid;grid-template-columns:92px 1fr;padding:0;overflow:hidden;align-items:stretch">
+        <div class="tile" style="height:100%;border-radius:0"><img src="assets/unsplash/cs-growth.jpg" alt="SaaS growth"/><div class="gr teal"></div></div>
+        <div class="col" style="gap:7px;padding:16px 17px;justify-content:center">
+          <div class="flex" style="justify-content:space-between;align-items:baseline"><div class="h3" style="color:#fff;font-size:15px">SaaS Platform</div><span class="tech txt" style="font-size:8.5px">FULL-STACK</span></div>
+          <p class="small">Complete GTM engine deployment — signals, automation and AI outreach wired end to end.</p>
+          <span class="ctag" style="border:none;padding:0;margin:2px 0 0">→ END-TO-END GTM ENGINE</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:4mm;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;background:rgba(255,255,255,.06)">
+      <div class="col" style="gap:2px"><span class="statnum" style="font-size:20px">12:1</span><span class="statlabel">Average ROI</span></div>
+      <div class="col" style="gap:2px"><span class="statnum" style="font-size:20px">99.9%</span><span class="statlabel">Uptime SLA</span></div>
+      <div class="col" style="gap:2px"><span class="statnum" style="font-size:20px">94%</span><span class="statlabel">AI intent accuracy</span></div>
+    </div>
+    <div class="foot"><span>16 · Proven Results</span><span><span class="dot" style="color:var(--cyan-light)">●</span> www.insightstap.com</span><span>16</span></div>
+  </div>
+  <style>.ocard{display:flex;flex-direction:column;justify-content:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:22px 20px}
+  .ocard .statnum{font-size:38px}</style>
+</section>
+
+<!-- ====================== 15 · LEADERSHIP ====================== -->
+<section class="page">
+  <div class="linegrid"></div>
+  <div class="hexwm" style="width:110mm;height:110mm;right:-44mm;bottom:-28mm;opacity:.07"></div>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">17 — Leadership &amp; Delivery Team</span><h2 class="h1">The people behind the work.</h2><div class="rule"></div></div>
+      <span class="secno">17</span>
+    </div>
+    <p class="lead" style="max-width:165mm;margin-bottom:5mm">Senior operators across engineering, AI, GTM and growth — accountable from first idea to last mile.</p>
+
+    <div class="region" style="display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:13px" >
+      <div class="leader"><img class="ph" src="assets/leaders/ritesh.jpg" alt="Ritesh Osta"/><div class="nm">Ritesh Osta</div><div class="rl">Founder &amp; CEO</div><p class="small" style="margin-top:6px">GTM engines, AI agents and revenue systems behind some of the fastest-growing B2B teams globally.</p></div>
+      <div class="leader"><img class="ph" src="assets/leaders/swarnendu.png" alt="Swarnendu De"/><div class="nm">Swarnendu De</div><div class="rl">CTO</div><p class="small" style="margin-top:6px">600+ products shipped, Harvard-certified. 18+ years architecting SaaS &amp; AI for Google, Best Buy and 250+ startups.</p></div>
+      <div class="leader"><img class="ph" src="assets/leaders/hassan.png" alt="Hassan Malik"/><div class="nm">Hassan Malik</div><div class="rl">VP, UK Sales</div><p class="small" style="margin-top:6px">UK-based B2B growth leader — shortening deal cycles and activating high-intent accounts with signal-driven GTM.</p></div>
+      <div class="leader"><img class="ph" src="assets/leaders/shivani.webp" alt="Shivani Nath"/><div class="nm">Shivani Nath</div><div class="rl">VP, Performance Marketing</div><p class="small" style="margin-top:6px">Owns PPC, SEO and paid media — engineering campaigns where every dollar is traceable to pipeline.</p></div>
+      <div class="leader"><img class="ph" src="assets/leaders/moumita.jpg" alt="Moumita Dasgupta"/><div class="nm">Moumita Dasgupta</div><div class="rl">VP, Branding</div><p class="small" style="margin-top:6px">Turns complex B2B offerings into sharp, memorable positioning that wins trust before the first sales call.</p></div>
+      <div class="leader"><img class="ph" src="assets/leaders/annesha.png" alt="Annesha Dutta"/><div class="nm">Annesha Dutta</div><div class="rl">Advisor, Customer Relations</div><p class="small" style="margin-top:6px">Turns client engagements into long-term partnerships through consistent results and honest communication.</p></div>
+    </div>
+
+    <div class="card soft" style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center;margin-top:5mm">
+      <div class="col" style="gap:3px"><div class="statnum" style="font-size:26px">15+</div><span class="statlabel">Senior engineers</span></div>
+      <div class="col" style="gap:3px"><div class="statnum" style="font-size:26px">1,000+</div><span class="statlabel">Successful deployments</span></div>
+      <div class="col" style="gap:3px"><div class="statnum" style="font-size:26px">AI · GTM</div><span class="statlabel">Engineers · DevOps · data · GTM</span></div>
+    </div>
+    <div class="foot"><span>17 · Leadership &amp; Delivery Team</span><span><span class="dot">●</span> www.insightstap.com</span><span>17</span></div>
+  </div>
+</section>
+
+<!-- ====================== 16 · ENGAGEMENT + TRUST + CONTACT ====================== -->
+<section class="page wash">
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">18 — Engagement Models &amp; Trust</span><h2 class="h1">Work with us your way.</h2><div class="rule"></div></div>
+      <span class="secno">18</span>
+    </div>
+
+    <div class="region" style="display:flex;flex-direction:column;justify-content:space-between;gap:6mm">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+        <div class="card cardflex" style="background:#fff;min-height:140px"><div class="col" style="gap:7px"><span class="mono cyan" style="font-size:13px;font-weight:700">A</span><div class="h3">Staff Augmentation</div><p class="body">Flexible scaling with your tech stack — senior talent embedded in your team.</p></div><div class="ctag">→ EMBEDDED SENIOR TALENT</div></div>
+        <div class="card cardflex" style="background:#fff;min-height:140px"><div class="col" style="gap:7px"><span class="mono cyan" style="font-size:13px;font-weight:700">B</span><div class="h3">Project-Based</div><p class="body">Fixed scope, defined timeline and clear deliverables, end to end.</p></div><div class="ctag">→ FIXED SCOPE &amp; TIMELINE</div></div>
+        <div class="card cardflex" style="background:#fff;min-height:140px"><div class="col" style="gap:7px"><span class="mono cyan" style="font-size:13px;font-weight:700">C</span><div class="h3">Managed Services</div><p class="body">Full ownership, SLA-guaranteed, with continuous improvement.</p></div><div class="ctag">→ SLA-GUARANTEED OWNERSHIP</div></div>
+      </div>
+
+      <div class="imgband" style="height:26mm">
+        <img src="assets/unsplash/engagement.jpg" alt="A consulting working session"/>
+        <div class="ov teal"></div>
+        <div class="ct" style="padding:0 20px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:14px">
+          <p class="subh" style="color:#fff;font-size:13px;max-width:120mm">Not sure which model fits? Book a working session and we'll recommend the right engagement for your goals.</p>
+          <span class="pill" style="background:var(--cyan);border-color:var(--cyan);color:#023a3a;font-weight:600;white-space:nowrap">Start here →</span>
+        </div>
+      </div>
+
+      <div class="col" style="gap:10px">
+        <div class="flex" style="justify-content:space-between;align-items:center">
+          <span class="kicker">Trusted by industry leaders</span>
+          <span class="pill" style="border-color:var(--gold-tint);background:#fffaf0;color:var(--gold-text);font-family:'Space Mono';font-size:10px;gap:5px">5.0★ · Top 2% Fiverr Pro</span>
+        </div>
+        <div class="logowall">
+          <div class="cell"><img src="assets/clients/allride.png" alt="AllRide"/></div>
+          <div class="cell"><img src="assets/clients/snapfix.png" alt="Snapfix"/></div>
+          <div class="cell"><img src="assets/clients/shootsta.png" alt="Shootsta"/></div>
+          <div class="cell"><img src="assets/clients/woliba.png" alt="Woliba"/></div>
+          <div class="cell"><img src="assets/clients/innofied.png" alt="Innofied"/></div>
+          <div class="cell"><img src="assets/clients/aws.png" alt="AWS"/></div>
+          <div class="cell"><img src="assets/clients/apollo.svg" alt="Apollo"/></div>
+          <div class="cell"><img src="assets/clients/reb2b.svg" alt="RB2B"/></div>
+          <div class="cell"><img src="assets/clients/fullenrich.svg" alt="FullEnrich"/></div>
+          <div class="cell" style="background:var(--cyan-wash)"><span class="cap" style="text-align:center">+ many<br/>more</span></div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div class="card" style="background:#fff;min-height:118px;display:flex;flex-direction:column;justify-content:center"><span class="mono" style="font-size:26px;color:var(--cyan);line-height:.6">“</span><p class="quote" style="font-size:13.5px">Delivered our AI chatbot ahead of schedule — customer engagement improved 45% in the first month.</p><span class="cap" style="display:block;margin-top:9px">— Sarah Chen · VP Marketing, E-commerce</span></div>
+        <div class="card" style="background:#fff;min-height:118px;display:flex;flex-direction:column;justify-content:center"><span class="mono" style="font-size:26px;color:var(--cyan);line-height:.6">“</span><p class="quote" style="font-size:13.5px">Like having an internal team that actually cared about our success. The ROI has been exceptional — 12:1 and growing.</p><span class="cap" style="display:block;margin-top:9px">— Michael Rodriguez · CEO, B2B SaaS</span></div>
+      </div>
+    </div>
+    <div class="foot"><span>18 · Engagement &amp; Trust</span><span><span class="dot">●</span> www.insightstap.com</span><span>18</span></div>
+  </div>
+</section>
+
+<!-- ====================== 17 · FOUNDER SPOTLIGHT ====================== -->
+<section class="page dark">
+  <div class="bgphoto"><img src="assets/unsplash/founder-bg.jpg" alt="" style="opacity:.38"/><div class="grad" style="background:linear-gradient(150deg,rgba(6,109,109,.70),rgba(4,82,82,.80) 50%,rgba(2,40,40,.92))"></div></div>
+  <div class="dotgrid w" style="opacity:.22"></div>
+  <div class="hexwm" style="width:120mm;height:120mm;right:-46mm;top:-30mm;opacity:.12"></div>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">19 — Founder Spotlight</span><h2 class="h1">Meet Ritesh Osta.</h2><div class="rule"></div></div>
+      <span class="secno">19</span>
+    </div>
+
+    <div class="region" style="display:grid;grid-template-columns:.82fr 1.18fr;gap:18px;align-items:stretch">
+      <div class="col" style="gap:11px">
+        <div class="tile" style="flex:1;min-height:0"><img src="assets/leaders/ritesh.jpg" alt="Ritesh Osta, Founder &amp; CEO of InsightsTap" style="object-position:center 22%"/><div class="gr"></div><div class="lbl">Ritesh Osta<span class="s">Founder &amp; CEO · @riteshosta</span></div></div>
+        <div class="flex" style="gap:8px;align-items:center;justify-content:center">
+          <span class="fvbadge"><span class="st">★</span> Top 2% Fiverr Pro</span>
+          <span class="pill" style="background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.28);color:#fff;font-family:'Space Mono';font-size:10px">5.0★ rating</span>
+        </div>
+      </div>
+
+      <div class="col" style="gap:13px;justify-content:center">
+        <p class="lead" style="color:rgba(233,253,253,.92);font-size:14.5px">
+          Ritesh founded InsightsTap to give B2B companies <b style="color:#fff">one team for both custom AI development
+          and signal-led GTM</b> — no handoffs, no silos. He's built the AI agents, GTM engines and revenue systems
+          behind some of the fastest-growing B2B teams worldwide.
+        </p>
+        <ul class="clean" style="color:rgba(233,253,253,.88);font-family:'Inter',sans-serif;font-size:12.5px">
+          <li>18+ years across Fortune 500s and high-growth startups</li>
+          <li>1,000+ B2B transformations delivered end to end</li>
+          <li>Shipped his own products — OneGPT, JobFeeder &amp; AetherPilot</li>
+          <li>Top 2% Fiverr Pro with a 5.0★ rating — every client, every time</li>
+        </ul>
+        <div class="card" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16)">
+          <span class="mono" style="font-size:24px;color:var(--cyan-light);line-height:.6">“</span>
+          <p class="quote" style="font-size:14px;color:#fff">Cleared the mind-blocks and confusion most startups face. The dual expertise in AI development and GTM strategy is unmatched.</p>
+          <span class="cap" style="display:block;margin-top:8px;color:rgba(233,253,253,.7)">— Tech Startup Founder · Canada</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:5mm;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16);text-align:center">
+      <div class="col" style="gap:2px"><div class="statnum" style="font-size:22px">Top 2%</div><span class="statlabel">Fiverr Pro</span></div>
+      <div class="col" style="gap:2px"><div class="statnum" style="font-size:22px">5.0★</div><span class="statlabel">Client rating</span></div>
+      <div class="col" style="gap:2px"><div class="statnum" style="font-size:22px">18+</div><span class="statlabel">Years experience</span></div>
+      <div class="col" style="gap:2px"><div class="statnum" style="font-size:22px">1,000+</div><span class="statlabel">Transformations</span></div>
+    </div>
+    <div class="foot"><span>19 · Founder Spotlight</span><span><span class="dot" style="color:var(--cyan-light)">●</span> www.insightstap.com</span><span>19</span></div>
+  </div>
+</section>
+
+<!-- ====================== 18 · CONNECT / WEBSITES & SOCIAL ====================== -->
+<section class="page">
+  <div class="dotgrid" style="opacity:.45"></div>
+  <div class="hexwm" style="width:108mm;height:108mm;right:-50mm;top:34mm;opacity:.06"></div>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">20 — Connect</span><h2 class="h1">Websites &amp; Social.</h2><div class="rule"></div></div>
+      <span class="secno">20</span>
+    </div>
+
+    <div class="region" style="display:flex;flex-direction:column;gap:14px">
+      <div class="imgband" style="height:48mm">
+        <img src="assets/unsplash/video-brief.jpg" alt="A short video brief"/>
+        <div class="ov teal"></div>
+        <div class="ct" style="padding:22px 24px;height:100%;display:flex;flex-direction:column;justify-content:center;gap:14px">
+          <p class="h2" style="color:#fff;max-width:122mm">Before you explore — watch a quick video brief. It's under 5 minutes.</p>
+          <span class="watchbtn"><span class="tri"></span> Watch Now</span>
+        </div>
+      </div>
+
+      <div style="flex:1;display:flex;flex-direction:column;justify-content:space-evenly;gap:12px;min-height:0">
+        <div class="crow"><span class="ckey">Fiverr Pro Profile</span><span class="cval">@riteshosta</span><span class="cext">↗</span></div>
+        <div class="crow"><span class="ckey">Company</span><span class="cval">www.insightstap.com</span><span class="cext">↗</span></div>
+        <div class="crow"><span class="ckey">Personal Website</span><span class="cval">www.riteshosta.com</span><span class="cext">↗</span></div>
+        <div class="crow"><span class="ckey">LinkedIn Profile</span><span class="cval">View LinkedIn Profile</span><span class="cext">↗</span></div>
+      </div>
+
+      <div class="card soft" style="display:flex;gap:16px;align-items:center;padding:14px 18px">
+        <div style="background:#fff;border-radius:9px;padding:5px;border:1px solid var(--line);flex:none"><img src="assets/qr/book-call.png" alt="Scan to book a discovery call" style="width:21mm;height:21mm;display:block"/></div>
+        <div class="col" style="gap:4px">
+          <span class="kicker">Start the conversation</span>
+          <p class="h3" style="font-weight:600;font-size:15px">Scan to book a discovery call — or email <span class="cyan">ritesh@insightstap.com</span> directly.</p>
+        </div>
+      </div>
+
+      <div class="flex" style="justify-content:space-between;align-items:center;padding-top:4px">
+        <div class="brandmark"><img src="assets/brand/logo-primary.png" alt="InsightsTap" style="height:26px"/></div>
+        <div class="flex" style="gap:10px;align-items:center">
+          <span style="font-family:'Inter',sans-serif;font-weight:600;font-size:12.5px;color:var(--ink)">@riteshosta</span>
+          <span class="fvbadge"><span class="st">★</span> Fiverr Pro</span>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span>20 · Connect</span><span><span class="dot">●</span> www.insightstap.com</span><span>20</span></div>
+  </div>
+  <style>.crow{display:grid;grid-template-columns:170px 1fr 22px;align-items:center;gap:14px;background:#fff;border:1px solid var(--line-strong);border-radius:12px;padding:15px 18px}
+  .crow .ckey{font-family:'Raleway',sans-serif;font-weight:700;font-size:13.5px;color:var(--ink)}
+  .crow .cval{font-family:'Inter',sans-serif;font-size:13.5px;color:var(--cyan-dark);font-weight:600;letter-spacing:.01em}
+  .crow .cext{font-family:'Space Mono',monospace;font-size:16px;color:var(--cyan);text-align:center}
+  .watchbtn{display:inline-flex;align-items:center;gap:9px;align-self:flex-start;background:var(--cyan);color:#023a3a;font-family:'Raleway',sans-serif;font-weight:700;font-size:15px;border-radius:999px;padding:10px 20px}
+  .watchbtn .tri{width:0;height:0;border-style:solid;border-width:6px 0 6px 10px;border-color:transparent transparent transparent #023a3a}</style>
+</section>
+
+<!-- ====================== 19 · CTA / BACK COVER ====================== -->
+<section class="page dark">
+  <div class="dotgrid w" style="opacity:.34"></div>
+  <div class="hexwm" style="width:148mm;height:148mm;right:-64mm;bottom:-62mm;opacity:.13"></div>
+  <svg viewBox="0 0 400 400" style="position:absolute;left:-130px;top:-120px;width:330px;height:330px;z-index:1;opacity:.5">
+    <circle cx="200" cy="200" r="150" fill="none" stroke="rgba(106,227,225,.16)" stroke-width="1.5"/>
+    <circle cx="200" cy="50" r="11" fill="none" stroke="rgba(106,227,225,.26)" stroke-width="1.5"/>
+    <circle cx="350" cy="200" r="11" fill="none" stroke="rgba(106,227,225,.26)" stroke-width="1.5"/>
+    <circle cx="200" cy="350" r="11" fill="none" stroke="rgba(106,227,225,.26)" stroke-width="1.5"/>
+    <circle cx="50" cy="200" r="11" fill="none" stroke="rgba(106,227,225,.26)" stroke-width="1.5"/>
+  </svg>
+  <div class="inner">
+    <div class="flex" style="justify-content:space-between;align-items:center">
+      <img src="assets/brand/logo-white.png" alt="InsightsTap" style="height:28px"/>
+      <span class="fvbadge"><span class="st">★</span> Top Rated · Fiverr Pro</span>
+    </div>
+
+    <div class="grow" style="display:flex;flex-direction:column;justify-content:center;gap:8mm">
+      <div>
+        <span class="kicker" style="color:var(--cyan-light);letter-spacing:.2em">Start your AI-powered growth journey</span>
+        <div class="rule" style="margin:13px 0 15px"></div>
+        <h2 class="display" style="font-size:42px;color:#fff;max-width:165mm">Let's build the <span style="color:var(--cyan-light)">future together.</span></h2>
+      </div>
+
+      <div>
+        <span class="kicker" style="color:var(--cyan-light);margin-bottom:10px;display:block">Three ways to engage</span>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:13px">
+          <div class="card" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16)"><span class="idx" style="color:var(--cyan-light)">01</span><div class="h3" style="color:#fff;margin-top:7px">Build Custom AI</div><p class="small" style="margin-top:6px">Transform operations with tailored AI solutions.</p></div>
+          <div class="card" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16)"><span class="idx" style="color:var(--cyan-light)">02</span><div class="h3" style="color:#fff;margin-top:7px">Engineer Your GTM</div><p class="small" style="margin-top:6px">Deploy signal-led growth engines that scale revenue.</p></div>
+          <div class="card" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16)"><span class="idx" style="color:var(--cyan-light)">03</span><div class="h3" style="color:#fff;margin-top:7px">Full Transformation</div><p class="small" style="margin-top:6px">A complete AI + GTM overhaul, run as one engine.</p></div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.55fr 1fr;gap:13px">
+        <div class="card" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16)">
+          <span class="kicker" style="color:var(--cyan-light);display:block;margin-bottom:12px">Contact</span>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:13px 16px">
+            <div class="col" style="gap:2px"><span class="cap" style="color:rgba(233,253,253,.6)">Email</span><span style="font-family:'Inter',sans-serif;font-weight:600;font-size:12.5px;color:#fff;letter-spacing:.01em">ritesh@insightstap.com</span></div>
+            <div class="col" style="gap:2px"><span class="cap" style="color:rgba(233,253,253,.6)">Website</span><span style="font-family:'Inter',sans-serif;font-weight:600;font-size:12.5px;color:#fff;letter-spacing:.01em">www.insightstap.com</span></div>
+            <div class="col" style="gap:2px"><span class="cap" style="color:rgba(233,253,253,.6)">Fiverr Pro</span><span style="font-family:'Inter',sans-serif;font-weight:600;font-size:12.5px;color:#fff;letter-spacing:.01em">@riteshosta</span></div>
+            <div class="col" style="gap:2px"><span class="cap" style="color:rgba(233,253,253,.6)">LinkedIn</span><span style="font-family:'Inter',sans-serif;font-weight:600;font-size:12.5px;color:#fff;letter-spacing:.01em">View Profile ↗</span></div>
+          </div>
+        </div>
+        <div class="card" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16);display:flex;gap:14px;justify-content:space-around;align-items:center">
+          <div class="col" style="gap:7px;align-items:center"><div style="background:#fff;border-radius:8px;padding:5px"><img src="assets/qr/book-call.png" alt="Book a discovery call" style="width:24mm;height:24mm;display:block"/></div><span class="cap" style="color:rgba(233,253,253,.78);text-align:center;font-size:8.5px">Book a discovery call</span></div>
+          <div class="col" style="gap:7px;align-items:center"><div style="background:#fff;border-radius:8px;padding:5px"><img src="assets/qr/portfolio.png" alt="Download full portfolio" style="width:24mm;height:24mm;display:block"/></div><span class="cap" style="color:rgba(233,253,253,.78);text-align:center;font-size:8.5px">Download portfolio</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="bannerstrip">
+        <span>Dedicated Experts</span><span class="bsep">●</span>
+        <span>Weekly Progress Reports</span><span class="bsep">●</span>
+        <span>Fixed Monthly Cost</span><span class="bsep">●</span>
+        <span>Seamless Integration</span>
+      </div>
+      <div class="flex" style="justify-content:space-between;align-items:center;margin-top:13px">
+        <span class="cap" style="color:rgba(233,253,253,.55)">© 2026 InsightsTap · Dallas, TX · Kolkata, IN</span>
+        <span class="cap" style="color:rgba(233,253,253,.55)">Build · Grow · Integrate</span>
+      </div>
+    </div>
+  </div>
+  <style>.bannerstrip{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 18px;border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:14px 18px;background:rgba(2,46,46,.6)}
+  .bannerstrip span{font-family:'Poppins',sans-serif;font-weight:500;font-size:11.5px;color:#eafdfd;white-space:nowrap}
+  .bannerstrip .bsep{color:var(--cyan-light);font-size:7px}</style>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+[
+  {
+    "slot": "cover-hero",
+    "file": "assets/unsplash/cover-hero.jpg",
+    "photographer": "Steve A Johnson",
+    "username": "steve_j",
+    "photo_id": "vH1W_2oVPnM",
+    "alt": "Flowing teal and cyan light-fiber streams sweeping across a deep black background with subtle warm accent glints, evoking data converging into growth"
+  },
+  {
+    "slot": "brand-network",
+    "file": "assets/unsplash/brand-network.jpg",
+    "photographer": "Conny Schneider",
+    "username": "choys_",
+    "photo_id": "xuTJZ7uD7PI",
+    "alt": "Abstract glowing blue node-and-line data mesh of connected dots over a dark navy background fading to near-black"
+  },
+  {
+    "slot": "ai-chat",
+    "file": "assets/unsplash/ai-chat.jpg",
+    "photographer": "Zan Lazarevic",
+    "username": "zanlazarevic",
+    "photo_id": "AmEeEB1g3XQ",
+    "alt": "Person working at a sleek laptop showing a productivity app interface, smartphone in hand, on a clean modern wooden desk"
+  },
+  {
+    "slot": "ai-automation",
+    "file": "assets/unsplash/ai-automation.jpg",
+    "photographer": "jonakoh _",
+    "username": "jonakoh",
+    "photo_id": "r5lbaK3fDaM",
+    "alt": "Abstract blue glowing particle-dot mesh forming a flowing wave on a dark background, evoking autonomous data flow and network automation"
+  },
+  {
+    "slot": "ai-chatbot",
+    "file": "assets/unsplash/ai-chatbot.jpg",
+    "photographer": "Brunxs Monochrome",
+    "username": "brunxs",
+    "photo_id": "WjWpTPZlu7E",
+    "alt": "Professional woman in a white blazer messaging on a smartphone at an outdoor table with a coffee cup, focused customer engagement moment"
+  },
+  {
+    "slot": "voice-ai",
+    "file": "assets/unsplash/voice-ai.jpg",
+    "photographer": "BaljkanN 4",
+    "username": "baljkann4",
+    "photo_id": "wnpf3Q5pkXA",
+    "alt": "Smiling professional support agent wearing a headset at her workstation in a modern call center, colleagues working in the background"
+  },
+  {
+    "slot": "voice-tech",
+    "file": "assets/unsplash/voice-tech.jpg",
+    "photographer": "Pawel Czerwinski",
+    "username": "pawel_czerwinski",
+    "photo_id": "eybM9n4yrpE",
+    "alt": "Glowing cyan-blue sound waveform of light on a pure black background, abstract voice and audio frequency visualization"
+  },
+  {
+    "slot": "data-signals",
+    "file": "assets/unsplash/data-signals.jpg",
+    "photographer": "灿雄 邱",
+    "username": "cader_",
+    "photo_id": "dOYVMySdXd0",
+    "alt": "Glowing blue light streams flowing diagonally with discrete bright data points on a pure black background"
+  },
+  {
+    "slot": "analytics-dashboard",
+    "file": "assets/unsplash/analytics-dashboard.jpg",
+    "photographer": "Luke Chesser",
+    "username": "lukechesser",
+    "photo_id": "JKUTrJ4vK00",
+    "alt": "Dark-themed performance analytics dashboard on a laptop screen with cyan bar charts, KPIs and trend lines, a blurred plant behind"
+  },
+  {
+    "slot": "outreach",
+    "file": "assets/unsplash/outreach.jpg",
+    "photographer": "LinkedIn Sales Solutions",
+    "username": "linkedinsalesnavigator",
+    "photo_id": "Be5aVKFv9ho",
+    "alt": "Professional man at a wooden desk engaged in a one-to-one video call on his laptop in a warm plant-filled workspace"
+  },
+  {
+    "slot": "ind-saas",
+    "file": "assets/unsplash/ind-saas.jpg",
+    "photographer": "Kevin Ache",
+    "username": "kevinache",
+    "photo_id": "2JJ3wBHu4_0",
+    "alt": "Dark data center server rack with blinking green and orange status LEDs and patch cabling"
+  },
+  {
+    "slot": "ind-healthcare",
+    "file": "assets/unsplash/ind-healthcare.jpg",
+    "photographer": "Vitaly Gariev",
+    "username": "silverkblack",
+    "photo_id": "2kopEHjST-g",
+    "alt": "Two clinicians in white coats, one with a stethoscope, reviewing a tablet together in a modern clinic"
+  },
+  {
+    "slot": "ind-itservices",
+    "file": "assets/unsplash/ind-itservices.jpg",
+    "photographer": "Domaintechnik Ledl.net",
+    "username": "fslfsl",
+    "photo_id": "VHmBX7FnXw0",
+    "alt": "Close-up of a server rack with rows of blade slots and green and blue status lights, shallow depth of field"
+  },
+  {
+    "slot": "ind-fintech",
+    "file": "assets/unsplash/ind-fintech.jpg",
+    "photographer": "Austin Hervias",
+    "username": "ahervias77",
+    "photo_id": "VLpWpv3oDB4",
+    "alt": "Upward-trending financial market candlestick chart on a dark screen"
+  },
+  {
+    "slot": "ind-ecommerce",
+    "file": "assets/unsplash/ind-ecommerce.jpg",
+    "photographer": "SumUp",
+    "username": "sumup",
+    "photo_id": "ShB9pI4mpRg",
+    "alt": "Person checking out online with a credit card and a laptop showing a shopping cart screen"
+  },
+  {
+    "slot": "ind-manufacturing",
+    "file": "assets/unsplash/ind-manufacturing.jpg",
+    "photographer": "Homa Appliances",
+    "username": "homaappliances",
+    "photo_id": "sz1CHL7Pky0",
+    "alt": "Blue industrial robotic arm on an automated production line inside a modern smart factory"
+  },
+  {
+    "slot": "cs-realestate",
+    "file": "assets/unsplash/cs-realestate.jpg",
+    "photographer": "Arthur BAUDRY",
+    "username": "bipow",
+    "photo_id": "4vioYQ9Nn9Y",
+    "alt": "Modern two-story house with glass walls glowing warmly against a dusk sky, manicured lawn and clean landscaping"
+  },
+  {
+    "slot": "cs-growth",
+    "file": "assets/unsplash/cs-growth.jpg",
+    "photographer": "Jonathan Simcoe",
+    "username": "jdsimcoe",
+    "photo_id": "jwhqbR3clzQ",
+    "alt": "Low-angle view of a sleek glass skyscraper soaring upward against a clear blue sky, converging lines suggesting upward momentum"
+  },
+  {
+    "slot": "team-office",
+    "file": "assets/unsplash/team-office.jpg",
+    "photographer": "Fiqih Alfarish",
+    "username": "fiqihalfarish",
+    "photo_id": "N3Bf0ArT5J0",
+    "alt": "Diverse professional team collaborating around laptops at a meeting table in a bright modern office with a city skyline behind them"
+  },
+  {
+    "slot": "founder-bg",
+    "file": "assets/unsplash/founder-bg.jpg",
+    "photographer": "Pawel Czerwinski",
+    "username": "pawel_czerwinski",
+    "photo_id": "YAtspJ-HV2E",
+    "alt": "Soft dark teal wavy ribbons of light flowing across a near-black background"
+  },
+  {
+    "slot": "video-brief",
+    "file": "assets/unsplash/video-brief.jpg",
+    "photographer": "Detail .co",
+    "username": "detailvideo",
+    "photo_id": "d5Tifmm4ILk",
+    "alt": "Modern video recording setup with a camera on a tripod, microphone, and a tablet/laptop screen showing a video, person gesturing to camera"
+  },
+  {
+    "slot": "engagement",
+    "file": "assets/unsplash/engagement.jpg",
+    "photographer": "Vitaly Gariev",
+    "username": "silverkblack",
+    "photo_id": "_BHlEskTT4c",
+    "alt": "Four professionals in suits in a focused business meeting around a table in a bright modern office, one gesturing while discussing"
+  },
+  {
+    "slot": "cs-healthcare",
+    "file": "assets/unsplash/cs-healthcare.jpg",
+    "photographer": "Vitaly Gariev",
+    "username": "silverkblack",
+    "photo_id": "c1ZGaJTOnJs",
+    "alt": "Doctor consulting a patient via video call"
+  }
+]

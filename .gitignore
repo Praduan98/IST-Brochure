@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Local safety backups (git history covers these)
+ist-brochure.BACKUP-*.html
+ist-brochure.PRE-REDESIGN-*.html
+
+# Superseded v2 iteration artifacts
+ist-brochure-v2.html
+render2.js
+claude-design-prompt.md
+v2-*.png
+
+# Throwaway build/debug screenshots
+sm-*.png
+_*.png
+p[0-9][0-9]_*.png
+
+# Redesign self-render temp files
+_test-*.html
+test-*.png
+test-out.png
+
+# Internal source / reference docs — NOT published to the public repo by default.
+# (Remove these lines if you want them tracked.)
+*.docx
+*.pdf
+!InsightsTap-Brochure.pdf
+IMG_*.JPG
+IMG_*.jpg
