@@ -48,10 +48,11 @@
     {"slot":"ind-manufacturing","file":"assets/unsplash/ind-manufacturing.jpg","alt":"Robotic arms on a smart-factory line","photographer":"Lilian Do Khac"}
   ],
   "caveats": [
-    "PNG (not SVG): clay, commonroom (128px), workato (32px small), make (high-res). Others are SVG.",
-    "Apollo.io brand is YELLOW #FECF40 (sales-intel, not Apollo GraphQL).",
-    "Mixpanel SVG is legacy blue; current brand purple is #7856FF (tint if exact match needed).",
-    "rb2b is intentional near-black pixel wordmark (dark variant for white chip).",
-    "Ignore stray temp files _tableau.png / _zapier.png in the folder."
+    "PNG (not SVG): clay, commonroom, workato, make, factors. Others are SVG.",
+    "Apollo.io: 2025 FINAO rebrand — four-petal light burst (lime #F8FF2C) on a near-black app-icon tile (sales-intel, not Apollo GraphQL).",
+    "AWS: navy #232F3E 'aws' letters + orange #FF9900 smile (light-bg variant so the wordmark stays visible on white chips).",
+    "rb2b.svg: 2025 'ugly rebrand' — blocky neon-green #51FF00 'RB2B' wordmark on a near-black tile (replaced an incorrect green-flame mark).",
+    "Mixpanel: current purple 'X' rebrand mark #7856FF. Gemini: current four-color sparkle. Clay: current colourful nested-C (confirmed via live favicon).",
+    "Known-outdated-but-recognizable (left as-is, swap on request): redis (pre-2024 cube — current logo is a wordmark, illegible at 17px), langchain (pre-2026 mark — new blue bird not yet in icon repos)."
   ]
 }
