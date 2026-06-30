@@ -279,12 +279,21 @@ ul.clean li::before{content:'';position:absolute;left:0;top:6px;width:7px;height
 /* page 04 */
 /* Page 04 — Build · Grow · Integrate horizontal step cards */
 .p04-row{display:flex;flex:1;min-height:0}
-.p04-side{position:relative;flex:none;width:228px;padding:18px 18px 36px;color:#fff;display:flex;flex-direction:column;justify-content:center}
-.p04-sub{font-family:'Poppins',sans-serif;font-weight:500;font-size:12px;line-height:1.4;color:#fff;margin-top:7px}
-.p04-ctag{position:absolute;left:18px;bottom:14px;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.04em;color:rgba(255,255,255,.9)}
-.p04-body{flex:1;display:flex;align-items:center;padding:14px 20px}
-.p04-list{display:grid;grid-template-columns:1fr 1fr;gap:11px 22px;width:100%;margin:0}
-.p04-list li{margin-bottom:0}
+.p04-side{position:relative;flex:none;width:232px;padding:18px;color:#fff;display:flex;flex-direction:column;justify-content:space-between}
+.p04-sidetop{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.p04-sidetop .cic{width:40px;height:40px;border-radius:11px}
+.p04-step{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72);flex:none}
+.p04-sidemid{display:flex;flex-direction:column;gap:5px}
+.p04-side .h2{margin:0;font-size:25px}
+.p04-sub{font-family:'Poppins',sans-serif;font-weight:500;font-size:12px;line-height:1.4;color:#fff;margin:0}
+.p04-ctag{position:static;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.04em;color:rgba(255,255,255,.92)}
+.p04-body{flex:1;min-width:0;display:flex;flex-direction:column;padding:15px 22px 16px}
+.p04-blabel{flex:none;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan-dark);margin-bottom:11px}
+.p04-list{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;width:100%;margin:0}
+ul.p04-list li{display:flex;align-items:center;margin:0;padding:11px 16px 11px 34px;position:relative;font-size:12.5px;line-height:1.32;color:var(--body)}
+ul.p04-list li:nth-child(odd){border-right:1px solid var(--line)}
+ul.p04-list li:nth-child(1),ul.p04-list li:nth-child(2){border-bottom:1px solid var(--line)}
+ul.p04-list li::before{left:14px;top:50%;transform:translateY(-50%) rotate(45deg)}
 /* page 05 */
 /* ===== Page 05 — Why InsightsTap (namespaced p05-) ===== */
 /* leftover height split proportionally so neither grid nor testimonial reads hollow */
@@ -849,12 +858,18 @@ ul.clean li::before{content:'';position:absolute;left:0;top:6px;width:7px;height
       <div class="card p04-row" style="padding:0">
         <span class="bignum">01</span>
         <div class="p04-side" style="background:linear-gradient(160deg,#0a8a8a,#066d6d)">
-          <div class="cic" style="background:rgba(255,255,255,.16)"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" stroke="#fff"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3" stroke="#fff"/></svg></div>
-          <div class="h2" style="color:#fff;margin-top:11px">Build</div>
-          <p class="p04-sub">Custom AI solutions that solve real problems.</p>
+          <div class="p04-sidetop">
+            <div class="cic" style="background:rgba(255,255,255,.16)"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" stroke="#fff"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3" stroke="#fff"/></svg></div>
+            <span class="p04-step">Step 01</span>
+          </div>
+          <div class="p04-sidemid">
+            <div class="h2" style="color:#fff">Build</div>
+            <p class="p04-sub">Custom AI solutions that solve real problems.</p>
+          </div>
           <div class="p04-ctag">→ SHIPPED TO PRODUCTION</div>
         </div>
         <div class="p04-body">
+          <span class="p04-blabel">What we deliver</span>
           <ul class="clean body p04-list"><li>AI apps &amp; AI agents</li><li>Internal tools &amp; automation platforms</li><li>Custom software, shipped to production</li><li>From MVP to production-grade scale</li></ul>
         </div>
       </div>
@@ -863,12 +878,18 @@ ul.clean li::before{content:'';position:absolute;left:0;top:6px;width:7px;height
       <div class="card p04-row" style="padding:0">
         <span class="bignum">02</span>
         <div class="p04-side" style="background:linear-gradient(160deg,#0fb6b6,#0a9a9a)">
-          <div class="cic" style="background:rgba(255,255,255,.16)"><svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 3 8-9" stroke="#fff"/><path d="M21 6v5h-5" stroke="#fff"/></svg></div>
-          <div class="h2" style="color:#fff;margin-top:11px">Grow</div>
-          <p class="p04-sub">Signal-led GTM engines that scale revenue.</p>
+          <div class="p04-sidetop">
+            <div class="cic" style="background:rgba(255,255,255,.16)"><svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 3 8-9" stroke="#fff"/><path d="M21 6v5h-5" stroke="#fff"/></svg></div>
+            <span class="p04-step">Step 02</span>
+          </div>
+          <div class="p04-sidemid">
+            <div class="h2" style="color:#fff">Grow</div>
+            <p class="p04-sub">Signal-led GTM engines that scale revenue.</p>
+          </div>
           <div class="p04-ctag">→ PIPELINE THAT COMPOUNDS</div>
         </div>
         <div class="p04-body">
+          <span class="p04-blabel">How we grow revenue</span>
           <ul class="clean body p04-list"><li>Identify real buyer intent</li><li>Activate precision outreach</li><li>Support predictable revenue growth</li><li>Outbound, inbound &amp; paid, in concert</li></ul>
         </div>
       </div>
@@ -877,12 +898,18 @@ ul.clean li::before{content:'';position:absolute;left:0;top:6px;width:7px;height
       <div class="card p04-row" style="padding:0">
         <span class="bignum" style="color:rgba(108,92,231,.08)">03</span>
         <div class="p04-side" style="background:linear-gradient(160deg,#7a6bec,#6C5CE7)">
-          <div class="cic" style="background:rgba(255,255,255,.18)"><svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2" stroke="#fff"/><circle cx="19" cy="6" r="2" stroke="#fff"/><circle cx="12" cy="18" r="2" stroke="#fff"/><path d="M7 6h10M6 8l5 8M18 8l-5 8" stroke="#fff"/></svg></div>
-          <div class="h2" style="color:#fff;margin-top:11px">Integrate</div>
-          <p class="p04-sub">Seamless connection between AI &amp; growth.</p>
+          <div class="p04-sidetop">
+            <div class="cic" style="background:rgba(255,255,255,.18)"><svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2" stroke="#fff"/><circle cx="19" cy="6" r="2" stroke="#fff"/><circle cx="12" cy="18" r="2" stroke="#fff"/><path d="M7 6h10M6 8l5 8M18 8l-5 8" stroke="#fff"/></svg></div>
+            <span class="p04-step" style="color:rgba(255,255,255,.78)">Step 03</span>
+          </div>
+          <div class="p04-sidemid">
+            <div class="h2" style="color:#fff">Integrate</div>
+            <p class="p04-sub">Seamless connection between AI &amp; growth.</p>
+          </div>
           <div class="p04-ctag" style="color:#e9e4ff">→ ONE OPERATING LAYER</div>
         </div>
         <div class="p04-body">
+          <span class="p04-blabel" style="color:#6C5CE7">What we connect</span>
           <ul class="clean body p04-list"><li>AI · CRM · automation · analytics</li><li>Outreach &amp; growth workflows</li><li>Unified into one operating layer</li><li>Real-time data across every tool</li></ul>
         </div>
       </div>
