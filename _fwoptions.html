@@ -1,0 +1,81 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&family=Poppins:wght@500;600&family=Space+Mono:wght@400;700&family=Jost:ital@1&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--cyan:#0DCFCF;--cyan-light:#6AE3E1;--cyan-dark:#009C9B;--teal:#066D6D}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Arial,sans-serif}
+.stage{position:relative;width:840px;padding:44px 54px;overflow:hidden;background:#052c2c}
+.stage .bg{position:absolute;inset:0;z-index:0}
+.stage .bg img{width:100%;height:100%;object-fit:cover}
+.stage .bg .grad{position:absolute;inset:0;background:linear-gradient(135deg,rgba(2,40,40,.60),rgba(4,82,82,.70) 50%,rgba(2,28,28,.94))}
+.wrap{position:relative;z-index:1}
+.h1{font-family:'Raleway';font-weight:800;font-size:44px;line-height:1.03;color:#fff;letter-spacing:-.01em;margin:0}
+.tag{font-family:'Jost';font-style:italic;font-size:16px;color:#fff;margin:14px 0 8px}
+.lead{font-size:12.5px;line-height:1.5;color:rgba(233,253,253,.9);max-width:150mm;margin:0 0 6px}
+.optlabel{font-family:'Space Mono';font-size:10px;letter-spacing:.14em;color:#5fd; margin:40px 0 14px;text-transform:uppercase;border-top:1px dashed rgba(106,227,225,.3);padding-top:12px}
+
+/* ============ OPTION A — editorial inline sequence ============ */
+.A-eyebrow{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+.A-eyebrow .ln{width:26px;height:1px;background:linear-gradient(90deg,var(--cyan-light),transparent)}
+.A-eyebrow span{font-family:'Poppins';font-weight:600;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan-light)}
+.rowA{display:flex;align-items:center}
+.fa{display:flex;align-items:baseline;gap:9px;font-family:'Raleway';font-weight:800;font-size:17px;color:#fff;letter-spacing:.02em;padding:0 22px}
+.fa:first-child{padding-left:0}
+.fa i{font-family:'Space Mono';font-style:normal;font-weight:700;font-size:11px;color:var(--cyan-light)}
+.sepA{width:1px;height:20px;background:rgba(106,227,225,.32)}
+
+/* ============ OPTION B — connected node pipeline ============ */
+.rowB{display:flex;align-items:flex-start;margin-top:6px}
+.fb{display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-width:0}
+.fb .dot{width:13px;height:13px;border-radius:50%;background:var(--cyan-light);box-shadow:0 0 12px rgba(106,227,225,.8);border:3px solid #063f3f;margin-left:1px}
+.fb .txt{display:flex;flex-direction:column;gap:2px}
+.fb .n{font-family:'Space Mono';font-weight:700;font-size:10px;color:var(--cyan-light);letter-spacing:.05em}
+.fb .nm{font-family:'Raleway';font-weight:800;font-size:15px;color:#fff}
+.lineB{flex:1;height:2px;margin-top:6px;background:linear-gradient(90deg,rgba(106,227,225,.55),rgba(106,227,225,.22));min-width:26px;border-radius:2px}
+
+/* ============ OPTION C — underline / index tabs ============ */
+.rowC{display:flex;gap:40px}
+.fc{position:relative;display:flex;flex-direction:column;gap:7px;padding-bottom:11px}
+.fc .n{font-family:'Space Mono';font-weight:700;font-size:10px;color:var(--cyan-light);letter-spacing:.06em}
+.fc .nm{font-family:'Raleway';font-weight:800;font-size:18px;color:#fff;line-height:1}
+.fc .ul{position:absolute;left:0;bottom:0;width:28px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--cyan-light),var(--cyan-dark));box-shadow:0 0 8px rgba(106,227,225,.5)}
+</style></head>
+<body>
+<div class="stage">
+  <div class="bg"><img src="assets/unsplash/cover-hero.jpg" alt=""><div class="grad"></div></div>
+  <div class="wrap">
+    <h1 class="h1">The Signal-Led<br>GTM Playbook.</h1>
+    <p class="tag">Run your B2B like a revenue engine.</p>
+    <p class="lead">How B2B teams detect hidden demand, activate intent, and turn active accounts into pipeline.</p>
+
+    <div class="optlabel">Option A — editorial inline sequence</div>
+    <div class="A-eyebrow"><span class="ln"></span><span>The four frameworks</span></div>
+    <div class="rowA">
+      <span class="fa"><i>01</i>DARK</span><span class="sepA"></span>
+      <span class="fa"><i>02</i>SIGNALS</span><span class="sepA"></span>
+      <span class="fa"><i>03</i>BRIDGE Ads</span><span class="sepA"></span>
+      <span class="fa"><i>04</i>ABM 2.0</span>
+    </div>
+
+    <div class="optlabel">Option B — connected node pipeline</div>
+    <div class="rowB">
+      <span class="fb"><span class="dot"></span><span class="txt"><span class="n">01</span><span class="nm">DARK</span></span></span>
+      <span class="lineB"></span>
+      <span class="fb"><span class="dot"></span><span class="txt"><span class="n">02</span><span class="nm">SIGNALS</span></span></span>
+      <span class="lineB"></span>
+      <span class="fb"><span class="dot"></span><span class="txt"><span class="n">03</span><span class="nm">BRIDGE Ads</span></span></span>
+      <span class="lineB"></span>
+      <span class="fb"><span class="dot"></span><span class="txt"><span class="n">04</span><span class="nm">ABM 2.0</span></span></span>
+    </div>
+
+    <div class="optlabel">Option C — index / underline tabs</div>
+    <div class="rowC">
+      <div class="fc"><span class="n">01</span><span class="nm">DARK</span><span class="ul"></span></div>
+      <div class="fc"><span class="n">02</span><span class="nm">SIGNALS</span><span class="ul"></span></div>
+      <div class="fc"><span class="n">03</span><span class="nm">BRIDGE Ads</span><span class="ul"></span></div>
+      <div class="fc"><span class="n">04</span><span class="nm">ABM 2.0</span><span class="ul"></span></div>
+    </div>
+  </div>
+</div>
+</body></html>

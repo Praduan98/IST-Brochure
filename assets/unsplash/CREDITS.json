@@ -182,5 +182,13 @@
     "username": "silverkblack",
     "photo_id": "c1ZGaJTOnJs",
     "alt": "Doctor consulting a patient via video call"
+  },
+  {
+    "slot": "traffic-signal",
+    "file": "assets/unsplash/traffic-signal.jpg",
+    "photographer": "Bro Takes Photos",
+    "username": "brotakesphotos",
+    "photo_id": "Xbkv7Pu9Yuw",
+    "alt": "A traffic signal lit against pure black — red and amber above a brightly glowing green-cyan light, viewed head-on"
   }
 ]
