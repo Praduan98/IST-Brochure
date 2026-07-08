@@ -190,5 +190,54 @@
     "username": "brotakesphotos",
     "photo_id": "Xbkv7Pu9Yuw",
     "alt": "A traffic signal lit against pure black — red and amber above a brightly glowing green-cyan light, viewed head-on"
+  },
+  {
+    "slot": "p3-cover",
+    "file": "assets/unsplash/p3-cover.jpg",
+    "photographer": "S A",
+    "username": "sraze",
+    "alt": "Abstract blue-teal fiber-optic light strands radiating outward on a near-black background"
+  },
+  {
+    "slot": "p3-web",
+    "file": "assets/unsplash/p3-web.jpg",
+    "photographer": "灿雄 邱",
+    "username": "cader_",
+    "alt": "Glowing blue light streams with discrete bright data points on a black background — web-intent signal visual"
+  },
+  {
+    "slot": "p3-hiring",
+    "file": "assets/unsplash/p3-hiring.jpg",
+    "photographer": "Vitaly Gariev",
+    "username": "silverkblack",
+    "alt": "Modern job interview in a bright office, interviewer reviewing a candidate"
+  },
+  {
+    "slot": "p3-champion",
+    "file": "assets/unsplash/p3-champion.jpg",
+    "photographer": "Vitaly Gariev",
+    "username": "silverkblack",
+    "alt": "Warm one-to-one conversation between two professionals at a desk in a modern office"
+  },
+  {
+    "slot": "p3-funding",
+    "file": "assets/unsplash/p3-funding.jpg",
+    "photographer": "Willian Justen de Vasconcellos",
+    "username": "willianjusten",
+    "alt": "Modern skyscraper with a cantilevered observation deck reaching upward against the sky"
+  },
+  {
+    "slot": "p3-group",
+    "file": "assets/unsplash/p3-group.jpg",
+    "photographer": "Mapbox",
+    "username": "mapbox",
+    "alt": "Diverse group of professionals collaborating around a table in a modern office"
+  },
+  {
+    "slot": "p3-close",
+    "file": "assets/unsplash/p3-close.jpg",
+    "photographer": "Mirella Callage",
+    "username": "mirellacallage",
+    "alt": "Elegant teal and cyan light ribbons glowing softly on a dark background"
   }
 ]

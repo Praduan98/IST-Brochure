@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Signal-to-Action Gap Diagnostic Worksheet · InsightsTap Resource</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:ital,wght@0,400..700;1,400..500&family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   InsightsTap Resource — Signal-to-Action Gap Diagnostic
+   Worksheet (A4 portrait, print-and-fill). Refined-minimal.
+   Brand system per insightstap.com/docs/pdf/brand-guidelines
+   ============================================================ */
+:root{
+  --cyan:#0DCFCF; --cyan-dark:#009C9B; --cyan-light:#6AE3E1; --cyan-wash:#ECFFFF;
+  --teal:#066D6D; --teal-deep:#025252;
+  --ink:#0A0A0A; --body:#3C3C3C; --muted:#6F6F6F;
+  --line-strong:rgba(10,10,10,.14); --line:rgba(10,10,10,.08);
+  --gold:#F4B740; --gold-tint:#FAD27D; --gold-shade:#D99A23; --gold-text:#946F27;
+  --violet:#6C5CE7; --violet-tint:#A29BFE; --violet-shade:#5541D6;
+  --pad:16mm;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{background:#d9dee2;font-family:'Hanken Grotesk',sans-serif;color:var(--body)}
+
+/* ---- Page shell ---- */
+.page{position:relative;width:210mm;height:297mm;margin:0 auto;background:#fff;overflow:hidden;page-break-after:always;break-after:page;color:var(--body)}
+.page:last-child{page-break-after:auto;break-after:auto}
+.screen .page{margin:8mm auto;box-shadow:0 18px 50px rgba(0,0,0,.22)}
+.inner{position:relative;z-index:3;height:100%;padding:var(--pad);display:flex;flex-direction:column}
+.col{display:flex;flex-direction:column}
+.region{flex:1;min-height:0;display:flex;flex-direction:column}
+.dist{justify-content:space-between}
+
+/* ---- Typography ---- */
+.kicker{font-family:'Hanken Grotesk',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.16em;font-size:10.5px;color:var(--cyan-dark)}
+.h1{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;color:var(--ink);line-height:1.08;letter-spacing:-.01em;font-size:30px}
+.h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;color:var(--ink);line-height:1.15;font-size:20px}
+.h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;color:var(--ink);line-height:1.2;font-size:14px}
+.lead{font-family:'Hanken Grotesk',sans-serif;font-weight:400;font-size:14px;line-height:1.6;color:var(--body)}
+.body{font-family:'Hanken Grotesk',sans-serif;font-weight:400;font-size:12px;line-height:1.58;color:var(--body)}
+.small{font-size:11px;line-height:1.5;color:var(--muted)}
+.cap{font-family:'Hanken Grotesk',sans-serif;font-size:10px;letter-spacing:.02em;color:var(--muted)}
+.mono{font-family:'Space Mono',monospace}
+.cyan{color:var(--cyan-dark)} .tealc{color:var(--teal)} .inkc{color:var(--ink)}
+.rule{height:3px;width:46px;background:var(--cyan);border-radius:2px}
+
+/* ---- Header / footer chrome ---- */
+.head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8mm}
+.head .secno{font-family:'Space Mono',monospace;font-size:11px;color:var(--cyan-dark);letter-spacing:.05em}
+.foot{margin-top:12px;display:flex;justify-content:space-between;align-items:center;
+  font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.04em;color:var(--muted);padding-top:3mm;border-top:1px solid var(--line)}
+.foot .dot{color:var(--cyan)}
+
+/* ---- Page-1 masthead ---- */
+.mast{display:flex;align-items:center;margin-bottom:11mm}
+/* official InsightsTap brand lockup (mark + wordmark) — the real logotype,
+   not a mono all-caps stand-in */
+.mast .brand-logo{height:9mm;width:auto;display:block}
+.wtitle{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:34px;line-height:1.05;letter-spacing:-.02em;color:var(--ink);max-width:150mm}
+
+/* ---- Section heading block (Step N) ---- */
+.sec{display:flex;flex-direction:column;gap:8px;margin-bottom:6mm}
+.sec .rule{margin:2px 0}
+.sec .lead{max-width:160mm}
+.sec .st{display:flex;align-items:baseline;gap:12px}
+.sec .st .no{font-family:'Space Mono',monospace;font-weight:700;font-size:12px;letter-spacing:.06em;color:var(--cyan-dark)}
+
+/* ---- Working-document note ---- */
+.note{position:relative;overflow:hidden;background:var(--cyan-wash);border-radius:14px;padding:15px 18px;
+  display:flex;align-items:flex-start;gap:13px;border:1px solid rgba(13,207,207,.18)}
+.note::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--cyan-light),var(--cyan-dark))}
+.note .ic{flex:none;width:30px;height:30px;border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(13,207,207,.25);box-shadow:0 4px 10px -6px rgba(2,82,82,.4)}
+.note .ic svg{width:17px;height:17px;fill:none;stroke:var(--teal);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.note .tx{font-family:'Hanken Grotesk',sans-serif;font-size:11.5px;line-height:1.55;color:var(--body)}
+.note .tx b{color:var(--ink);font-weight:600}
+
+/* ---- Print-and-fill tables (deep-teal header, hairline cells, blank rows) ---- */
+.tbl{border:1px solid var(--line-strong);border-radius:14px;overflow:hidden;box-shadow:0 12px 30px -20px rgba(2,82,82,.42);display:grid}
+/* rows inherit the table's column tracks via subgrid, so header + body columns
+   are always identical widths and can never drift out of alignment */
+.trow{grid-column:1 / -1;display:grid;grid-template-columns:subgrid}
+.trow>span{padding:10px 14px;border-top:1px solid var(--line);border-left:1px solid var(--line);
+  font-family:'Hanken Grotesk',sans-serif;font-size:11px;line-height:1.4;color:var(--body);display:flex;align-items:center}
+.trow>span:first-child{border-left:0}
+.trow.hd{background:radial-gradient(120% 200% at 0% 0%, rgba(13,207,207,.22), transparent 46%),linear-gradient(120deg,#055050,#04403f 58%,#022826)}
+.trow.hd>span{border-top:0;border-left-color:rgba(255,255,255,.12);color:#fff;
+  font-weight:600;font-size:9px;letter-spacing:.06em;text-transform:uppercase}
+.trow.hd .cn{font-family:'Space Mono',monospace;font-weight:700;font-size:8.5px;color:var(--cyan-light);margin-right:7px}
+.trow.blank>span{color:transparent}
+.trow.blank{background:#fff}
+.trow.blank:nth-child(even){background:#fbfeff}
+/* 1-5 circle-this scale, printed quietly in the score cell */
+.scale{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.28em;color:var(--muted);white-space:nowrap}
+.trow.blank .score{color:var(--muted)}
+/* per-table geometry */
+.t-score{grid-template-columns:1.5fr .95fr 1.5fr 1fr}
+.t-score .blank>span{min-height:11.6mm;align-items:flex-start;padding-top:9px}
+.t-score .blank .score{align-items:center;padding-top:0}
+.t-inv{grid-template-columns:1fr 1.28fr .86fr 1fr .82fr}
+.t-inv .blank>span{min-height:16mm;align-items:flex-start;padding-top:9px}
+.t-fix{grid-template-columns:.6fr 1.7fr .9fr .9fr 1.15fr}
+.t-fix .blank>span{min-height:19mm;align-items:flex-start;padding-top:9px}
+.t-fix .blank .pri{color:var(--muted);font-family:'Space Mono',monospace;font-size:11px}
+
+/* ---- Checkbox checklist (Areas to score) ---- */
+.chklist{border:1px solid var(--line-strong);border-radius:14px;overflow:hidden;box-shadow:0 12px 30px -20px rgba(2,82,82,.42)}
+.chk{display:flex;align-items:center;gap:13px;padding:12px 16px;border-top:1px solid var(--line)}
+.chk:first-child{border-top:0}
+.chk:nth-child(even){background:#fbfeff}
+.chk .box{flex:none;width:15px;height:15px;border:1.5px solid var(--line-strong);border-radius:3px;background:#fff}
+.chk .n{flex:none;font-family:'Space Mono',monospace;font-weight:700;font-size:9.5px;letter-spacing:.04em;color:var(--cyan-dark);width:16px}
+.chk .lb{font-family:'Hanken Grotesk',sans-serif;font-size:12px;line-height:1.4;color:var(--body)}
+
+/* ---- Section divider label (thin rule) ---- */
+.dcat{font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:9.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--cyan-dark);display:flex;align-items:center;gap:10px;margin-bottom:11px}
+.dcat .ln{flex:1;height:1px;background:var(--line)}
+
+/* ---- Refined inline tip footnote (sits under the fix table) ---- */
+.tip{display:flex;align-items:flex-start;gap:10px;margin-top:12px;
+  font-family:'Hanken Grotesk',sans-serif;font-size:10.5px;line-height:1.5;color:var(--muted);max-width:172mm}
+.tip b{color:var(--teal);font-weight:600}
+.tip .tipmk{flex:none;width:7px;height:7px;margin-top:3px;border-radius:2px;
+  background:linear-gradient(135deg,var(--cyan-light),var(--cyan-dark));transform:rotate(45deg);
+  box-shadow:0 0 0 3px rgba(13,207,207,.12)}
+
+/* ---- "What makes a high-leverage fix" criteria cards ---- */
+.crit{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cx{border:1px solid var(--line-strong);border-radius:12px;padding:14px 15px;display:flex;flex-direction:column;gap:9px;
+  background:linear-gradient(180deg,#fff 0%,#f8feff 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 10px 24px -18px rgba(2,82,82,.4)}
+.cx .ci{width:30px;height:30px;border-radius:9px;background:var(--cyan-wash);display:flex;align-items:center;justify-content:center}
+.cx .ci svg{width:16px;height:16px;stroke:var(--teal);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.cx .ck{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:13px;color:var(--ink);letter-spacing:-.01em;line-height:1}
+.cx .cd{font-family:'Hanken Grotesk',sans-serif;font-size:10px;line-height:1.42;color:var(--muted)}
+
+/* ---- Closing CTA (single dark-teal focal band) ---- */
+.cta{position:relative;overflow:hidden;display:flex;align-items:center;gap:20px;padding:24px 26px;border-radius:16px;color:#fff;
+  background:radial-gradient(120% 170% at 0% 0%, rgba(13,207,207,.26), transparent 52%),linear-gradient(150deg,#065151,#043b3b 68%,#022a2a);
+  box-shadow:0 18px 40px -22px rgba(2,82,82,.7)}
+.cta .tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:9px}
+.cta .k{font-family:'Space Mono',monospace;font-weight:700;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan-light)}
+.cta .v{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:17px;line-height:1.3;color:#fff;letter-spacing:-.01em;max-width:150mm}
+.cta .lk{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.06em;color:rgba(233,253,253,.82);display:flex;align-items:center;gap:7px;margin-top:1px}
+.cta .lk .dot{color:var(--cyan-light)}
+.cta .arw{flex:none;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;
+  background:linear-gradient(135deg,var(--cyan),var(--cyan-dark));box-shadow:0 12px 24px -10px rgba(13,207,207,.7)}
+.cta .arw svg{width:22px;height:22px;stroke:#022;stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---- Print ---- */
+@media print{
+  body{background:#fff}
+  .screen .page{margin:0;box-shadow:none}
+  .page{margin:0}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  img{image-rendering:auto}
+}
+@page{size:A4 portrait;margin:0}
+</style>
+</head>
+<body class="screen">
+
+<!-- ==================================================================== 01 · MASTHEAD + STEP 1 ==================================================================== -->
+<section class="page">
+  <div class="inner">
+    <div class="mast" style="margin-bottom:9mm">
+      <img class="brand-logo" src="assets/brand/logo-primary.png" alt="InsightsTap" />
+    </div>
+
+    <div class="col" style="gap:15px;margin-bottom:7mm">
+      <h1 class="wtitle">Signal-to-Action Gap<br/>Diagnostic Worksheet</h1>
+      <div class="rule"></div>
+      <p class="lead" style="max-width:158mm">A practical audit for teams that have buyer intent data but still struggle to turn signals into pipeline.</p>
+    </div>
+
+    <div class="note" style="margin-bottom:7mm">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-3"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M8 11h8M8 15h5"/></svg></span>
+      <span class="tx"><b>Use this as a practical working document.</b> Print it, duplicate it for each campaign, or gate it behind a form as a lead magnet.</span>
+    </div>
+
+    <div class="col" style="gap:6px;margin-bottom:7mm">
+      <h3 class="h3">Who this is for</h3>
+      <p class="body" style="max-width:162mm">Use this worksheet when your team already has intent data, website alerts, enrichment, or CRM activity, but those signals are not reliably becoming meetings, opportunities, or pipeline.</p>
+    </div>
+
+    <div class="region">
+      <div class="sec">
+        <div class="st"><span class="no">Step 1</span><h2 class="h2">Score your signal-to-action gap</h2></div>
+        <div class="rule"></div>
+        <p class="lead">Score each area from 1 to 5. A score of 1 means unclear or broken. A score of 5 means defined, trusted, and measured.</p>
+      </div>
+      <div class="tbl t-score">
+        <div class="trow hd"><span><span class="cn">#</span>Area</span><span>Score 1&ndash;5</span><span>Evidence / notes</span><span>Fix needed</span></div>
+        <div class="trow blank"><span></span><span class="score"><span class="scale">1 2 3 4 5</span></span><span></span><span></span></div>
+        <div class="trow blank"><span></span><span class="score"><span class="scale">1 2 3 4 5</span></span><span></span><span></span></div>
+        <div class="trow blank"><span></span><span class="score"><span class="scale">1 2 3 4 5</span></span><span></span><span></span></div>
+        <div class="trow blank"><span></span><span class="score"><span class="scale">1 2 3 4 5</span></span><span></span><span></span></div>
+        <div class="trow blank"><span></span><span class="score"><span class="scale">1 2 3 4 5</span></span><span></span><span></span></div>
+        <div class="trow blank"><span></span><span class="score"><span class="scale">1 2 3 4 5</span></span><span></span><span></span></div>
+        <div class="trow blank"><span></span><span class="score"><span class="scale">1 2 3 4 5</span></span><span></span><span></span></div>
+        <div class="trow blank"><span></span><span class="score"><span class="scale">1 2 3 4 5</span></span><span></span><span></span></div>
+      </div>
+    </div>
+
+    <div class="foot"><span>InsightsTap &middot; Signal-led GTM systems</span><span><span class="dot">&#9679;</span> www.insightstap.com</span><span>01</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== 02 · AREAS TO SCORE + STEP 2 ==================================================================== -->
+<section class="page">
+  <div class="inner">
+    <div class="head">
+      <span class="kicker">Signal-to-Action Gap &middot; Worksheet</span>
+      <span class="secno">02</span>
+    </div>
+    <div class="region dist">
+
+      <div class="col" style="gap:10px">
+        <h3 class="h3">Areas to score</h3>
+        <div class="chklist">
+          <div class="chk"><span class="box"></span><span class="n">01</span><span class="lb">We know which buyer signals the team trusts.</span></div>
+          <div class="chk"><span class="box"></span><span class="n">02</span><span class="lb">Each signal has a clear owner.</span></div>
+          <div class="chk"><span class="box"></span><span class="n">03</span><span class="lb">Each signal has a defined next action.</span></div>
+          <div class="chk"><span class="box"></span><span class="n">04</span><span class="lb">The signal includes enough context for sales to act.</span></div>
+          <div class="chk"><span class="box"></span><span class="n">05</span><span class="lb">High-intent alerts reach the owner quickly.</span></div>
+          <div class="chk"><span class="box"></span><span class="n">06</span><span class="lb">The response changes based on signal type and account context.</span></div>
+          <div class="chk"><span class="box"></span><span class="n">07</span><span class="lb">Outcomes are tracked beyond tasks, opens, or alerts.</span></div>
+          <div class="chk"><span class="box"></span><span class="n">08</span><span class="lb">Feedback is used to refine scoring, routing, and messaging.</span></div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="sec">
+          <div class="st"><span class="no">Step 2</span><h2 class="h2">Map your current signal inventory</h2></div>
+          <div class="rule"></div>
+          <p class="lead">List the signals you already capture. Do not add new tools yet. The first goal is to understand which existing signals already have commercial value.</p>
+        </div>
+        <div class="tbl t-inv">
+          <div class="trow hd"><span><span class="cn">#</span>Signal source</span><span>What it tells us</span><span>Current owner</span><span>Current action</span><span>Pipeline impact</span></div>
+          <div class="trow blank"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="trow blank"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="trow blank"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="trow blank"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="trow blank"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="trow blank"><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="foot"><span>InsightsTap &middot; Signal-led GTM systems</span><span><span class="dot">&#9679;</span> www.insightstap.com</span><span>02</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== 03 · STEP 3 + CTA ==================================================================== -->
+<section class="page">
+  <div class="inner">
+    <div class="head">
+      <span class="kicker">Signal-to-Action Gap &middot; Worksheet</span>
+      <span class="secno">03</span>
+    </div>
+    <div class="region dist">
+
+      <div class="col">
+        <div class="sec">
+          <div class="st"><span class="no">Step 3</span><h2 class="h2">Pick the three highest-leverage fixes</h2></div>
+          <div class="rule"></div>
+          <p class="lead">Choose fixes that improve speed, context, ownership, or measurement. Avoid building new automations until ownership and next actions are clear.</p>
+        </div>
+        <div class="tbl t-fix">
+          <div class="trow hd"><span><span class="cn">#</span>Priority</span><span>Fix</span><span>Owner</span><span>Deadline</span><span>Success metric</span></div>
+          <div class="trow blank"><span class="pri">01</span><span></span><span></span><span></span><span></span></div>
+          <div class="trow blank"><span class="pri">02</span><span></span><span></span><span></span><span></span></div>
+          <div class="trow blank"><span class="pri">03</span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <p class="tip"><span class="tipmk"></span><span><b>Keep it to three.</b> Fewer, well-owned fixes close the gap faster than another round of new automation.</span></p>
+      </div>
+
+      <div class="col" style="gap:13mm">
+        <div class="col">
+          <div class="dcat">What makes a high-leverage fix<span class="ln"></span></div>
+          <div class="crit">
+            <div class="cx"><span class="ci"><svg viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H12l-1 8.5L19.5 10.5H12l1-8.5z"/></svg></span><span class="ck">Speed</span><span class="cd">Cut the time from signal to first action.</span></div>
+            <div class="cx"><span class="ci"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></span><span class="ck">Context</span><span class="cd">Give sales enough to act without digging.</span></div>
+            <div class="cx"><span class="ci"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></span><span class="ck">Ownership</span><span class="cd">One clear owner per signal and next step.</span></div>
+            <div class="cx"><span class="ci"><svg viewBox="0 0 24 24"><path d="M3 20h18"/><path d="M6 20v-6M11 20V7M16 20v-9M20.5 20V4"/></svg></span><span class="ck">Measurement</span><span class="cd">Track outcomes, not just tasks or opens.</span></div>
+          </div>
+        </div>
+
+      <div class="cta">
+        <div class="tx">
+          <span class="k">Next step</span>
+          <p class="v">If your buyer signals are not turning into pipeline, book a strategy call with InsightsTap to close the signal-to-action gap.</p>
+          <span class="lk"><span class="dot">&#9679;</span> www.insightstap.com&ensp;&middot;&ensp;info@insightstap.com</span>
+        </div>
+        <a class="arw" href="https://www.insightstap.com" aria-label="Book a strategy call"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      </div>
+
+    </div>
+    <div class="foot"><span>InsightsTap &middot; Resource for B2B revenue teams</span><span><span class="dot">&#9679;</span> www.insightstap.com</span><span>03</span></div>
+  </div>
+</section>
+
+</body>
+</html>

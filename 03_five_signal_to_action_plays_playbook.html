@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Five Signal-to-Action Plays · InsightsTap Playbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:ital,wght@0,400..700;1,400..500&family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   InsightsTap Company Brochure — vertical (A4 portrait, 17pp)
+   Brand system per insightstap.com/docs/pdf/brand-guidelines
+   ============================================================ */
+:root{
+  --cyan:#0DCFCF; --cyan-dark:#009C9B; --cyan-light:#6AE3E1; --cyan-wash:#ECFFFF;
+  --teal:#066D6D; --teal-deep:#025252;
+  --ink:#0A0A0A; --body:#3C3C3C; --muted:#6F6F6F;
+  --line-strong:rgba(10,10,10,.14); --line:rgba(10,10,10,.08);
+  --gold:#F4B740; --gold-tint:#FAD27D; --gold-shade:#D99A23; --gold-text:#946F27;
+  --violet:#6C5CE7; --violet-tint:#A29BFE; --violet-shade:#5541D6;
+  --pad:14mm;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{background:#d9dee2;font-family:'Hanken Grotesk',sans-serif;color:var(--body)}
+
+/* ---- Page shell ---- */
+.page{position:relative;width:210mm;height:297mm;margin:0 auto;background:#fff;overflow:hidden;page-break-after:always;break-after:page;color:var(--body)}
+.screen .page{margin:8mm auto;box-shadow:0 18px 50px rgba(0,0,0,.22)}
+.inner{position:relative;z-index:3;height:100%;padding:var(--pad);display:flex;flex-direction:column}
+
+/* ---- Typography ---- */
+.kicker{font-family:'Hanken Grotesk',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.16em;font-size:10.5px;color:var(--cyan-dark)}
+.display{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;color:var(--ink);line-height:1.04;letter-spacing:-.015em}
+.h1{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;color:var(--ink);line-height:1.08;letter-spacing:-.01em;font-size:30px}
+.h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;color:var(--ink);line-height:1.15;font-size:21px}
+.h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;color:var(--ink);line-height:1.2;font-size:16px}
+.subh{font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:13px;color:var(--ink)}
+.lead{font-family:'Hanken Grotesk',sans-serif;font-weight:400;font-size:14px;line-height:1.6;color:var(--body)}
+.body{font-family:'Hanken Grotesk',sans-serif;font-weight:400;font-size:12px;line-height:1.58;color:var(--body)}
+.small{font-size:11px;line-height:1.5;color:var(--muted)}
+.quote{font-family:'Fraunces',sans-serif;font-style:italic;font-weight:400;line-height:1.45;color:var(--ink)}
+.cap{font-family:'Hanken Grotesk',sans-serif;font-size:10px;letter-spacing:.02em;color:var(--muted)}
+.mono{font-family:'Space Mono',monospace}
+.cyan{color:var(--cyan-dark)} .tealc{color:var(--teal)} .inkc{color:var(--ink)} .goldc{color:var(--gold-text)} .violetc{color:var(--violet-shade)}
+
+/* ---- Header / footer chrome ---- */
+.head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6mm}
+.head .secno{font-family:'Space Mono',monospace;font-size:11px;color:var(--cyan-dark);letter-spacing:.05em}
+.foot{margin-top:12px;display:flex;justify-content:space-between;align-items:center;
+  font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.04em;color:var(--muted);padding-top:3mm;border-top:1px solid var(--line)}
+.foot .dot{color:var(--cyan)}
+.brandmark{display:flex;align-items:center;gap:7px}
+
+/* ---- Decorative layers ---- */
+.dotgrid{position:absolute;inset:0;z-index:1;background-image:radial-gradient(circle,rgba(13,207,207,.10) 1px,transparent 1px);background-size:22px 22px}
+.dotgrid.w{background-image:radial-gradient(circle,rgba(255,255,255,.10) 1px,transparent 1px)}
+.linegrid{position:absolute;inset:0;z-index:1;background-image:linear-gradient(rgba(10,10,10,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(10,10,10,.03) 1px,transparent 1px);background-size:34px 34px}
+.wash{background:linear-gradient(180deg,#fff 0%,var(--cyan-wash) 100%)}
+
+/* ---- Dark pages ---- */
+.dark{color:#e9fdfd;background:
+  radial-gradient(110% 70% at 12% -5%, rgba(13,207,207,.28) 0%, transparent 45%),
+  radial-gradient(90% 80% at 100% 110%, rgba(106,227,225,.22) 0%, transparent 50%),
+  linear-gradient(150deg,#0a8a8a 0%, #066d6d 42%, #045252 72%, #023a3a 100%)}
+.dark .h1,.dark .h2,.dark .h3,.dark .display{color:#fff}
+.dark .lead,.dark .body{color:rgba(233,253,253,.86)}
+.dark .kicker{color:var(--cyan-light)}
+.dark .foot{color:rgba(233,253,253,.62);border-top-color:rgba(255,255,255,.16)}
+.dark .small{color:rgba(233,253,253,.74)}
+.dark .cap{color:rgba(233,253,253,.6)}
+.dark .head .secno{color:var(--cyan-light)}
+
+/* ---- Components ---- */
+.rule{height:3px;width:46px;background:var(--cyan);border-radius:2px}
+.rule.gold{background:var(--gold)} .rule.violet{background:var(--violet)} .rule.teal{background:var(--teal)}
+.dark .rule{background:var(--cyan-light)}
+.pill{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line-strong);border-radius:999px;padding:5px 12px;font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:11px;color:var(--ink);background:#fff}
+/* Top-Rated Fiverr Pro trust badge (gold accent, used sparingly) */
+.fvbadge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 12px;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.02em;color:var(--gold-text);background:linear-gradient(120deg,#fff7e6,#fde9c2);border:1px solid var(--gold-tint);white-space:nowrap}
+.fvbadge .st{color:var(--gold-shade)}
+.dark .fvbadge{color:#1a1300;background:linear-gradient(120deg,#FAD27D,#F4B740);border-color:rgba(255,255,255,.35)}
+.dark .fvbadge .st{color:#7a5800}
+.card{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line-strong);border-radius:14px;padding:16px}
+.card.soft{background:var(--cyan-wash);border-color:transparent}
+.card>*{position:relative;z-index:1}
+.dark .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16);backdrop-filter:blur(2px)}
+.idx{font-family:'Space Mono',monospace;font-size:12px;color:var(--cyan-dark)}
+
+/* big faint index numeral that fills a tall card's negative space */
+.bignum{position:absolute;right:10px;bottom:-12px;font-family:'Space Mono',monospace;font-weight:700;font-size:62px;line-height:1;color:rgba(13,207,207,.07);letter-spacing:-.04em;z-index:0;pointer-events:none}
+.dark .bignum{color:rgba(106,227,225,.08)}
+
+/* capability line-icon */
+.cic{width:34px;height:34px;border-radius:9px;background:var(--cyan-wash);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.cic svg{width:18px;height:18px;stroke:var(--teal);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.dark .cic{background:rgba(255,255,255,.09)} .dark .cic svg{stroke:var(--cyan-light)}
+
+/* stat */
+.statnum{font-family:'Space Mono',monospace;font-weight:700;color:var(--cyan-dark);line-height:1;letter-spacing:-.02em}
+.dark .statnum{color:var(--cyan-light)}
+.statlabel{font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.dark .statlabel{color:rgba(233,253,253,.72)}
+
+/* tech chips — one unified shell; icon-backed show teal-masked icon, text-only show a cyan marker */
+.techgrid{display:flex;flex-wrap:wrap;gap:7px}
+.tech{display:inline-flex;align-items:center;gap:7px;padding:6px 11px;border:1px solid var(--line-strong);border-radius:999px;background:#fff;font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:11.5px;color:var(--ink)}
+.tech i{width:17px;height:17px;display:inline-block;background:var(--ic) center/contain no-repeat;flex:none}
+.tech.txt{font-family:'Space Mono',monospace;font-size:10.5px;color:var(--teal);letter-spacing:.01em}
+.tech.txt::before{content:'';width:6px;height:6px;background:var(--cyan);transform:rotate(45deg);flex:none}
+
+/* logo wall */
+.logowall{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.logowall .cell{display:flex;align-items:center;justify-content:center;padding:38px 14px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+.logowall img{max-height:30px;max-width:118px;object-fit:contain;filter:grayscale(1);opacity:.62}
+.dark .logowall{border-color:rgba(255,255,255,.14)}
+.dark .logowall .cell{background:rgba(255,255,255,.92);border-color:rgba(255,255,255,.14)}
+
+/* ============================================================
+   P18 "Trusted by industry leaders" — Lit Glass Wall (tbl-*)
+   Fully STATIC: no animation / transition / hover. Dynamism comes
+   from a lit directional gradient wall, glassy depth on each logo
+   card, full-colour logos, brand-cyan corner accents, soft colour
+   glow blooms + masked dot texture, and a gradient "+ many more" tile.
+   ============================================================ */
+.tbl-block{display:flex;flex-direction:column;gap:11px}
+.tbl-head{display:flex;justify-content:space-between;align-items:center;gap:14px}
+.tbl-eyebrow{display:inline-flex;align-items:center;gap:10px}
+.tbl-eyebrow .dia{width:7px;height:7px;background:var(--cyan);transform:rotate(45deg);flex:none;box-shadow:0 0 0 4px rgba(13,207,207,.14)}
+
+/* the lit wall: directional cyan wash + glass top highlight + depth */
+.tbl-wall{position:relative;overflow:hidden;border-radius:18px;padding:14px;
+  background:
+    radial-gradient(120% 95% at 6% -12%, rgba(13,207,207,.20) 0%, transparent 46%),
+    radial-gradient(120% 130% at 106% 120%, rgba(106,227,225,.20) 0%, transparent 52%),
+    linear-gradient(118deg,#ffffff 0%, #f3ffff 46%, var(--cyan-wash) 100%);
+  border:1px solid rgba(13,207,207,.22);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.92), 0 18px 42px -22px rgba(2,82,82,.34), 0 3px 10px -6px rgba(10,10,10,.08)}
+/* glossy top highlight — the "lit glass" cue (static) */
+.tbl-wall::before{content:'';position:absolute;left:0;right:0;top:0;height:54%;z-index:1;pointer-events:none;
+  border-radius:18px 18px 50% 50%/18px 18px 26px 26px;
+  background:linear-gradient(180deg,rgba(255,255,255,.66) 0%,rgba(255,255,255,0) 100%)}
+/* masked cyan dot texture (top-right) for layered depth */
+.tbl-wall::after{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:radial-gradient(circle,rgba(13,207,207,.12) 1px,transparent 1px);background-size:19px 19px;
+  -webkit-mask-image:radial-gradient(120% 120% at 88% 4%,#000,transparent 66%);
+          mask-image:radial-gradient(120% 120% at 88% 4%,#000,transparent 66%)}
+/* soft colour glow blooms (show through the card gaps) for organic light */
+.tbl-bloom{position:absolute;z-index:0;border-radius:50%;pointer-events:none;filter:blur(30px)}
+.tbl-bloom.b1{width:150px;height:150px;left:1%;top:-46px;background:radial-gradient(circle,rgba(13,207,207,.34),transparent 70%)}
+.tbl-bloom.b2{width:170px;height:170px;right:2%;bottom:-60px;background:radial-gradient(circle,rgba(244,183,64,.16),transparent 70%)}
+
+/* lit logo grid — glassy full-colour cards */
+.tbl-grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(5,1fr);gap:9px}
+.tbl-cell{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;
+  min-height:72px;padding:14px 15px;border-radius:13px;
+  background:linear-gradient(152deg,#ffffff 0%,#ffffff 56%,#f4feff 100%);
+  border:1px solid rgba(10,10,10,.07);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9), 0 8px 18px -12px rgba(2,82,82,.42), 0 1px 2px rgba(10,10,10,.04)}
+/* per-card glossy corner highlight (premium glass cue) */
+.tbl-cell::before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(152deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,0) 42%)}
+/* brand-cyan corner-accent diamond */
+.tbl-cell::after{content:'';position:absolute;top:8px;right:8px;width:5px;height:5px;z-index:2;
+  background:var(--cyan);transform:rotate(45deg);box-shadow:0 0 0 3px rgba(13,207,207,.12)}
+.tbl-cell img{position:relative;z-index:1;max-height:30px;max-width:114px;object-fit:contain;display:block}
+/* icon-only mark (FullEnrich) sizing */
+.tbl-cell.tbl-ic img{max-height:38px;max-width:40px}
+
+/* "+ many more" — confident cyan gradient tile */
+.tbl-more{flex-direction:column;gap:1px;
+  background:
+    radial-gradient(95% 180% at 0% 0%, rgba(255,255,255,.28), transparent 44%),
+    linear-gradient(135deg,var(--cyan) 0%, var(--cyan-dark) 56%, var(--teal) 100%);
+  border:1px solid var(--cyan-dark);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.34), 0 12px 24px -12px rgba(2,82,82,.55)}
+.tbl-more::before{background:linear-gradient(135deg,rgba(255,255,255,.42) 0%,rgba(255,255,255,0) 40%)}
+.tbl-more::after{background:var(--cyan-light);box-shadow:0 0 8px rgba(106,227,225,.8)}
+.tbl-more .n{position:relative;z-index:2;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:15px;line-height:1.05;color:#fff;letter-spacing:-.01em}
+.tbl-more .t{position:relative;z-index:2;font-family:'Space Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:rgba(236,255,255,.92)}
+
+
+/* leader card */
+.leader{position:relative;overflow:hidden;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line-strong);border-radius:14px;padding:12px}
+.leader .ph{width:100%;aspect-ratio:1/1;border-radius:50%;object-fit:cover;object-position:top center;filter:grayscale(1) contrast(1.02);background:var(--cyan-wash)}
+.leader .nm{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:14px;color:var(--ink);margin-top:10px}
+.leader .rl{font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:9.5px;color:var(--cyan-dark);text-transform:uppercase;letter-spacing:.05em;margin-top:2px}
+
+/* helpers */
+.flex{display:flex} .col{display:flex;flex-direction:column} .grow{flex:1} .mt-auto{margin-top:auto}
+.region{flex:1;min-height:0;display:flex;flex-direction:column}
+.fillrows{grid-auto-rows:1fr;align-content:stretch}
+.cardflex{display:flex;flex-direction:column;justify-content:space-between}
+.tcard .col{flex:1;justify-content:center}
+.tick{color:var(--cyan-dark);font-weight:700}
+ul.clean{list-style:none}
+ul.clean li{position:relative;padding-left:18px;margin-bottom:9px;line-height:1.4}
+ul.clean li::before{content:'';position:absolute;left:0;top:6px;width:7px;height:7px;border-radius:2px;background:var(--cyan);transform:rotate(45deg)}
+.dark ul.clean li::before{background:var(--cyan-light)}
+
+/* bottom micro-tag inside a card */
+.ctag{display:flex;align-items:center;gap:7px;margin-top:13px;padding-top:11px;border-top:1px solid var(--line);font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.03em;color:var(--cyan-dark)}
+.dark .ctag{border-top-color:rgba(255,255,255,.16);color:var(--cyan-light)}
+
+/* ---- Imagery (brand-consistent treatments) ---- */
+.tile{position:relative;overflow:hidden;border-radius:12px;background:var(--cyan-wash)}
+.tile img{display:block;width:100%;height:100%;object-fit:cover}
+.tile .gr{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(2,40,40,0) 28%,rgba(2,40,40,.74))}
+.tile .gr.teal{background:linear-gradient(150deg,rgba(4,82,82,.30),rgba(2,40,40,.78))}
+.tile .lbl{position:absolute;left:12px;right:12px;bottom:10px;z-index:2;color:#fff;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:11.5px;letter-spacing:.01em;line-height:1.25;text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.tile .lbl .s{display:block;font-family:'Space Mono',monospace;font-weight:400;font-size:8.5px;letter-spacing:.06em;color:var(--cyan-light);margin-top:2px;text-transform:uppercase}
+.tile .tag{position:absolute;left:10px;top:10px;z-index:2;font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:.06em;color:#fff;background:rgba(2,40,40,.55);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:3px 9px;backdrop-filter:blur(2px)}
+/* image used as a side banner inside a card/spread */
+.imgband{position:relative;overflow:hidden;border-radius:14px;min-height:0}
+.imgband img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.imgband .ov{position:absolute;inset:0;z-index:1}
+.imgband .ov.teal{background:linear-gradient(120deg,rgba(4,82,82,.84) 0%,rgba(6,109,109,.50) 55%,rgba(2,40,40,.30) 100%)}
+.imgband .ov.dark{background:linear-gradient(120deg,rgba(2,40,40,.80),rgba(10,10,10,.45))}
+.imgband .ct{position:relative;z-index:2}
+/* full-bleed cover/hero photo layer */
+.bgphoto{position:absolute;inset:0;z-index:0;overflow:hidden}
+.bgphoto img{width:100%;height:100%;object-fit:cover}
+.bgphoto .grad{position:absolute;inset:0}
+/* ============================================================
+   COVER — photographic traffic-signal composite.
+   A deep teal field with drifting aurora depth. The traffic-light
+   photo has a pure-black background, so a `screen` blend drops out the
+   black and leaves only the glowing red/amber/green signal, framed to
+   the upper-right. A teal halo seats it, then a legibility wash keeps
+   the left-hand text prominent. Prints cleanly (blend + backgrounds honoured).
+   ============================================================ */
+.cover-fx{position:absolute;inset:0;z-index:0;overflow:hidden;
+  background:
+    radial-gradient(120% 92% at 74% 10%, #0c7a7a 0%, transparent 52%),
+    radial-gradient(95% 85% at 4% 106%, #0a5c5c 0%, transparent 55%),
+    linear-gradient(158deg,#02282a 0%, #05494b 38%, #033436 70%, #01191b 100%)}
+.fx-aurora{position:absolute;border-radius:50%;filter:blur(52px);mix-blend-mode:screen;opacity:.58;will-change:transform}
+.fx-aurora.a1{width:60%;height:48%;left:-12%;top:-10%;
+  background:radial-gradient(circle,rgba(13,207,207,.5),transparent 68%);animation:fxDrift1 22s ease-in-out infinite}
+.fx-aurora.a2{width:56%;height:56%;right:-14%;top:12%;
+  background:radial-gradient(circle,rgba(106,227,225,.42),transparent 66%);animation:fxDrift2 27s ease-in-out infinite}
+.fx-aurora.a3{width:62%;height:50%;left:2%;bottom:-16%;
+  background:radial-gradient(circle,rgba(6,132,132,.5),transparent 70%);animation:fxDrift3 31s ease-in-out infinite}
+/* soft teal pool that seats the photo into the field (behind the image) */
+.fx-tlglow{position:absolute;z-index:1;top:-4%;right:2%;width:52%;height:60%;pointer-events:none;
+  background:radial-gradient(closest-side, rgba(30,190,180,.30), rgba(16,120,120,.12) 54%, transparent 78%);
+  filter:blur(16px);mix-blend-mode:screen;animation:fxGlow 6s ease-in-out infinite}
+/* the traffic-signal photo — presented SOLID (metal housings intact, so it
+   reads as a real traffic light) and feathered into the dark field with a
+   soft radial mask, so its black background dissolves with no hard edge */
+.fx-tl{position:absolute;z-index:1;top:-4%;right:-4%;height:64%;width:auto;object-fit:contain;
+  filter:contrast(1.05) saturate(1.06) brightness(1.02);
+  -webkit-mask-image:radial-gradient(64% 60% at 55% 45%, #000 44%, rgba(0,0,0,.5) 72%, transparent 90%);
+          mask-image:radial-gradient(64% 60% at 55% 45%, #000 44%, rgba(0,0,0,.5) 72%, transparent 90%)}
+/* fine grain lifts the flat gradients */
+.fx-grain{position:absolute;inset:0;z-index:2;opacity:.05;mix-blend-mode:overlay;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:150px 150px}
+/* legibility wash — a contrast scrim shaped to the text zones. Darkens
+   behind the headline + lead (left-centre) and the stat band + footer
+   (bottom, full width) while keeping the upper-right signal bright. */
+.fx-wash{position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:
+    /* cinematic reading column — text on the left sits on solid contrast,
+       the imagery reveals toward the right where the signal glows */
+    linear-gradient(94deg,
+      rgba(1,14,16,.95) 0%, rgba(1,16,18,.90) 20%, rgba(2,26,28,.64) 40%,
+      rgba(2,32,34,.28) 58%, rgba(2,34,36,.05) 72%, transparent 82%),
+    /* headline + lead emphasis pool (fades before the signal) */
+    radial-gradient(64% 42% at 29% 46%, rgba(1,12,14,.80) 0%, rgba(1,12,14,.30) 52%, transparent 78%),
+    /* soft band behind the framework row so the dots + connectors read clean */
+    linear-gradient(180deg, transparent 55%, rgba(1,14,16,.42) 62%, rgba(1,14,16,.42) 69%, transparent 76%),
+    /* bottom band — protects the stat row + footer across full width */
+    linear-gradient(0deg, rgba(1,11,13,.95) 0%, rgba(1,11,13,.72) 13%, rgba(1,11,13,.24) 30%, rgba(1,11,13,.04) 42%, transparent 50%),
+    /* gentle overall vignette */
+    radial-gradient(150% 125% at 62% 40%, transparent 46%, rgba(1,10,12,.55) 100%)}
+/* text halos guarantee contrast over any bright part of the photo */
+.t-cover-head{text-shadow:0 2px 22px rgba(1,16,16,.6),0 1px 4px rgba(1,16,16,.5)}
+.t-cover-hero .lead,.t-cover-tag{text-shadow:0 1px 14px rgba(1,16,16,.7),0 1px 3px rgba(1,16,16,.55)}
+.t-fw .nm,.t-fw .n{text-shadow:0 1px 10px rgba(1,16,16,.75)}
+.t-statband .statnum,.t-statband .cap{text-shadow:0 1px 10px rgba(1,16,16,.65)}
+/* brighten the secondary copy on the cover so it reads at a glance */
+.t-cover-hero .lead{color:#eafcfb!important;max-width:116mm!important}
+.t-statband .cap{color:rgba(234,252,251,.84)!important}
+@keyframes fxDrift1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(6%,4%) scale(1.09)}}
+@keyframes fxDrift2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-5%,6%) scale(1.13)}}
+@keyframes fxDrift3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(4%,-5%) scale(1.1)}}
+@keyframes fxGlow{0%,100%{opacity:.78;transform:scale(.97)}50%{opacity:1;transform:scale(1.05)}}
+@media (prefers-reduced-motion:reduce){.fx-aurora,.fx-tlglow{animation:none}}
+/* thin photo strip (e.g., a horizontal accent) */
+.thumb{border-radius:10px;overflow:hidden;background:var(--cyan-wash)}
+.thumb img{display:block;width:100%;height:100%;object-fit:cover}
+
+@media print{
+  body{background:#fff}
+  .screen .page{margin:0;box-shadow:none}
+  .page{margin:0}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  img{image-rendering:auto}
+}
+@page{size:A4 portrait;margin:0}
+
+/* ===================================================================
+   TEMPLATE ARCHETYPE HELPERS  (.t-*)
+   The ONLY styles below that are not part of the reusable kit above.
+   They generalise four page patterns (cover hero, contents rows,
+   person/feature spotlight, closing CTA). Everything else on every
+   page uses the kit classes + inline grid/flex styles.
+   =================================================================== */
+
+/* -- Cover hero -- */
+.t-cover-edge{position:absolute;left:var(--pad);top:30%;bottom:26%;width:1px;z-index:2;
+  background:linear-gradient(180deg,transparent,rgba(106,227,225,.55) 18%,rgba(106,227,225,.55) 82%,transparent)}
+.t-cover-hero{padding-left:22px}
+.t-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.t-dia{width:7px;height:7px;background:var(--cyan-light);transform:rotate(45deg);flex:none;box-shadow:0 0 10px rgba(106,227,225,.7)}
+.t-cover-head{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:50px;line-height:1.03;
+  letter-spacing:-.022em;color:#fff;text-shadow:0 2px 24px rgba(2,30,30,.35);max-width:172mm}
+.t-cover-tag{font-family:'Fraunces',sans-serif;font-style:italic;font-size:18.5px;line-height:1.4;color:#fff;max-width:150mm}
+.t-statband{display:flex;align-items:stretch;border-top:1px solid rgba(255,255,255,.18);padding-top:18px;gap:0}
+.t-statband .s{flex:1;display:flex;flex-direction:column;gap:5px;justify-content:center}
+.t-statband .div{width:1px;align-self:stretch;margin:2px 22px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.22),transparent)}
+/* -- cover: the four frameworks as a connected signal pipeline -- */
+.t-fwrow{display:flex;align-items:flex-start;margin-top:30px}
+.t-fw{display:flex;flex-direction:column;align-items:flex-start;gap:11px}
+.t-fw .dot{width:13px;height:13px;border-radius:50%;background:var(--cyan-light);
+  box-shadow:0 0 13px rgba(106,227,225,.85);border:3px solid #063f3f}
+.t-fw .txt{display:flex;flex-direction:column;gap:3px}
+.t-fw .n{font-family:'Space Mono',monospace;font-weight:700;font-size:10px;color:var(--cyan-light);letter-spacing:.06em}
+.t-fw .nm{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:15px;color:#fff;letter-spacing:.01em;white-space:nowrap}
+.t-fwline{flex:1;height:2px;margin-top:6px;min-width:26px;border-radius:2px;
+  background:linear-gradient(90deg,rgba(106,227,225,.55),rgba(106,227,225,.20))}
+
+/* -- Contents / index rows -- */
+.t-toc{display:flex;flex-direction:column}
+.t-toc-row{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:14px;
+  padding:12px 0;border-bottom:1px solid var(--line)}
+.t-toc-row .no{font-family:'Space Mono',monospace;font-weight:700;font-size:13px;color:var(--cyan-dark)}
+.t-toc-row .nm{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:14.5px;color:var(--ink)}
+.t-toc-row .ds{font-family:'Hanken Grotesk',sans-serif;font-size:11px;color:var(--muted)}
+.t-toc-row .pg{font-family:'Space Mono',monospace;font-size:11px;color:var(--muted)}
+
+/* -- Person / feature spotlight (generalised from page 19) -- */
+.t-spot-region{display:flex;flex-direction:column;gap:16px;justify-content:space-between}
+.t-spot-band{position:relative;flex:none;display:grid;grid-template-columns:74mm minmax(0,1fr);gap:20px;
+  align-items:center;padding:8mm;border-radius:16px;overflow:hidden;border:1px solid rgba(106,227,225,.22);
+  background:
+    radial-gradient(120% 140% at 0% 50%, rgba(13,207,207,.18) 0%, transparent 56%),
+    linear-gradient(100deg, rgba(6,109,109,.32) 0%, rgba(4,82,82,.20) 48%, rgba(2,40,40,.08) 100%);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.04),0 16px 38px rgba(2,40,40,.42)}
+.t-spot-band::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--cyan-light),var(--cyan-dark));opacity:.9}
+/* portrait: HARD-LOCKED aspect — fixed width + aspect-ratio + absolute inner img,
+   so a square source can never flex-stretch into a tall, zoomed frame. */
+.t-portrait{position:relative;width:74mm;aspect-ratio:4/5;margin:0;flex:none;align-self:center}
+.t-portrait .ring{position:absolute;inset:-6px;border-radius:18px;z-index:0;
+  background:linear-gradient(150deg,var(--cyan-light) 0%,var(--cyan-dark) 48%,rgba(106,227,225,.18) 100%);opacity:.42;filter:blur(.4px)}
+.t-portrait .frame{position:absolute;inset:0;z-index:1;overflow:hidden;border-radius:14px;
+  border:1px solid rgba(106,227,225,.42);box-shadow:0 18px 40px rgba(2,40,40,.55),inset 0 0 0 1px rgba(255,255,255,.06)}
+.t-portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 24%;
+  filter:grayscale(.26) contrast(1.04) brightness(1.06)}
+.t-portrait .duo{position:absolute;inset:0;z-index:2;mix-blend-mode:multiply;
+  background:linear-gradient(155deg,rgba(13,207,207,.16) 0%,rgba(6,109,109,.34) 58%,rgba(2,40,40,.46) 100%)}
+.t-portrait .shade{position:absolute;inset:0;z-index:3;
+  background:linear-gradient(180deg, rgba(2,40,40,0) 56%, rgba(2,40,40,.28) 78%, rgba(2,40,40,.84) 100%)}
+.t-portrait .cap{position:absolute;left:15px;right:15px;bottom:13px;z-index:4;display:flex;flex-direction:column}
+.t-portrait .nm{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:17px;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.6)}
+.t-portrait .rl{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.06em;color:var(--cyan-light);text-transform:uppercase;margin-top:3px}
+.t-spot-bio{display:flex;flex-direction:column;justify-content:center;gap:13px;min-width:0}
+/* featured pull-quote — grows to fill the page so light content never leaves a void */
+.t-pullquote{position:relative;flex:0 0 auto;min-height:auto;display:flex;flex-direction:column;justify-content:center;
+  overflow:hidden;border-radius:16px;padding:24px 40px 24px 38px;
+  background:radial-gradient(110% 130% at 100% 0%, rgba(13,207,207,.14) 0%, transparent 58%),rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.15)}
+.t-pullquote::before{content:'';position:absolute;left:0;top:18%;bottom:18%;width:3px;
+  background:linear-gradient(180deg,var(--cyan-light),var(--teal-deep))}
+.t-pullquote .qm{position:absolute;top:50%;left:24px;transform:translateY(-56%);z-index:0;
+  font-family:'Fraunces',serif;font-style:italic;font-weight:700;font-size:150px;line-height:1;color:rgba(106,227,225,.10);pointer-events:none}
+.t-pullquote .qt{position:relative;z-index:1;font-family:'Fraunces',sans-serif;font-style:italic;font-size:20px;line-height:1.5;color:#fff;margin:0;max-width:158mm}
+.t-pullquote .qa{position:relative;z-index:1;display:block;margin-top:14px;
+  font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--cyan-light)}
+.t-statribbon{flex:none;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;text-align:center;
+  background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:20px 12px}
+.t-statribbon .s{position:relative;display:flex;flex-direction:column;gap:3px}
+.t-statribbon .s::after{content:'';position:absolute;right:-6px;top:14%;bottom:14%;width:1px;background:rgba(255,255,255,.16)}
+.t-statribbon .s:last-child::after{display:none}
+.t-statribbon .statnum{font-size:25px}
+
+/* -- Dual-leadership duo (page 15: Founder + CTO) -- */
+.t-lead-intro{color:rgba(233,253,253,.9);font-size:13px;line-height:1.55;max-width:172mm;margin:-2mm 0 5mm}
+.t-lead-intro b{color:#fff;font-weight:600}
+.t-spot-region.duo{gap:16px}
+.t-spot-region.duo .t-pullquote{flex:1 1 auto}
+.t-duo-band{display:grid;grid-template-columns:1fr 1fr;gap:18px;flex:none}
+.t-duo-card{position:relative;display:flex;flex-direction:column;overflow:hidden;border-radius:16px;
+  border:1px solid rgba(106,227,225,.24);
+  background:
+    radial-gradient(120% 120% at 0% 0%, rgba(13,207,207,.16) 0%, transparent 58%),
+    linear-gradient(155deg, rgba(6,109,109,.30) 0%, rgba(4,82,82,.16) 55%, rgba(2,40,40,.06) 100%);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.05),0 16px 38px rgba(2,40,40,.42)}
+.t-duo-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;z-index:6;
+  background:linear-gradient(180deg,var(--cyan-light),var(--cyan-dark));opacity:.9}
+.t-duo-photo{position:relative;height:63mm;overflow:hidden;flex:none}
+.t-duo-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;
+  filter:grayscale(.24) contrast(1.04) brightness(1.05)}
+.t-duo-photo .duo{position:absolute;inset:0;mix-blend-mode:multiply;
+  background:linear-gradient(155deg,rgba(13,207,207,.14) 0%,rgba(6,109,109,.30) 60%,rgba(2,40,40,.44) 100%)}
+.t-duo-photo .shade{position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(2,40,40,0) 42%,rgba(2,40,40,.34) 70%,rgba(2,40,40,.92) 100%)}
+.t-duo-photo .cap{position:absolute;left:16px;right:16px;bottom:12px;z-index:2;display:flex;flex-direction:column}
+.t-duo-photo .nm{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px;color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.65)}
+.t-duo-photo .rl{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.06em;color:var(--cyan-light);text-transform:uppercase;margin-top:4px}
+.t-duo-body{display:flex;flex-direction:column;gap:12px;padding:15px 17px 16px;flex:1}
+.t-duo-body p{font-family:'Hanken Grotesk',sans-serif;font-size:11.5px;line-height:1.52;color:rgba(233,253,253,.85);margin:0}
+.t-duo-body p b{color:#fff;font-weight:600}
+.t-duo-tags{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-top:auto}
+.t-chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 12px;
+  font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.02em;color:#eafffe;
+  background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.26);white-space:nowrap}
+.t-chip .dt{width:5px;height:5px;border-radius:50%;background:var(--cyan-light);flex:none}
+.t-chip.solid{background:rgba(13,207,207,.16);border-color:rgba(106,227,225,.55);color:#effffe}
+.t-ico{display:inline-flex;align-items:center;justify-content:center;width:27px;height:27px;border-radius:8px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.24);color:#cdfffe;text-decoration:none}
+.t-ico svg{width:13px;height:13px;fill:currentColor}
+.t-ico.link{width:auto;padding:0 11px;gap:7px;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.03em}
+
+/* -- Closing CTA -- */
+.t-cta-head{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:42px;line-height:1.06;color:#fff;letter-spacing:-.015em;max-width:155mm}
+.t-contact{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.t-contact .c{display:flex;flex-direction:column;gap:5px;padding:16px 18px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16)}
+.t-contact .k{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan-light)}
+.t-contact .v{font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:13px;color:#fff}
+
+/* ===================================================================
+   DR018 — The Signal-Led GTM Playbook · page-specific helpers (d-*)
+   Built on the InsightsTap design-system kit above. These only add the
+   few patterns the playbook needs: framework-letter cards, a step flow,
+   a before/after split, engine cards, and the GTM-stack chip rows.
+   =================================================================== */
+
+/* -- big statement page (The New GTM Reality) -- */
+.d-statement{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:34px;line-height:1.12;
+  letter-spacing:-.015em;color:#fff;max-width:165mm}
+.d-statement .hl{color:var(--cyan-light)}
+.d-keyline{position:relative;padding:16px 20px 16px 22px;border-radius:14px;overflow:hidden;
+  background:radial-gradient(120% 140% at 0% 50%, rgba(13,207,207,.16) 0%, transparent 60%),rgba(255,255,255,.05);
+  border:1px solid rgba(106,227,225,.30)}
+.d-keyline::before{content:'';position:absolute;left:0;top:14%;bottom:14%;width:3px;
+  background:linear-gradient(180deg,var(--cyan-light),var(--cyan-dark))}
+.d-keyline .q{font-family:'Fraunces',sans-serif;font-style:italic;font-weight:500;font-size:17px;line-height:1.45;color:#fff}
+
+/* -- framework letter cards (DARK) -- */
+.d-letters{display:grid;gap:12px}
+.d-letters.q4{grid-template-columns:repeat(2,1fr);grid-auto-rows:1fr}
+.d-l{position:relative;overflow:hidden;display:grid;grid-template-columns:42px 1fr;gap:13px;align-items:start;
+  border:1px solid var(--line-strong);border-radius:14px;padding:15px 16px;background:#fff}
+.dark .d-l{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16);backdrop-filter:blur(2px)}
+.d-l .big{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:34px;line-height:.8;color:var(--cyan-dark)}
+.dark .d-l .big{color:var(--cyan-light)}
+.d-l h4{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:14.5px;color:var(--ink);margin-bottom:4px;line-height:1.1}
+.dark .d-l h4{color:#fff}
+.d-l p{font-family:'Hanken Grotesk',sans-serif;font-size:11px;line-height:1.5;color:var(--body)}
+.dark .d-l p{color:rgba(233,253,253,.82)}
+
+/* -- compact 7-letter SIGNALS grid -- */
+.d-sig{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.d-sig .row{display:grid;grid-template-columns:26px 1fr;gap:11px;align-items:start;padding:11px 13px;
+  border:1px solid var(--line);border-radius:12px;background:var(--cyan-wash)}
+.d-sig .row.span{grid-column:1 / -1}
+.d-sig .ltr{font-family:'Space Mono',monospace;font-weight:700;font-size:18px;color:var(--cyan-dark);line-height:1}
+.d-sig .t{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12.5px;color:var(--ink);display:block;margin-bottom:1px}
+.d-sig .s{font-family:'Hanken Grotesk',sans-serif;font-size:10.5px;color:var(--muted);line-height:1.4}
+
+/* ===================================================================
+   P6 · SIGNALS — "Signal Spine" : single-column 01->07 pipeline timeline
+   Synthesis: D1 spine + D2 .tbl-more payoff capstone + D3 index kicker
+   & right-aligned mono number-spine + D4 outcome micro-tag (capstone only).
+   Fully print-static: depth = gradients/borders/box-shadow/pseudo only.
+   Scoped under .sig2 so nothing else on the page is touched.
+   =================================================================== */
+.fill-sig .sig2{flex:1;min-height:0;display:flex;flex-direction:column;gap:2.6mm}
+
+/* --- index kicker (frames the block as an ordered set) --- */
+.sig2 .sig2-kick{display:flex;align-items:center;gap:10px;flex:none}
+.sig2 .sig2-kick .kicker{font-size:9px;letter-spacing:.16em}
+.sig2 .sig2-kick .ln{flex:1;height:1px;background:var(--line-strong)}
+.sig2 .sig2-kick .of{font-family:'Space Mono',monospace;font-weight:700;font-size:9px;
+  letter-spacing:.06em;color:var(--cyan-dark);white-space:nowrap}
+
+/* --- the timeline: 7 rows that split the remaining height evenly --- */
+.sig2 .sig2-list{position:relative;flex:1;min-height:0;
+  display:grid;grid-template-rows:repeat(6,1fr) 1.22fr}
+
+/* one move = [rail 40px][icon 34px][copy 1fr] ; flat row on the wash */
+.sig2 .sig2-row{position:relative;display:grid;grid-template-columns:40px 34px 1fr;
+  gap:12px;align-items:center;padding:0 4px;
+  border-top:1px solid var(--line)}
+.sig2 .sig2-list .sig2-row:first-child{border-top-color:var(--line-strong)}
+
+/* RAIL COLUMN — holds the continuous spine + the numbered bead.
+   The spine is drawn INSIDE this full-height column (no page-relative
+   mm offsets), threading every bead centre regardless of row height. */
+.sig2 .sig2-rail{position:relative;justify-self:stretch;align-self:stretch;
+  display:flex;align-items:center;justify-content:center}
+.sig2 .sig2-rail::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;
+  transform:translateX(-50%);z-index:0;
+  background:linear-gradient(180deg,var(--cyan) 0%,var(--cyan-light) 100%)}
+.sig2 .sig2-list .sig2-row:first-child .sig2-rail::before{top:50%}
+.sig2 .sig2-bead{position:relative;z-index:1;width:29px;height:29px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--cyan-wash);border:1.5px solid var(--cyan);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 0 0 4px #fff}
+.sig2 .sig2-bead .no{font-family:'Space Mono',monospace;font-weight:700;font-size:11px;
+  line-height:1;color:var(--cyan-dark)}
+/* downward flow caret in the gap below each bead (pipeline direction S->S) */
+.sig2 .sig2-rail::after{content:'';position:absolute;left:50%;bottom:-2px;z-index:1;
+  transform:translateX(-50%);
+  border-top:5px solid var(--cyan);border-left:4px solid transparent;border-right:4px solid transparent}
+.sig2 .sig2-list .sig2-row:last-child .sig2-rail::after{display:none}
+
+/* house icon chip (.cic) — inherits global .cic (34px, cyan-wash, teal 1.7 line-SVG) */
+.sig2 .sig2-row .cic{align-self:center}
+
+/* copy: acronym letter + title on one baseline, one tight desc line */
+.sig2 .sig2-copy{position:relative;z-index:1;min-width:0;display:flex;flex-direction:column;gap:1px}
+.sig2 .sig2-copy .hd{display:flex;align-items:baseline;gap:9px}
+.sig2 .sig2-copy .ac{font-family:'Space Mono',monospace;font-weight:700;font-size:12px;
+  color:var(--teal);letter-spacing:.02em;flex:none}
+.sig2 .sig2-copy .t{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:13.5px;
+  color:var(--ink);line-height:1.05}
+.sig2 .sig2-copy .s{font-family:'Hanken Grotesk',sans-serif;font-size:10.5px;line-height:1.34;
+  color:var(--muted)}
+
+/* big faint acronym ghost letter — activates the right void + amplifies
+   S·I·G·N·A·L·S down the right edge (a per-row .bignum idiom) */
+.sig2 .sig2-row .gl{position:absolute;right:18px;top:50%;transform:translateY(-50%);z-index:0;
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:50px;line-height:1;
+  color:rgba(13,207,207,.10);letter-spacing:-.02em;pointer-events:none}
+.sig2 .sig2-row.cap .gl{right:20px;color:rgba(255,255,255,.15)}
+
+/* =============== CAPSTONE — "Scale" = confident cyan->teal payoff =============== */
+.sig2 .sig2-row.cap{border-top:0;overflow:hidden;border-radius:14px;
+  grid-template-columns:40px 34px 1fr;align-items:center;
+  padding:11px 16px 11px 6px;margin-top:1.8mm;
+  background:
+    radial-gradient(95% 180% at 0% 0%, rgba(255,255,255,.28), transparent 44%),
+    linear-gradient(135deg,var(--cyan) 0%, var(--cyan-dark) 56%, var(--teal) 100%);
+  border:1px solid var(--cyan-dark);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.34), 0 12px 24px -12px rgba(2,82,82,.55)}
+.sig2 .sig2-row.cap::before{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:linear-gradient(135deg,rgba(255,255,255,.42) 0%,rgba(255,255,255,0) 40%)}
+.sig2 .sig2-row.cap::after{content:'';position:absolute;top:9px;right:9px;width:5px;height:5px;z-index:3;
+  background:var(--cyan-light);transform:rotate(45deg);box-shadow:0 0 8px rgba(106,227,225,.85)}
+.sig2 .sig2-row.cap>*{position:relative;z-index:1}
+.sig2 .sig2-row.cap .bignum{right:14px;bottom:-13px;font-size:58px;color:rgba(236,255,255,.17)}
+
+/* inverted "hero" bead: the spine visibly ARRIVES into the payoff */
+.sig2 .sig2-row.cap .sig2-rail::before{bottom:50%}
+.sig2 .sig2-row.cap .sig2-bead{background:#fff;border-color:#fff;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 0 10px rgba(106,227,225,.75),0 0 0 4px rgba(255,255,255,.22)}
+.sig2 .sig2-row.cap .sig2-bead .no{color:var(--cyan-dark)}
+.sig2 .sig2-row.cap .cic{background:rgba(255,255,255,.16)}
+.sig2 .sig2-row.cap .cic svg{stroke:#fff}
+.sig2 .sig2-row.cap .ac{color:#fff;opacity:.9}
+.sig2 .sig2-row.cap .t{color:#fff}
+.sig2 .sig2-row.cap .s{color:rgba(236,255,255,.92)}
+.sig2 .sig2-row.cap .sigtag{margin-top:4px;font-family:'Space Mono',monospace;font-weight:700;
+  font-size:9px;letter-spacing:.11em;text-transform:uppercase;color:rgba(233,253,253,.96)}
+
+/* -- horizontal step flow (BRIDGE Ads) — the signal pipeline -- */
+.flowhd{display:flex;flex-direction:column;gap:6px}
+.flowhd .flowhd-s{font-family:'Hanken Grotesk',sans-serif;font-weight:400;font-size:12px;line-height:1.5;color:rgba(233,253,253,.74);max-width:150mm}
+/* cold -> warm temperature scale that frames the pipeline */
+.thermo{display:flex;align-items:center;gap:13px}
+.thermo .tbar{position:relative;flex:1;height:5px;border-radius:3px;
+  background:linear-gradient(90deg,#56E1DE,#7DE7C6,#E9D79A,#F3CE84,#F4B740);
+  box-shadow:0 0 14px rgba(106,227,225,.26),inset 0 0 0 1px rgba(255,255,255,.14)}
+.thermo .tbar::after{content:'';position:absolute;inset:0;border-radius:3px;
+  background-image:repeating-linear-gradient(90deg,transparent 0 calc(20% - 1px),rgba(2,34,34,.5) calc(20% - 1px) 20%)}
+.thermo .tl{font-family:'Space Mono',monospace;font-weight:700;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;display:flex;align-items:center;gap:6px}
+.thermo .tl::before{content:'';width:6px;height:6px;border-radius:50%}
+.thermo .tl.cold{color:#8fecea}
+.thermo .tl.cold::before{background:#56E1DE;box-shadow:0 0 8px rgba(86,225,222,.85)}
+.thermo .tl.warm{color:#F4B740}
+.thermo .tl.warm::before{background:#F4B740;box-shadow:0 0 8px rgba(244,183,64,.85)}
+.d-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;align-items:stretch}
+.d-step{--acc:#6AE3E1;--acc2:#6AE3E1;position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;
+  padding:20px 13px 18px;border-radius:15px;
+  background:radial-gradient(125% 60% at 50% 0%,color-mix(in srgb,var(--acc) 12%,transparent),transparent 72%),linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.045));
+  border:1px solid rgba(255,255,255,.17);box-shadow:inset 0 1px 0 rgba(255,255,255,.09),0 8px 22px rgba(0,0,0,.14)}
+/* connector rail warms cyan -> gold across the row; a chevron marks direction in each gap */
+.d-step::before{content:'';position:absolute;top:43px;left:-9px;right:-9px;height:2px;z-index:0;
+  background:linear-gradient(90deg,color-mix(in srgb,var(--acc) 72%,transparent),color-mix(in srgb,var(--acc2) 72%,transparent))}
+.d-step:first-child::before{left:50%}
+.d-step:last-child::before{right:50%}
+.d-step .chev{position:absolute;top:43px;right:-13px;width:11px;height:11px;z-index:5;
+  border-top:3px solid var(--acc2);border-right:3px solid var(--acc2);
+  transform:translateY(-50%) rotate(45deg);filter:drop-shadow(0 0 5px color-mix(in srgb,var(--acc2) 80%,transparent))}
+.d-step:last-child .chev{display:none}
+/* icon medallion sits on the rail — accent bloom that warms per step */
+.d-step .node{position:relative;z-index:2;width:46px;height:46px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 50% 30%,color-mix(in srgb,var(--acc) 36%,#063f42),#052c2e);
+  border:1.5px solid color-mix(in srgb,var(--acc) 82%,transparent);
+  box-shadow:0 0 0 4px rgba(4,42,42,.35),0 0 18px 2px color-mix(in srgb,var(--acc) 42%,transparent),0 6px 16px rgba(0,0,0,.30)}
+.d-step .node svg{width:22px;height:22px;fill:none;stroke:var(--acc);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+/* readable step index under the medallion */
+.d-step .n{position:relative;z-index:2;font-family:'Space Mono',monospace;font-weight:700;font-size:12px;
+  letter-spacing:.08em;color:var(--acc);margin-top:9px}
+/* label group leads the card (read first) */
+.d-step .tag{position:relative;z-index:2;width:100%;margin-top:9px;font-family:'Space Mono',monospace;font-weight:700;font-size:9px;
+  letter-spacing:.15em;text-transform:uppercase;color:var(--acc);margin-bottom:5px}
+.d-step .x{position:relative;z-index:2;width:100%;min-height:45px;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12px;color:#fff;line-height:1.25;letter-spacing:-.005em;margin-bottom:6px;
+  display:flex;align-items:flex-start;justify-content:center}
+.d-step .sub{position:relative;z-index:2;width:100%;font-family:'Hanken Grotesk',sans-serif;font-size:10px;line-height:1.42;color:rgba(233,253,253,.9)}
+/* signal stream — a beaded data trace flowing from the step down to its outcome */
+.d-step .beam{position:relative;z-index:2;flex:1;width:9px;min-height:22px;margin:12px auto 13px;
+  background-image:radial-gradient(circle,color-mix(in srgb,var(--acc) 62%,transparent) 1.8px,transparent 2.4px);
+  background-size:9px 15px;background-repeat:repeat-y;background-position:center top;
+  -webkit-mask-image:linear-gradient(180deg,#000 0 78%,transparent 100%);mask-image:linear-gradient(180deg,#000 0 78%,transparent 100%)}
+.d-step .beam::before{content:'';position:absolute;left:50%;top:-4px;transform:translateX(-50%);
+  width:7px;height:7px;border-radius:50%;background:var(--acc);box-shadow:0 0 10px color-mix(in srgb,var(--acc) 85%,transparent)}
+/* mono outcome-tag pinned to the card foot */
+.d-step .sfoot{position:relative;z-index:2;width:100%;padding-top:11px;white-space:nowrap;
+  border-top:1px solid color-mix(in srgb,var(--acc) 24%,rgba(255,255,255,.14));font-family:'Space Mono',monospace;font-weight:700;font-size:8.5px;
+  letter-spacing:.03em;color:var(--acc)}
+
+/* -- before / after split (ABM 2.0) · light-base, dark override -- */
+.d-vs{display:grid;grid-template-columns:1fr 38px 1fr;gap:0;align-items:stretch}
+.d-vs .vsx{align-self:center;text-align:center;font-family:'Space Mono',monospace;font-weight:700;font-size:12px;color:var(--cyan-dark)}
+.d-vs .col{padding:18px;border-radius:14px}
+.d-vs .old{background:#fff;border:1px solid var(--line-strong)}
+.d-vs .new{background:radial-gradient(120% 130% at 100% 0%, rgba(13,207,207,.14) 0%, transparent 60%),var(--cyan-wash);border:1px solid rgba(13,207,207,.34)}
+.d-vs .tag{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--cyan-dark)}
+.d-vs .ask{font-family:'Fraunces',sans-serif;font-style:italic;font-size:15px;line-height:1.4;color:var(--ink);margin:7px 0 2px}
+.dark .d-vs .vsx,.dark .d-vs .tag{color:var(--cyan-light)}
+.dark .d-vs .old{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.14)}
+.dark .d-vs .new{background:radial-gradient(120% 130% at 100% 0%, rgba(13,207,207,.18) 0%, transparent 60%),rgba(255,255,255,.07);border-color:rgba(106,227,225,.34)}
+.dark .d-vs .ask{color:#fff}
+
+/* -- 3 engine cards -- */
+.d-engine{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;grid-auto-rows:1fr}
+.d-eng-q{font-family:'Fraunces',sans-serif;font-style:italic;font-size:12px;color:var(--cyan-light);line-height:1.35}
+
+/* -- GTM stack rows -- */
+.d-cat{font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:9.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--cyan-dark);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.d-cat .ln{flex:1;height:1px;background:var(--line)}
+.d-chips{display:flex;flex-wrap:wrap;gap:6px}
+.d-chip{display:inline-flex;align-items:center;gap:6px;padding:4px 11px 4px 5px;border:1px solid var(--line-strong);
+  border-radius:999px;background:#fff;font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:10.5px;color:var(--ink)}
+.d-chip img{width:17px;height:17px;object-fit:contain;border-radius:4px;flex:none}
+.d-chip.own{background:linear-gradient(120deg,#e9fdfd,#cffafa);border-color:var(--cyan);font-weight:600}
+.d-chip.txt{font-family:'Space Mono',monospace;font-size:9.5px;color:var(--teal);padding-left:11px}
+.d-chip.txt::before{content:'';width:6px;height:6px;background:var(--cyan);transform:rotate(45deg);flex:none}
+
+/* -- numbered process steps (How we build) -- */
+.d-proc{display:grid;grid-template-columns:repeat(5,1fr);gap:11px;grid-auto-rows:1fr}
+.d-proc .st{position:relative;display:flex;flex-direction:column;gap:7px;padding:14px 13px;border-radius:13px;
+  background:#fff;border:1px solid var(--line-strong);overflow:hidden}
+.d-proc .st .no{font-family:'Space Mono',monospace;font-weight:700;font-size:13px;color:var(--cyan-dark)}
+.d-proc .st h4{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12px;color:var(--ink);line-height:1.15}
+.d-proc .st p{font-family:'Hanken Grotesk',sans-serif;font-size:10px;line-height:1.45;color:var(--body)}
+
+/* ===================================================================
+   PAGE-FILL REFINEMENTS
+   Vertical rhythm so each A4 reads composed, not top-loaded. Growers
+   (.fillg) take the region's slack; distributors space children across
+   the full canvas; child-centering keeps stretched cards from feeling
+   hollow. Scoped names so they only touch the pages that opt in.
+   =================================================================== */
+.fillg{flex:1;min-height:0}                 /* a region child that should absorb slack */
+.dist{justify-content:space-between}         /* spread region children across full height */
+/* P2 contents */
+.fill-toc .t-toc-row{padding:15px 0}
+/* P3 statement */
+.fill-p3 .d-statement{font-size:37px}
+/* P6 SIGNALS */
+.fill-sig .d-sig{grid-auto-rows:1fr;gap:11px}
+.fill-sig .row{align-items:center;padding:18px 16px}
+.fill-sig .ltr{font-size:20px}
+.fill-sig .t{font-size:13.5px}
+.fill-sig .s{font-size:11.5px}
+/* P4 problem cards — a touch more presence */
+.fill-p4 .card .h3{font-size:16px}
+.fill-p4 .card .body{font-size:12px;line-height:1.5}
+/* P7 BRIDGE flow — the pipeline sits as a centered band; equal-height columns
+   keep medallions on the rail (top) and state-tags aligned (foot) */
+.fill-flow .flowgrp{flex:1;display:flex;flex-direction:column;justify-content:center;gap:6mm}
+.fill-flow .d-flow{align-content:center}
+.fill-flow .d-step{min-height:113mm}
+/* P8 ABM before/after — content flows from top, a mono signal-tag anchors the card bottom */
+.fill-vs .old,.fill-vs .new{justify-content:flex-start;gap:11px}
+.fill-vs .sigline{margin-top:auto;padding-top:12px;font-family:'Space Mono',monospace;
+  font-size:8.5px;letter-spacing:.05em;line-height:1.55}
+.fill-vs .old .sigline{color:var(--muted);border-top:1px solid var(--line-strong)}
+.fill-vs .new .sigline{color:var(--cyan-dark);border-top:1px solid rgba(13,207,207,.34)}
+.dark .fill-vs .old .sigline,.dark .fill-vs .new .sigline{border-top-color:rgba(255,255,255,.14)}
+.dark .fill-vs .new .sigline{color:var(--cyan-light)}
+/* P9 engines + P14 outcomes + P16 AI — center card contents when stretched */
+.fillg.cgrid>.card,.cctr>.card{display:flex;flex-direction:column;justify-content:center}
+/* P10 process */
+.fill-proc .st{justify-content:flex-start;gap:9px;padding:16px 15px 14px}
+.fill-proc .st h4{font-size:12.5px}
+.fill-proc .st p{font-size:10.5px}
+/* P10 — steps grow to fill (kills the band/steps gap); content tops each card,
+   a deliverable tag pins to the base, a big faint index fills the lower card */
+.fill-proc{flex:none}
+.fill-proc .st>*{position:relative;z-index:1}
+.fill-proc .st h4{margin-top:2px}
+.fill-proc .st .no{align-self:flex-start;display:flex;align-items:center;justify-content:center;
+  width:33px;height:33px;border-radius:50%;font-size:12.5px;color:#fff;
+  background:linear-gradient(135deg,var(--cyan),var(--cyan-dark));box-shadow:0 6px 13px -5px rgba(2,82,82,.55)}
+.fill-proc .st .bn{position:absolute;right:6px;bottom:-6px;z-index:0;font-family:'Bricolage Grotesque',sans-serif;
+  font-weight:800;font-size:76px;line-height:.8;letter-spacing:-.04em;color:rgba(13,207,207,.09)}
+.fill-proc .st .pt{margin-top:auto;padding-top:11px;border-top:1px solid var(--line);
+  font-family:'Space Mono',monospace;font-weight:700;font-size:8px;letter-spacing:.07em;color:var(--cyan-dark)}
+/* P16 AI descriptor line */
+.fill-ai .card p{font-family:'Hanken Grotesk',sans-serif;font-size:10px;line-height:1.4;color:rgba(233,253,253,.78);margin-top:1px}
+/* ---- second pass: give light pages a substantial, page-centered band ---- */
+.midup{padding-bottom:10mm}                  /* nudge a region-centered band up toward page centre */
+/* P7 BRIDGE sub-label — styled in the signal-pipeline component */
+/* P14 outcomes — five stacked metric rows fill the page vertically (icon · outcome · metric) */
+.outrows{flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:9px}
+.outrow{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;
+  background:#fff;border:1px solid var(--line-strong);border-radius:14px;padding:15px 22px}
+.outrow .rt .h3{font-size:15px;margin-bottom:2px}
+.outrow .rt .body{font-size:11.5px;line-height:1.45;max-width:104mm}
+.outrow .metric{text-align:right;min-width:33mm}
+.outrow .metric .statnum{font-size:25px;line-height:1}
+.outrow .metric .statlabel{font-size:9.5px;letter-spacing:.02em}
+.aicards{grid-auto-rows:48mm!important}      /* P16 AI — taller, content-centered cards */
+.aicards>.card{display:flex;flex-direction:column;justify-content:center}
+.fill-jf li{margin-bottom:6px}               /* P11 — fuller right column */
+/* ---- third pass: real vertical mass on sparse framework pages ---- */
+.fill-proc .st{min-height:58mm}              /* P10 — snug step cards; the hero band carries the fill */
+.fill-vs .d-vs{min-height:60mm}              /* P8 — before/after cards fill without middle void */
+.fill-vs .ask{font-size:16px}
+.fill-vs .old .body,.fill-vs .new .body{font-size:12px}
+.fill-vs .clean{font-size:12.5px!important;line-height:1.5}
+.fill-vs .clean li{margin-bottom:8px}
+/* ---- fourth pass: image-anchored light pages + distributed grids ---- */
+.fill-p4 .cardflex{min-height:54mm}          /* P4 — problem cards earn their row under the image */
+.fill-p4 .card .ctag{margin-top:auto}
+.fill-sig .d-sig{flex:1}                      /* P6 — SIGNALS grid fills below the signal-data band */
+.fill-sig .row{padding:15px 16px}
+/* ---- fifth pass: kill residual voids on framework + closing pages ---- */
+/* P5 DARK funnel — a mono signal-tag fills each card (content top, tag bottom) */
+.dark .d-l{align-items:stretch}
+.dark .d-l .big{align-self:center}
+.dark .d-l>div{display:flex;flex-direction:column;justify-content:center;height:100%}
+.dark .d-l .sig{margin-top:13px;padding-top:0;font-family:'Space Mono',monospace;font-size:8.5px;
+  letter-spacing:.04em;color:var(--cyan-light);opacity:.85;line-height:1.5}
+/* P7 BRIDGE — the signal-pipeline component (above) carries the styling and the
+   fill rules live with the other P7 refinements; nothing further needed here */
+/* P9 engines — see "The Signal Machine" block below (all P9 rules scoped under .fill-eng) */
+/* P12 use cases — six uniform cards, centered, filling a 2x3 grid */
+.fill-uc .cardflex{min-height:0;justify-content:center;gap:9px}
+/* P12 plays — a distinct colour tint per play card (matches the P14 palette) */
+.uc1{background:#EAFDFD;border-color:#C8EEED}.uc1 .cic{background:#D5F6F4}.uc1 .cic svg{stroke:#0AAAA8}.uc1 .ctag{color:#0AAAA8;border-top-color:#CBECEA}
+.uc2{background:#DEF9F7;border-color:#BAE8E5}.uc2 .cic{background:#C9F1EE}.uc2 .cic svg{stroke:#099E9B}.uc2 .ctag{color:#099E9B;border-top-color:#BDE7E3}
+.uc3{background:#D2F4F0;border-color:#ACE0DB}.uc3 .cic{background:#BEEAE5}.uc3 .cic svg{stroke:#0A8F8B}.uc3 .ctag{color:#0A8F8B;border-top-color:#AFE0DA}
+.uc4{background:#C6EEE9;border-color:#9FD8D2}.uc4 .cic{background:#B2E4DD}.uc4 .cic svg{stroke:#0B807B}.uc4 .ctag{color:#0B807B;border-top-color:#A2D8D1}
+.uc5{background:#BAE8E1;border-color:#92D0C9}.uc5 .cic{background:#A6DDD5}.uc5 .cic svg{stroke:#0B716C}.uc5 .ctag{color:#0B716C;border-top-color:#95CFC7}
+.uc6{background:#ADE1D9;border-color:#85C7BF}.uc6 .cic{background:#99D5CC}.uc6 .cic svg{stroke:#0A625D}.uc6 .ctag{color:#0A625D;border-top-color:#88C6BD}
+/* P13 stack — category shelves with a descriptor line + real concept chips */
+.d-shelf{padding:12px 16px 13px}
+.d-shelf .dsc{font-family:'Hanken Grotesk',sans-serif;font-size:10px;line-height:1.4;color:var(--muted);margin:-1px 0 9px}
+/* ===== P13 redesign — the GTM stack as a filled 2-column category grid ===== */
+.stackgrid{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:12px}
+.scard{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;background:#fff;
+  border:1px solid var(--line-strong);border-radius:16px;padding:16px 18px}
+.scard .wm{position:absolute;right:6px;bottom:-30px;z-index:0;pointer-events:none;
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:128px;line-height:.8;color:rgba(9,156,155,.075)}
+.scard .shd{position:relative;z-index:1;display:flex;align-items:center;gap:11px;margin-bottom:11px}
+.scard .snum{width:29px;height:29px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;
+  font-family:'Space Mono',monospace;font-weight:700;font-size:11px;color:#fff;
+  background:linear-gradient(135deg,var(--cyan),var(--cyan-dark));box-shadow:0 3px 9px rgba(9,156,155,.28)}
+.scard .stt{display:flex;flex-direction:column;gap:2px}
+.scard .stt b{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:13.5px;color:var(--ink);line-height:1.05}
+.scard .stt .ds{font-family:'Hanken Grotesk',sans-serif;font-size:9.5px;line-height:1.3;color:var(--muted)}
+.scard .d-chips{position:relative;z-index:1;margin-top:13px;gap:7px}
+.scard .d-chip{font-size:11px;padding:5px 12px 5px 6px}
+.scard .d-chip img{width:19px;height:19px}
+/* ===== P14 redesign — creative tinted metric bento (a colour per box, varied tile sizes) ===== */
+.obento{flex:1;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:12px;min-height:0}
+.otile{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;
+  border:1px solid var(--line-strong);border-radius:18px;padding:17px 20px;box-shadow:0 6px 15px rgba(6,60,60,.05)}
+.otile .cic{width:38px;height:38px;border-radius:11px;margin-bottom:10px}
+.otile .statnum{font-size:30px;line-height:1}
+.otile .statlabel{font-size:8.5px;display:block;margin-top:5px}
+.otile .onm{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:14px;color:var(--ink);margin-top:11px}
+.otile .odesc{font-family:'Hanken Grotesk',sans-serif;font-size:10px;line-height:1.42;color:var(--body);margin-top:3px}
+.otile.span2{grid-column:span 2;flex-direction:row;align-items:center;gap:24px}
+.otile.span2 .oL{display:flex;flex-direction:column;min-width:55mm}
+.otile.span2 .oL .cic{margin-bottom:9px}
+.otile.span2 .statnum{font-size:36px;white-space:nowrap}
+.otile.span2 .oR .onm{margin-top:0;font-size:15.5px}
+.otile.span2 .oR .odesc{font-size:11px;line-height:1.5}
+.otile.span3{grid-column:span 3;flex-direction:row;align-items:center;gap:26px}
+.otile.span3 .oL{display:flex;flex-direction:column;min-width:44mm}
+.otile.span3 .oL .cic{margin-bottom:10px}
+/* a distinct colour tint per box */
+.ot1{background:#E9FCFB;border-color:#C3EEEB}.ot1 .cic{background:#D2F5F2}.ot1 .cic svg{stroke:#009C9B}.ot1 .statnum{color:#009C9B}
+.ot2{background:#DCF1EE;border-color:#B0DCD7}.ot2 .cic{background:#C7E8E3}.ot2 .cic svg{stroke:#066D6D}.ot2 .statnum{color:#066D6D}
+.ot3{background:#D8F8F6;border-color:#ABE7E4}.ot3 .cic{background:#C4F1EE}.ot3 .cic svg{stroke:#008E8C}.ot3 .statnum{color:#008E8C}
+.ot4{background:#FBF3DE;border-color:#EDD9A5}.ot4 .cic{background:#F6E6BA}.ot4 .cic svg{stroke:#D99A23}.ot4 .statnum{color:#946F27}
+.ot5{background:#EEECFC;border-color:#D6CFF6}.ot5 .cic{background:#E1DCFA}.ot5 .cic svg{stroke:#6C5CE7}.ot5 .statnum{color:#5541D6}
+.ot6{background:radial-gradient(130% 150% at 0% 0%,rgba(255,255,255,.55),transparent 55%),linear-gradient(120deg,#12C6C4,#068C8B);border-color:transparent}
+.ot6 .cic{background:rgba(255,255,255,.22)}.ot6 .cic svg{stroke:#fff}
+.ot6 .wlab{font-family:'Space Mono',monospace;font-weight:700;font-size:11px;letter-spacing:.06em;color:#fff;line-height:1.3}
+.ot6 .wtxt{font-family:'Hanken Grotesk',sans-serif;font-size:11px;line-height:1.55;color:rgba(255,255,255,.94)}
+.d-chip.txt{font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:10.5px;color:var(--ink);padding-left:11px}
+.d-chip.txt::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--cyan);transform:none}
+/* P16 AI — the grid grows to fill, slightly brighter body text */
+.aicards{grid-auto-rows:52mm!important}      /* P16 AI — compact fixed-height cards, band carries the fill */
+.fill-ai .aicards{flex:none}
+.fill-ai .card p{color:rgba(233,253,253,.9)}
+/* P17 CTA — contact cards read as actions (primary fill + arrow affordance) */
+.t-contact .c{position:relative;min-height:32mm;padding-bottom:30px}
+.t-contact .c.primary{background:linear-gradient(120deg,rgba(13,207,207,.22),rgba(13,207,207,.09));border-color:rgba(106,227,225,.5)}
+.t-contact .c .arw{position:absolute;right:16px;bottom:13px;font-family:'Space Mono',monospace;font-size:17px;color:var(--cyan-light)}
+/* ============================================================
+   P4 closing panel — "operating-model shift" ledger (shift-*)
+   Three equal, wrap-proof cells: struck mono OLD -> Raleway-800 NEW.
+   Vertical per-cell stack + margin-bottom:auto baseline-locks the
+   captions across columns, so a term wrapping (e.g. "GTM engineering")
+   never breaks alignment. Lit-glass panel + left cyan keyline anchor.
+   Fully static / print-safe; composes existing tokens + fonts only.
+   ============================================================ */
+.shift-panel{position:relative;overflow:hidden;border-radius:14px;padding:20px 22px 19px;
+  display:flex;flex-direction:column;gap:15px;min-height:58mm;
+  background:
+    radial-gradient(120% 95% at 6% -12%, rgba(13,207,207,.20) 0%, transparent 46%),
+    radial-gradient(120% 130% at 106% 120%, rgba(106,227,225,.20) 0%, transparent 52%),
+    linear-gradient(118deg,#fff 0%, #f3ffff 46%, var(--cyan-wash) 100%);
+  border:1px solid rgba(13,207,207,.22);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.92), 0 18px 42px -22px rgba(2,82,82,.34)}
+.shift-panel::before{content:'';position:absolute;left:0;top:12%;bottom:12%;width:3px;z-index:2;
+  border-radius:0 3px 3px 0;background:linear-gradient(180deg,var(--cyan-light),var(--cyan-dark))}
+.shift-head{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.shift-eyebrow{display:flex;align-items:center;gap:11px}
+.shift-dia{width:7px;height:7px;flex:none;background:var(--cyan);transform:rotate(45deg);box-shadow:0 0 0 4px rgba(13,207,207,.14)}
+.shift-title{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:15px;line-height:1.1;color:var(--ink);letter-spacing:-.01em}
+.shift-legend{display:flex;align-items:center;gap:9px;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.shift-legend .fr{color:var(--muted)}
+.shift-legend .ar{color:var(--cyan-dark);font-weight:700}
+.shift-legend .to{color:var(--teal)}
+.shift-grid{position:relative;z-index:1;flex:1;display:grid;grid-template-columns:1fr 1fr 1fr}
+.shift-cell{display:flex;flex-direction:column;padding:2px 22px 0;border-left:1px solid var(--line-strong)}
+.shift-cell:first-child{padding-left:2px;border-left:none}
+.shift-cell:last-child{padding-right:0}
+.shift-idx{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan-dark);letter-spacing:.04em;margin-bottom:11px}
+.shift-axis{font-family:'Hanken Grotesk',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.16em;font-size:9px;color:var(--muted);margin-bottom:12px}
+.shift-old{display:flex;align-items:center;gap:8px;margin-bottom:9px}
+.shift-old .term{font-family:'Space Mono',monospace;font-size:11.5px;color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(111,111,111,.6);text-decoration-thickness:1px;text-underline-offset:2px}
+.shift-old .arw{font-family:'Space Mono',monospace;font-size:11px;color:var(--cyan-dark);font-weight:700}
+.shift-new{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:22px;line-height:1.06;color:var(--ink);letter-spacing:-.015em;margin-bottom:auto}
+.shift-new em{font-style:normal;color:var(--cyan-dark)}
+.shift-cap{margin-top:14px;padding-top:11px;border-top:1px solid var(--line);font-family:'Hanken Grotesk',sans-serif;font-size:10px;letter-spacing:.01em;line-height:1.4;color:var(--muted)}
+/* ============================================================
+   P3 "won't fix it" myth cards (myth-*)
+   Each false fix is a busted myth: a struck-out concept icon,
+   an accented headline, a faint oversized x watermark filling the
+   negative space, and a mono verdict stamp. Dark-page glass; static.
+   ============================================================ */
+.myth{position:relative;overflow:hidden;border-radius:14px;padding:15px 16px 13px 18px;
+  display:flex;flex-direction:column;gap:10px;
+  background:linear-gradient(158deg,rgba(255,255,255,.085) 0%,rgba(255,255,255,.028) 62%,rgba(255,255,255,.018) 100%);
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 12px 28px -18px rgba(0,0,0,.55)}
+.myth::before{content:'';position:absolute;left:0;top:15%;bottom:15%;width:3px;z-index:2;
+  border-radius:0 3px 3px 0;background:linear-gradient(180deg,var(--cyan-light),rgba(106,227,225,.16))}
+.myth::after{content:'\00D7';position:absolute;right:-6px;bottom:-46px;z-index:0;pointer-events:none;
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:132px;line-height:.7;color:rgba(255,255,255,.05)}
+.myth>*{position:relative;z-index:1}
+.myth-top{display:flex;align-items:center;justify-content:space-between}
+.myth-ic{position:relative;width:40px;height:40px;border-radius:11px;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15)}
+.myth-ic svg{width:20px;height:20px;fill:none;stroke:rgba(233,253,253,.68);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.myth-ic i{position:absolute;left:5px;right:5px;top:50%;height:2px;border-radius:2px;
+  background:var(--cyan-light);transform:rotate(-40deg);box-shadow:0 0 7px rgba(106,227,225,.8)}
+.myth-no{font-family:'Space Mono',monospace;font-weight:700;font-size:9.5px;letter-spacing:.16em;color:rgba(233,253,253,.34)}
+.myth-h{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:16px;line-height:1.14;color:#fff;letter-spacing:-.01em}
+.myth-h em{font-style:normal;color:var(--cyan-light)}
+.myth-p{font-family:'Hanken Grotesk',sans-serif;font-size:11px;line-height:1.5;color:rgba(233,253,253,.6)}
+.myth-tag{margin-top:auto;display:flex;align-items:center;gap:8px;padding-top:11px;
+  border-top:1px solid rgba(255,255,255,.13);
+  font-family:'Space Mono',monospace;font-weight:700;font-size:8.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--cyan-light)}
+.myth-tag .x{font-size:13px;line-height:0;color:var(--cyan-light)}
+/* ============================================================
+   P10 build roadmap (proc2) — a vertical connected timeline beside
+   the hero image: a cyan spine, numbered nodes, step + deliverable
+   pill. Fills the column height so both sides read balanced. Static.
+   ============================================================ */
+.proc2{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:12px;padding:4px 0 4px 2px}
+.proc2::before{content:'';position:absolute;left:18px;top:22px;bottom:22px;width:2px;z-index:0;border-radius:2px;
+  background:linear-gradient(180deg,rgba(13,207,207,.2),var(--cyan) 14%,var(--cyan-dark) 86%,rgba(0,156,155,.2))}
+.pstep{position:relative;z-index:1;display:grid;grid-template-columns:34px 1fr;gap:15px;align-items:start}
+.pnode{width:34px;height:34px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;
+  font-family:'Space Mono',monospace;font-weight:700;font-size:12.5px;color:#fff;letter-spacing:.02em;
+  background:linear-gradient(135deg,var(--cyan),var(--cyan-dark));
+  box-shadow:0 0 0 4px #fff,0 6px 14px -4px rgba(2,82,82,.55)}
+.pbody{padding-top:3px;min-width:0}
+.phead{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.pstep h4{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:14.5px;color:var(--ink);line-height:1.14}
+.pdel{flex:none;font-family:'Space Mono',monospace;font-weight:700;font-size:8px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--cyan-dark);background:var(--cyan-wash);border:1px solid rgba(13,207,207,.28);border-radius:999px;padding:3px 9px;white-space:nowrap}
+.pstep p{font-family:'Hanken Grotesk',sans-serif;font-size:11.5px;line-height:1.5;color:var(--body);margin-top:4px}
+/* ============================================================
+   P5 DARK Funnel — featured iceberg diagram panel (client model).
+   A bright framed panel makes the teal iceberg read on the dark
+   page; the image floats in its own light space. Static / print.
+   ============================================================ */
+.iceberg-wrap{position:relative;flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.iceberg-wrap::before{content:'';position:absolute;z-index:0;width:88%;height:80%;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(106,227,225,.28),transparent 72%);filter:blur(28px)}
+.iceberg-panel{position:relative;z-index:1;aspect-ratio:1109/1063;max-width:100%;max-height:100%;
+  border-radius:18px;overflow:hidden;background:#fff;border:1px solid rgba(106,227,225,.5);
+  box-shadow:0 34px 74px -30px rgba(2,40,40,.85),0 0 0 5px rgba(255,255,255,.05),inset 0 1px 0 rgba(255,255,255,.9)}
+.iceberg-panel img{width:100%;height:100%;object-fit:cover;display:block}
+.iceberg-tag{position:absolute;top:12px;left:13px;z-index:2;font-family:'Space Mono',monospace;font-weight:700;
+  font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan-dark);
+  background:rgba(236,255,255,.9);border:1px solid rgba(13,207,207,.3);border-radius:999px;padding:4px 11px}
+/* P5 DARK method header + condensed D/A/R/K cards beneath the iceberg */
+.dark-lead{display:flex;align-items:center;gap:11px}
+.dark-lead .dia{width:7px;height:7px;flex:none;background:var(--cyan);transform:rotate(45deg);box-shadow:0 0 0 4px rgba(13,207,207,.16)}
+.dark-sub{font-family:'Hanken Grotesk',sans-serif;font-size:11px;color:rgba(233,253,253,.62)}
+.dark-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.dcard{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:8px;border-radius:13px;padding:16px 17px;
+  background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.035));border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(2px)}
+.dcard::before{content:'';position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:0 3px 3px 0;background:linear-gradient(180deg,var(--cyan-light),var(--cyan-dark))}
+.dcard>*{position:relative}
+.dcard .top{display:flex;align-items:baseline;gap:11px}
+.dcard .l{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:31px;line-height:.85;color:var(--cyan-light)}
+.dcard h4{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15.5px;color:#fff}
+.dcard p{font-family:'Hanken Grotesk',sans-serif;font-size:11.5px;line-height:1.5;color:rgba(233,253,253,.78)}
+.dcard .sg{margin-top:auto;padding-top:10px;border-top:1px solid rgba(255,255,255,.12);font-family:'Space Mono',monospace;font-weight:700;font-size:8px;letter-spacing:.05em;color:var(--cyan-light);opacity:.85;line-height:1.5}
+
+/* ================= P08/P09/P12 text-reduction + visuals (client feedback) ================= */
+/* ===== P08 ABM 2.0 — icon-tile "what changes" grid + flow-rail takeaway (scoped: .p08abm) ===== */
+.p08abm .p08-shifts{position:relative;overflow:hidden;padding:15px 20px 16px}
+.p08abm .p08-ghost{position:absolute;right:-16px;bottom:-34px;width:150px;height:150px;z-index:0;
+  stroke:rgba(9,156,155,.07);stroke-width:1.4;fill:none;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.p08abm .p08-head{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;
+  gap:12px;margin-bottom:12px}
+.p08abm .p08-flag{font-family:'Space Mono',monospace;font-weight:700;font-size:8.5px;letter-spacing:.09em;
+  color:var(--cyan-dark);border:1px solid rgba(13,207,207,.34);border-radius:999px;padding:3px 9px;line-height:1}
+.p08abm .p08-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);
+  grid-auto-rows:1fr;gap:10px 12px}
+.p08abm .p08-tile{display:flex;flex-direction:column;gap:2px;background:#fff;
+  border:1px solid rgba(13,207,207,.24);border-radius:12px;padding:12px 14px 13px;box-shadow:0 4px 11px rgba(6,60,60,.045)}
+.p08abm .p08-tile .cic{margin-bottom:9px}
+.p08abm .p08-lb{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12.5px;line-height:1.15;color:var(--ink)}
+.p08abm .p08-sub{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--muted);line-height:1.35;margin-top:1px}
+.p08abm .p08-rail{display:flex;align-items:center;gap:9px;flex-wrap:wrap;
+  background:radial-gradient(120% 160% at 100% 0%,rgba(13,207,207,.12),transparent 60%),var(--cyan-wash);
+  border:1px solid rgba(13,207,207,.30);border-radius:14px;padding:12px 18px}
+.p08abm .p08-node{font-family:'Space Mono',monospace;font-weight:700;font-size:10px;letter-spacing:.08em;
+  color:var(--teal);background:#fff;border:1px solid rgba(13,207,207,.30);border-radius:999px;padding:5px 13px;line-height:1}
+.p08abm .p08-node.on{color:#fff;background:linear-gradient(120deg,var(--cyan),var(--cyan-dark));border-color:transparent;
+  box-shadow:0 5px 12px -5px rgba(2,82,82,.55)}
+.p08abm .p08-car{font-family:'Space Mono',monospace;font-weight:700;font-size:15px;color:var(--cyan-dark);line-height:1;transform:translateY(-1px)}
+.p08abm .p08-strap{margin-left:auto;font-family:'Hanken Grotesk',sans-serif;font-size:11.5px;color:var(--body);line-height:1.35}
+.p08abm .p08-strap .mono{font-family:'Space Mono',monospace;font-weight:700;font-size:10px;letter-spacing:.03em;
+  color:var(--cyan-dark);margin-right:6px}
+
+/* ===== P09 · The Signal Machine — horizontal 3-engine pipeline (print-static, scoped under .fill-eng) ===== */
+/* region rhythm: fixed band + keyline; the machine flexes to consume exact leftover height (no void / no overflow) */
+.fill-eng{gap:0}
+/* -- system band: SIGNAL IN -> phase labels -> PIPELINE OUT -- */
+.fill-eng .eng-band{flex:none;display:flex;align-items:stretch;border-radius:11px;overflow:hidden;margin-bottom:5mm;
+  border:1px solid rgba(106,227,225,.28);background:rgba(255,255,255,.045)}
+.fill-eng .eng-cap{display:flex;align-items:center;gap:6px;padding:9px 15px;font-family:'Space Mono',monospace;
+  font-size:8.5px;font-weight:700;letter-spacing:.10em;color:var(--cyan-light);white-space:nowrap;background:rgba(13,207,207,.10)}
+.fill-eng .eng-cap .ar{opacity:.6}
+.fill-eng .eng-cap.out{background:rgba(13,207,207,.18);color:#fff}
+.fill-eng .eng-cap.out .ar{opacity:.85}
+.fill-eng .eng-phases{flex:1;display:flex;align-items:center;justify-content:space-evenly;gap:10px;padding:9px 14px}
+.fill-eng .eng-phase{display:inline-flex;align-items:baseline;gap:7px}
+.fill-eng .eng-phase .ix{font-family:'Space Mono',monospace;font-size:9px;color:var(--cyan-light);opacity:.8}
+.fill-eng .eng-phase .lb{font-family:'Hanken Grotesk',sans-serif;font-weight:600;text-transform:uppercase;
+  letter-spacing:.13em;font-size:9.5px;color:#fff;opacity:.92}
+.fill-eng .eng-car{font-family:'Space Mono',monospace;font-size:14px;color:var(--cyan-light);opacity:.5}
+
+/* -- the machine: THREE HORIZONTAL engine bands (wide + short — no pillars); bands are snug, slack goes to the gaps -- */
+.fill-eng .eng-machine{position:relative;flex:1;min-height:0;display:flex;flex-direction:column;justify-content:space-between;margin-bottom:5mm}
+/* LIGHT THEME cards on the dark teal page — bright cards pop for a premium high-contrast read */
+.fill-eng .eng-band-row{position:relative;overflow:hidden;display:grid;grid-template-columns:37mm minmax(0,1fr) 54mm;
+  align-items:stretch;gap:17px;padding:13px;border-radius:16px;min-height:44mm;
+  background:linear-gradient(118deg,#ffffff 0%,#EAFBFA 100%);
+  border:1px solid rgba(6,109,109,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.85),0 20px 44px -22px rgba(0,0,0,.7),0 4px 12px -5px rgba(2,28,28,.4)}
+.fill-eng .eng-band-row>*{position:relative;z-index:2}
+
+/* engine emblem — a circular "gauge" core (icon + dashed dial ring + engine label) */
+.fill-eng .ebr-emblem{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:11px}
+.fill-eng .ebr-core{position:relative;width:22mm;height:22mm;border-radius:999px;flex:none;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 50% 26%,#18DAD8,#068A88 94%);
+  border:1px solid rgba(255,255,255,.55);
+  box-shadow:inset 0 2px 3px rgba(255,255,255,.45),inset 0 -4px 9px rgba(2,44,44,.28),0 10px 22px -8px rgba(9,140,140,.6)}
+.fill-eng .ebr-core::before{content:'';position:absolute;inset:-6px;border-radius:999px;border:1.5px dashed rgba(6,109,109,.32)}
+.fill-eng .ebr-core svg{width:27px;height:27px;stroke:#fff;stroke-width:1.9;fill:none;stroke-linecap:round;stroke-linejoin:round}
+/* per-stage fill so the three engines read distinctly */
+.fill-eng .eng-band-row:nth-of-type(2) .ebr-core{background:radial-gradient(circle at 50% 26%,#12BAB8,#05605F 94%);
+  box-shadow:inset 0 2px 3px rgba(255,255,255,.4),inset 0 -4px 9px rgba(2,40,40,.32),0 10px 22px -8px rgba(6,109,109,.6)}
+.fill-eng .ebr-emblem .estep{font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.18em;color:var(--cyan-dark)}
+
+/* main zone: name + one-liner + the horizontal IN -> OUT transform */
+.fill-eng .ebr-main{display:flex;flex-direction:column;justify-content:center;gap:8px;min-width:0}
+.fill-eng .ebr-name{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;color:var(--ink);line-height:1.08}
+.fill-eng .ebr-mech{margin:0;font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:11.5px;line-height:1.4;color:var(--body)}
+.fill-eng .ebr-xform{display:flex;align-items:center;gap:9px;margin-top:2px}
+.fill-eng .xf-chip{flex:1;display:flex;flex-direction:column;gap:2px;padding:8px 12px;border-radius:9px;min-width:0}
+.fill-eng .xf-tag{font-family:'Space Mono',monospace;font-size:7px;font-weight:700;letter-spacing:.12em}
+.fill-eng .xf-txt{font-family:'Hanken Grotesk',sans-serif;font-size:11.5px;line-height:1.18}
+.fill-eng .xf-in{background:#EEF5F5;border:1px solid rgba(10,10,10,.07)}
+.fill-eng .xf-in .xf-tag{color:var(--muted)}
+.fill-eng .xf-in .xf-txt{color:var(--muted);font-weight:500}
+.fill-eng .xf-out{background:#D6F4F0;border:1px solid rgba(6,109,109,.24)}
+.fill-eng .xf-out .xf-tag{color:var(--cyan-dark)}
+.fill-eng .xf-out .xf-txt{color:var(--ink);font-weight:600}
+.fill-eng .xf-arw{flex:none;width:24px;height:13px}
+.fill-eng .xf-arw svg{width:100%;height:100%;stroke:var(--cyan-dark);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* context zone: input chips + guiding question, set off by a hairline */
+.fill-eng .ebr-ctx{display:flex;flex-direction:column;justify-content:center;gap:9px;padding-left:16px;border-left:1px solid rgba(10,10,10,.1)}
+.fill-eng .eng-clbl{display:block;font-family:'Space Mono',monospace;font-size:7px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan-dark);margin-bottom:6px}
+.fill-eng .eng-chips{display:flex;flex-wrap:wrap;gap:5px}
+.fill-eng .eng-chip{font-family:'Space Mono',monospace;font-size:7.5px;letter-spacing:.03em;color:var(--teal);
+  padding:2.5px 7px;border-radius:999px;border:1px solid rgba(6,109,109,.24);background:#E6FBF9;white-space:nowrap;line-height:1.3}
+.fill-eng .eng-q{position:relative;margin:0;padding-left:11px;font-family:'Fraunces',sans-serif;font-style:italic;font-size:11.5px;line-height:1.34;color:var(--teal)}
+.fill-eng .eng-q::before{content:'';position:absolute;left:0;top:2px;bottom:2px;width:2px;border-radius:2px;
+  background:linear-gradient(180deg,var(--cyan),var(--teal))}
+
+/* cascade coupling — light node bridging the dark gap between two light cards */
+.fill-eng .eng-couple{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:5;width:23px;height:23px;
+  display:flex;align-items:center;justify-content:center;border-radius:999px;pointer-events:none;
+  background:#fff;border:1px solid rgba(6,109,109,.3);box-shadow:0 0 0 4px rgba(2,40,40,.4),0 3px 9px rgba(0,0,0,.4)}
+.fill-eng .eng-couple svg{width:11px;height:11px;stroke:var(--teal);stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* terminal band (03) — warm gold accent on the light card: pipeline & revenue exits here */
+.fill-eng .eng-band-row.term{background:linear-gradient(118deg,#ffffff 0%,#FDF6E7 100%);border-color:rgba(217,154,35,.3)}
+.fill-eng .eng-band-row.term .ebr-core{border-color:rgba(255,255,255,.6);
+  background:radial-gradient(circle at 50% 26%,#F9CD5B,#D9971F 94%);box-shadow:inset 0 2px 3px rgba(255,255,255,.5),inset 0 -4px 9px rgba(120,78,8,.28),0 10px 22px -8px rgba(217,154,35,.6)}
+.fill-eng .eng-band-row.term .ebr-core::before{border-color:rgba(217,154,35,.42)}
+.fill-eng .eng-band-row.term .ebr-core svg{stroke:#fff}
+.fill-eng .eng-band-row.term .ebr-emblem .estep{color:var(--gold-text)}
+.fill-eng .eng-band-row.term .xf-out{background:#FBF1D6;border-color:rgba(217,154,35,.36)}
+.fill-eng .eng-band-row.term .xf-out .xf-tag{color:var(--gold-text)}
+.fill-eng .eng-band-row.term .xf-out .xf-txt{color:var(--gold-text)}
+/* keyline pinned at page base */
+.fill-eng .d-keyline{flex:none}
+
+/* ===== P12 use cases — infographic upgrade (scoped under .fill-uc) ===== */
+/* distribute: icon+title+line+flow top, trigger anchored to base */
+.fill-uc .cardflex{min-height:0;justify-content:space-between;gap:9px;padding:15px 16px 14px}
+/* top row: enlarged prominent icon chip + mono play-index badge */
+.fill-uc .p12-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:1px}
+.fill-uc .cic{width:44px;height:44px;border-radius:11px}
+.fill-uc .cic svg{width:23px;height:23px;stroke-width:1.6}
+.fill-uc .h3{font-size:15px;font-weight:700;line-height:1.15}
+/* single tight play line replaces the paragraph */
+.fill-uc .p12-line{font-size:11.5px;line-height:1.5;color:var(--body);margin:0}
+/* mono play-index badge (P1..P6) — number motif, tinted per card */
+.fill-uc .p12-no{font-weight:700;font-size:11px;letter-spacing:.06em;line-height:1;
+  padding:4px 8px;border-radius:7px;background:rgba(255,255,255,.6);
+  box-shadow:inset 0 0 0 1px rgba(10,10,10,.06)}
+/* signal -> play flow rail: soft mono signal chip, caret, gradient outcome node */
+.fill-uc .p12-flow{display:flex;align-items:center;gap:6px;margin-top:2px;
+  font-size:8px;letter-spacing:.05em;line-height:1;flex-wrap:nowrap}
+.fill-uc .p12-sig{display:inline-flex;align-items:center;padding:4px 8px;border-radius:6px;
+  background:rgba(255,255,255,.7);box-shadow:inset 0 0 0 1px rgba(10,10,10,.06);
+  color:var(--teal-deep);white-space:nowrap}
+.fill-uc .p12-out{display:inline-flex;align-items:center;padding:4px 8px;border-radius:6px;
+  background:linear-gradient(180deg,var(--cyan-dark),var(--teal));color:#fff;
+  letter-spacing:.04em;white-space:nowrap}
+.fill-uc .p12-arr{font-size:14px;line-height:1;font-weight:700;flex:none}
+/* faint oversized ghost numeral fills the lower-right negative space */
+.fill-uc .p12-ghost{position:absolute;right:11px;bottom:-14px;z-index:0;pointer-events:none;
+  font-weight:700;font-size:78px;line-height:.8;letter-spacing:-.04em}
+/* per-tint accent: play-index, caret and ghost track each card's stroke colour */
+.uc1 .p12-no,.uc1 .p12-arr{color:#0AAAA8}.uc1 .p12-ghost{color:rgba(10,170,168,.09)}
+.uc2 .p12-no,.uc2 .p12-arr{color:#099E9B}.uc2 .p12-ghost{color:rgba(9,158,155,.10)}
+.uc3 .p12-no,.uc3 .p12-arr{color:#0A8F8B}.uc3 .p12-ghost{color:rgba(10,143,139,.11)}
+.uc4 .p12-no,.uc4 .p12-arr{color:#0B807B}.uc4 .p12-ghost{color:rgba(11,128,123,.12)}
+.uc5 .p12-no,.uc5 .p12-arr{color:#0B716C}.uc5 .p12-ghost{color:rgba(11,113,108,.13)}
+.uc6 .p12-no,.uc6 .p12-arr{color:#0A625D}.uc6 .p12-ghost{color:rgba(10,98,93,.14)}
+
+/* ===== P11 JobFeeder hero — custom "live job-signal feed" (replaces stock photo; client: show job signals) ===== */
+.jfhero{position:relative}
+.jfhero .jf-bg{position:absolute;inset:0;z-index:0;background:
+  radial-gradient(96% 52% at 10% 2%, rgba(13,207,207,.32) 0%, transparent 46%),
+  radial-gradient(96% 60% at 110% 108%, rgba(106,227,225,.20) 0%, transparent 52%),
+  linear-gradient(158deg,#0b8b8b 0%,#066d6d 40%,#044f4f 70%,#022e2e 100%)}
+.jfhero .jf-dots{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:radial-gradient(circle,rgba(255,255,255,.10) 1px,transparent 1px);background-size:15px 15px;
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 62%);mask-image:linear-gradient(180deg,#000 0%,transparent 62%)}
+.jfhero .ct{position:relative;z-index:2}
+.jfhero .jf-top{display:flex;align-items:center;justify-content:space-between}
+.jfhero .jf-live{display:inline-flex;align-items:center;gap:6px;font-family:'Space Mono',monospace;font-weight:700;
+  font-size:8.5px;letter-spacing:.12em;color:var(--cyan-light)}
+.jfhero .jf-pulse{width:7px;height:7px;border-radius:50%;background:var(--cyan-light);
+  box-shadow:0 0 0 3px rgba(106,227,225,.22),0 0 9px rgba(106,227,225,.75)}
+.jfhero .jf-feed{display:flex;flex-direction:column;gap:8px}
+.jfhero .jf-lbl{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:.13em;text-transform:uppercase;
+  color:rgba(233,253,253,.6);margin-bottom:2px}
+.jfhero .jf-post{position:relative;overflow:hidden;background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.17);border-radius:10px;padding:9px 12px 9px 13px;
+  box-shadow:0 6px 16px -10px rgba(0,0,0,.4)}
+.jfhero .jf-post::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--cyan-light),var(--cyan-dark))}
+.jfhero .jf-prow{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.jfhero .jf-role{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:11.5px;color:#fff;line-height:1.12}
+.jfhero .jf-sig{font-family:'Space Mono',monospace;font-weight:700;font-size:7.5px;letter-spacing:.04em;
+  color:#04302f;white-space:nowrap;flex:none;background:linear-gradient(120deg,var(--cyan-light),var(--cyan));
+  border-radius:999px;padding:3px 8px;line-height:1}
+.jfhero .jf-meta{font-family:'Hanken Grotesk',sans-serif;font-size:8.5px;color:rgba(233,253,253,.6);margin-top:3px;letter-spacing:.01em}
+
+/* JobFeeder hero v2 — feed fills the panel height, posts distribute evenly */
+.jfhero .jf-feed{flex:1;min-height:0;display:flex;flex-direction:column;gap:9px}
+.jfhero .jf-lbl{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.jfhero .jf-count{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:.06em;color:var(--cyan-light);opacity:.9;white-space:nowrap}
+.jfhero .jf-posts{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:space-between;gap:7px}
+
+/* JobFeeder hero v3 — live signal timeline: feed fills the panel; posts sit on a connective spine */
+.jfhero .jf-feed{flex:1;min-height:0;display:flex;flex-direction:column;gap:9px}
+.jfhero .jf-lbl{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.jfhero .jf-count{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:.06em;color:var(--cyan-light);opacity:.9;white-space:nowrap}
+.jfhero .jf-posts{position:relative;flex:1;min-height:0;display:flex;flex-direction:column;justify-content:space-between;gap:8px;padding-left:20px}
+.jfhero .jf-posts::before{content:'';position:absolute;left:6px;top:22px;bottom:22px;width:2px;z-index:0;background:linear-gradient(180deg,rgba(106,227,225,.6),rgba(106,227,225,.16))}
+.jfhero .jf-post{overflow:visible}
+.jfhero .jf-post::before{display:none}
+.jfhero .jf-post::after{content:'';position:absolute;left:-17px;top:50%;transform:translateY(-50%);width:9px;height:9px;border-radius:50%;background:var(--cyan-light);box-shadow:0 0 0 3px rgba(2,42,42,.85),0 0 8px rgba(106,227,225,.5);z-index:2}
+
+/* P15 founder tags — keep each card row of tags on ONE line */
+.t-duo-tags{flex-wrap:nowrap}
+.t-duo-tags .fvbadge{font-size:9.5px;padding:4px 10px;white-space:nowrap;flex:none}
+.t-duo-tags .t-chip{font-size:9px;padding:4px 10px;white-space:nowrap;flex:none}
+.t-duo-tags .t-ico.link{padding:0 9px}
+
+/* ===================================================================
+   Five Signal-to-Action Plays · page helpers (p3-*)
+   Built on the InsightsTap DR018 design-system kit above. Adds only
+   the few patterns this resource needs: a light 4-step signal loop,
+   a per-play Trigger/Context/Action/Why signal block, and a
+   print-and-fill implementation table.
+   =================================================================== */
+
+/* -- P2 · light 4-step signal-to-action loop -- */
+.p3-loop{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;align-items:stretch}
+.p3-lstep{position:relative;display:flex;flex-direction:column;gap:9px;padding:20px 15px 16px;border-radius:16px;
+  background:radial-gradient(130% 62% at 50% 0%, rgba(13,207,207,.11), transparent 72%), #fff;
+  border:1px solid var(--line-strong);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 12px 28px -18px rgba(2,82,82,.4)}
+.p3-lstep .node{position:relative;z-index:1;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 50% 30%,var(--cyan),var(--cyan-dark));
+  border:1.5px solid rgba(255,255,255,.7);box-shadow:0 8px 18px -8px rgba(2,82,82,.6),0 0 0 4px rgba(13,207,207,.10)}
+.p3-lstep .node svg{width:21px;height:21px;stroke:#fff;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+/* connector rail + chevron between steps.
+   Nodes are left-aligned: each sits 39px from the card's left edge and 44px from its top.
+   Pin the rail ends to the first/last node centres (39px) so it starts at step 01 without a
+   gap and stops at step 04 without an overshoot; centre each chevron between node centres. */
+.p3-lstep::before{content:'';position:absolute;top:43px;left:-9px;right:-9px;height:2px;z-index:0;
+  background:linear-gradient(90deg,rgba(13,207,207,.55),rgba(13,207,207,.22))}
+.p3-lstep:first-child::before{left:39px}
+.p3-lstep:last-child::before{right:calc(100% - 39px)}
+.p3-lstep .chev{position:absolute;top:44px;left:calc(50% + 46.5px);width:10px;height:10px;z-index:3;
+  border-top:2.5px solid var(--cyan);border-right:2.5px solid var(--cyan);transform:translate(-50%,-50%) rotate(45deg)}
+.p3-lstep:last-child .chev{display:none}
+.p3-lstep .n{font-family:'Space Mono',monospace;font-weight:700;font-size:10.5px;color:var(--cyan-dark);letter-spacing:.1em;margin-top:3px}
+.p3-lstep .t{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15px;color:var(--ink);line-height:1.12;letter-spacing:-.01em}
+.p3-lstep .s{font-family:'Hanken Grotesk',sans-serif;font-size:10.5px;line-height:1.45;color:var(--body)}
+.p3-lstep .tag{margin-top:auto;padding-top:11px;border-top:1px solid var(--line);
+  font-family:'Space Mono',monospace;font-weight:700;font-size:8px;letter-spacing:.09em;text-transform:uppercase;color:var(--cyan-dark)}
+.p3-loopcap{display:flex;align-items:center;gap:11px;margin-bottom:2px}
+.p3-loopcap .ln{flex:1;height:1px;background:var(--line-strong)}
+.p3-loopcap .of{font-family:'Space Mono',monospace;font-weight:700;font-size:9px;letter-spacing:.06em;color:var(--cyan-dark);white-space:nowrap}
+
+/* -- Play pages · Trigger / Context / Action / Why signal block (2x2) -- */
+.p3-sig{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.p3-cell{position:relative;overflow:hidden;padding:16px 18px;border-radius:14px;background:#fff;border:1px solid var(--line-strong);
+  display:flex;flex-direction:column;gap:8px;min-height:31mm}
+.p3-cell .p3-lb{display:flex;align-items:center;gap:8px;font-family:'Space Mono',monospace;font-weight:700;font-size:9px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--cyan-dark)}
+.p3-cell .p3-lb .dia{width:6px;height:6px;background:var(--cyan);transform:rotate(45deg);flex:none}
+.p3-cell .p3-vl{font-family:'Hanken Grotesk',sans-serif;font-size:11.5px;line-height:1.5;color:var(--body)}
+/* Trigger = entry point (top-left), cyan wash */
+.p3-cell.trig{background:radial-gradient(120% 130% at 0% 0%, rgba(13,207,207,.14), transparent 62%), var(--cyan-wash);border-color:rgba(13,207,207,.32)}
+.p3-cell.trig .p3-vl{color:var(--ink);font-weight:500}
+.p3-cell.trig::after{content:'';position:absolute;left:0;top:14%;bottom:14%;width:3px;background:linear-gradient(180deg,var(--cyan-light),var(--cyan-dark))}
+/* Why it works = insight focal point (bottom-right), deep teal */
+.p3-cell.why{background:radial-gradient(120% 130% at 100% 0%, rgba(13,207,207,.20), transparent 58%),linear-gradient(150deg,#065151,#043b3b 70%,#022a2a);border-color:transparent}
+.p3-cell.why .p3-lb{color:var(--cyan-light)}
+.p3-cell.why .p3-vl{color:#eafcfb;font-family:'Fraunces',sans-serif;font-style:italic;font-size:12.5px;line-height:1.48}
+.p3-cell.why span.qm{position:absolute;right:12px;bottom:-16px;z-index:0;font-family:'Fraunces',serif;font-style:italic;font-weight:700;font-size:78px;line-height:1;color:rgba(106,227,225,.13);pointer-events:none}
+.p3-cell.why .p3-lb,.p3-cell.why .p3-vl{position:relative;z-index:1}
+
+/* -- Play pages · print-and-fill implementation table -- */
+.p3-tbl{border:1px solid var(--line-strong);border-radius:14px;overflow:hidden;box-shadow:0 12px 30px -20px rgba(2,82,82,.42)}
+.p3-row{display:grid;grid-template-columns:1.12fr .92fr 1.5fr 1.16fr}
+.p3-row>span{padding:11px 15px;border-top:1px solid var(--line);border-left:1px solid var(--line);
+  font-family:'Hanken Grotesk',sans-serif;font-size:11px;line-height:1.42;color:var(--body);display:flex;align-items:center}
+.p3-row>span:first-child{border-left:0}
+.p3-row.hd{background:radial-gradient(120% 200% at 0% 0%, rgba(13,207,207,.22), transparent 46%),linear-gradient(120deg,#055050,#04403f 58%,#022826)}
+.p3-row.hd>span{border-top:0;border-left-color:rgba(255,255,255,.12);color:#fff;
+  font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase}
+.p3-row.hd .cn{font-family:'Space Mono',monospace;font-weight:700;font-size:9px;color:var(--cyan-light);margin-right:8px}
+.p3-row.ex{background:radial-gradient(120% 200% at 0% 0%, rgba(13,207,207,.10), transparent 55%), var(--cyan-wash)}
+.p3-row.ex>span{color:var(--ink)}
+.p3-row.ex .exlbl{display:inline-flex;align-items:center;gap:7px}
+.p3-row.ex .exlbl::before{content:'EX';font-family:'Space Mono',monospace;font-weight:700;font-size:7.5px;letter-spacing:.04em;
+  color:#fff;background:var(--cyan-dark);border-radius:4px;padding:2px 5px;flex:none}
+.p3-mono{font-family:'Space Mono',monospace;font-size:10px;color:var(--teal);letter-spacing:.01em}
+.p3-row.blank>span{min-height:17mm;color:transparent}
+.p3-row.blank{background:#fff}
+.p3-row.blank:nth-child(odd){background:#fbfeff}
+
+/* image-band caption scrim — guarantees white caption legibility over busy photos */
+.imgband .ct.scrim{background:linear-gradient(0deg,rgba(1,23,23,.82) 2%,rgba(1,23,23,.44) 40%,rgba(1,23,23,.06) 70%,transparent 84%)}
+.p3-tblcap{margin-top:9px;display:flex;align-items:center;gap:8px}
+.p3-tblcap .dia{width:6px;height:6px;background:var(--cyan);transform:rotate(45deg);flex:none}
+
+/* -- closing · contact stack tweaks -- */
+.p3-qr{background:#fff;border-radius:11px;padding:8px;border:1px solid rgba(255,255,255,.2);flex:none}
+.p3-qr img{width:23mm;height:23mm;display:block}
+.p3-signoff{display:flex;align-items:center;gap:12px;font-family:'Space Mono',monospace;font-size:9.5px;
+  letter-spacing:.06em;color:rgba(233,253,253,.7)}
+.p3-signoff .b{color:var(--cyan-light)}
+
+/* ---- Fraunces editorial-italic accent (cover headline word, CTA) ---- */
+.fr-it{font-family:'Fraunces',serif;font-style:italic;font-weight:500;letter-spacing:0}
+
+/* ---- branded 'signal' badge (P2 principle band) — replaces the bare diamond glyph ---- */
+.p3-badge{width:44px;height:44px;border-radius:13px;flex:none;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 50% 28%,var(--cyan) 0%,var(--cyan-dark) 78%,var(--teal) 100%);
+  border:1.5px solid rgba(255,255,255,.65);
+  box-shadow:0 9px 20px -8px rgba(2,82,82,.6),0 0 0 4px rgba(13,207,207,.12),inset 0 1px 0 rgba(255,255,255,.35)}
+.p3-badge svg{width:23px;height:23px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---- Bespoke line-icon family (replaces the generic rotated-square bullets) ----
+   One cohesive set used for the signal fields + the P2 loop steps.
+   stroke:currentColor so each inherits its label/panel colour. */
+.p3-ic{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.7;
+  stroke-linecap:round;stroke-linejoin:round;flex:none}
+.p3-loop .node .p3-ic{width:22px;height:22px;stroke:#fff;stroke-width:1.7}
+
+/* ---- Enhanced "Recommended stack" — richer tool cards (logo · name · role) ---- */
+.p3-stack{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
+.p3-tool{position:relative;display:flex;align-items:center;gap:11px;padding:13px 13px;border-radius:14px;
+  background:linear-gradient(180deg,#fff 0%,#f8feff 100%);border:1px solid var(--line-strong);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 10px 24px -16px rgba(2,82,82,.4)}
+.p3-tool .lg{width:36px;height:36px;border-radius:10px;flex:none;display:flex;align-items:center;justify-content:center;
+  background:#fff;border:1px solid rgba(10,10,10,.09);box-shadow:0 2px 6px -3px rgba(2,82,82,.28)}
+.p3-tool .lg img{width:24px;height:24px;object-fit:contain;display:block}
+.p3-tool .tx{display:flex;flex-direction:column;gap:3px;min-width:0}
+.p3-tool .nm{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12.5px;color:var(--ink);
+  line-height:1;letter-spacing:-.01em;white-space:nowrap}
+.p3-tool .rl{font-family:'Space Mono',monospace;font-weight:700;font-size:7.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--cyan-dark);white-space:nowrap;line-height:1}
+.p3-tool .step{position:absolute;top:9px;right:11px;font-family:'Space Mono',monospace;font-weight:700;
+  font-size:8px;color:rgba(13,207,207,.45)}
+.p3-tool.own{background:linear-gradient(150deg,#e9fdfd,#d3fafa);border-color:rgba(13,207,207,.5)}
+.p3-tool.own .lg{border-color:rgba(13,207,207,.32)}
+.p3-tool.own .rl{color:var(--teal)}
+
+/* ---- refined closing CTA panel (professional) ---- */
+.p3-cta{position:relative;overflow:hidden;display:flex;align-items:center;gap:18px;padding:20px 24px;border-radius:16px;
+  background:radial-gradient(120% 200% at 0% 0%, rgba(13,207,207,.22), transparent 55%),linear-gradient(120deg,rgba(13,207,207,.16),rgba(13,207,207,.05));
+  border:1px solid rgba(106,227,225,.5)}
+.p3-cta .txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
+.p3-cta .k{font-family:'Space Mono',monospace;font-weight:700;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan-light)}
+.p3-cta .v{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px;color:#fff;line-height:1.1;margin-top:5px;letter-spacing:-.01em}
+.p3-cta .arw{flex:none;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--cyan),var(--cyan-dark));
+  box-shadow:0 10px 22px -10px rgba(13,207,207,.7)}
+.p3-cta .arw svg{display:block;width:21px;height:21px;stroke:#022;stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.p3-linkcard{display:flex;flex-direction:column;gap:5px;padding:15px 17px;border-radius:14px;
+  background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.16)}
+.p3-linkcard .k{font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan-light)}
+.p3-linkcard .v{font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:13px;color:#fff}
+
+/* =====================================================================
+   S2A · Signal-Instrument bookend — cover (01) + closing (08)
+   "Phosphor Trace": a precision oscilloscope bezel. A mm graticule doubles
+   as the baseline grid; a cyan trace rendered as three stacked strokes
+   (NO filter blur → print-bulletproof) is the hero; one gold event node is
+   the only warm accent. Cover = signal detected; closing = signal resolved
+   into rising pipeline, the node descending to become the CTA. All visuals
+   are CSS + inline SVG (viewBox in mm, preserveAspectRatio=none, A4 ratio
+   so strokes stay undistorted). Text is absolutely positioned in mm.
+   ===================================================================== */
+.s2a{position:relative;background:#02171a;color:#eafdfd;overflow:hidden}
+.s2a-field{position:absolute;inset:0;z-index:0;background:
+  radial-gradient(115% 70% at 50% 3%, #0a595b 0%, transparent 50%),
+  radial-gradient(92% 82% at 88% 113%, rgba(6,132,132,.42) 0%, transparent 52%),
+  radial-gradient(150% 130% at 50% 44%, transparent 36%, rgba(1,11,13,.92) 100%),
+  linear-gradient(160deg,#053a3c 0%, #03292c 42%, #021b1e 72%, #01141a 100%)}
+.s2a-grid{position:absolute;inset:0;z-index:1;pointer-events:none;background-image:
+  repeating-linear-gradient(0deg, rgba(13,207,207,.045) 0 .2mm, transparent .2mm 5mm),
+  repeating-linear-gradient(90deg, rgba(13,207,207,.045) 0 .2mm, transparent .2mm 5mm),
+  repeating-linear-gradient(0deg, rgba(13,207,207,.08) 0 .3mm, transparent .3mm 25mm),
+  repeating-linear-gradient(90deg, rgba(13,207,207,.08) 0 .3mm, transparent .3mm 25mm)}
+.s2a-dots{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.6;
+  background-image:radial-gradient(circle,rgba(106,227,225,.16) 1px,transparent 1px);background-size:21px 21px;
+  -webkit-mask-image:radial-gradient(66% 40% at 52% 60%, #000 0%, transparent 74%);
+          mask-image:radial-gradient(66% 40% at 52% 60%, #000 0%, transparent 74%)}
+.s2a-svg{position:absolute;inset:0;z-index:2;width:100%;height:100%;pointer-events:none}
+.s2a-svg .bez{fill:none;stroke:rgba(106,227,225,.36);stroke-width:.4}
+.s2a-svg .cross{fill:none;stroke:rgba(106,227,225,.32);stroke-width:.3}
+.s2a-svg .ax{fill:none;stroke:rgba(13,207,207,.36);stroke-width:.4}
+.s2a-svg .tick{stroke:rgba(13,207,207,.42);stroke-width:.3}
+.s2a-svg .tick.hot{stroke:#F4B740;stroke-width:.6}
+.s2a-svg .drop{fill:none;stroke:rgba(106,227,225,.42);stroke-width:.3;stroke-dasharray:1 1.5}
+.s2a-svg .trg{fill:none;stroke:#009C9B;stroke-width:2.6;opacity:.20;stroke-linecap:round;stroke-linejoin:round}
+.s2a-svg .trm{fill:none;stroke:#3fd8d6;stroke-width:1.1;opacity:.6;stroke-linecap:round;stroke-linejoin:round}
+.s2a-svg .trc{fill:none;stroke:#ecfffe;stroke-width:.5;stroke-linecap:round;stroke-linejoin:round}
+.s2a-svg .ring{fill:none}
+.s2a-svg .pfill{stroke:none}
+.s2a-svg .arw{stroke:none}
+.s2a-svg .ret{fill:none;stroke:rgba(106,227,225,.5);stroke-width:.45}
+/* absolutely-positioned instrument text (mm coords set inline on each block) */
+.s2a-abs{position:absolute;z-index:4}
+.s2a-eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:'Space Mono',monospace;font-weight:700;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan-light)}
+.s2a-eyebrow .dia{width:6px;height:6px;background:var(--cyan-light);transform:rotate(45deg);box-shadow:0 0 9px rgba(106,227,225,.85);flex:none}
+.s2a-plate{display:flex;align-items:center;gap:11px}
+.s2a-plate img{width:12mm;height:12mm;display:block;border-radius:50%;box-shadow:0 4px 14px rgba(0,0,0,.45),0 0 0 1px rgba(106,227,225,.28)}
+.s2a-plate .tx{display:flex;flex-direction:column;gap:2px;text-align:right;font-family:'Space Mono',monospace;letter-spacing:.12em}
+.s2a-plate .a{font-size:9px;font-weight:700;color:#fff}
+.s2a-plate .b{font-size:7.5px;color:rgba(233,253,253,.6)}
+.s2a-micro{font-family:'Space Mono',monospace;font-size:8px;line-height:1.7;letter-spacing:.14em;color:rgba(233,253,253,.42);text-transform:uppercase}
+.s2a-head{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:57px;line-height:1.0;letter-spacing:-.022em;color:#fff}
+.s2a-head .it{font-family:'Fraunces',serif;font-style:italic;font-weight:500;letter-spacing:-.012em;color:#93f2ef;
+  text-shadow:0 0 28px rgba(13,207,207,.62),0 0 9px rgba(106,227,225,.72)}
+.s2a-dim{display:flex;align-items:center;gap:9px}
+.s2a-dim .ln{flex:1;height:1px;background:linear-gradient(90deg,rgba(106,227,225,.55),rgba(106,227,225,.14))}
+.s2a-dim .ln.r{background:linear-gradient(90deg,rgba(106,227,225,.14),rgba(106,227,225,.55))}
+.s2a-dim .cap{width:1px;height:8px;background:rgba(106,227,225,.7);flex:none}
+.s2a-dim .lbl{font-family:'Space Mono',monospace;font-weight:700;font-size:8px;letter-spacing:.2em;color:var(--cyan-light);white-space:nowrap}
+.s2a-tag{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:17px;line-height:1.42;color:#eafcfb}
+.s2a-lead{font-family:'Hanken Grotesk',sans-serif;font-weight:400;font-size:12.5px;line-height:1.62;color:rgba(233,253,253,.82)}
+.s2a-nodecap{font-family:'Space Mono',monospace;font-weight:700;font-size:8px;line-height:1.55;letter-spacing:.14em;color:#f7c863;text-transform:uppercase;text-shadow:0 0 12px rgba(244,183,64,.55)}
+/* channel index (cover) */
+.s2a-ch{display:grid;grid-template-columns:repeat(5,1fr)}
+.s2a-ch .it{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;padding-top:11px}
+.s2a-ch .no{font-family:'Space Mono',monospace;font-weight:700;font-size:10px;letter-spacing:.06em;color:var(--cyan-light)}
+.s2a-ch .nm{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:11.5px;letter-spacing:-.01em;color:#fff;white-space:nowrap}
+.s2a-ch .it.hot .no{color:#F4B740}
+.s2a-ch .it.hot .nm{color:#fce0a6}
+/* gauge readout strip */
+.s2a-gauge{display:grid;grid-template-columns:1fr 1px 1fr 1px 1fr;align-items:center}
+.s2a-gauge .g{display:flex;flex-direction:column;gap:3px;padding:0 5mm}
+.s2a-gauge .gv{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:27px;line-height:1;color:#fff}
+.s2a-gauge .gl{font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:.05em;text-transform:uppercase;color:rgba(233,253,253,.66)}
+.s2a-gauge .gdiv{align-self:stretch;background:linear-gradient(180deg,transparent,rgba(255,255,255,.22),transparent)}
+.s2a-foot{display:flex;justify-content:space-between;align-items:center;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.05em;color:rgba(233,253,253,.55);border-top:1px solid rgba(255,255,255,.14);padding-top:3mm}
+.s2a-foot .d{color:var(--cyan-light)}
+/* closing · step labels + output tray */
+.s2a-step{font-family:'Space Mono',monospace;font-weight:700;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:rgba(233,253,253,.72);text-align:center;transform:translateX(-50%)}
+.s2a-step .n{color:var(--cyan-light)}
+.s2a-cta{overflow:hidden;display:flex;align-items:center;gap:15px;padding:15px 20px;border-radius:15px;
+  background:radial-gradient(140% 260% at 0% 0%, rgba(13,207,207,.26), transparent 52%),linear-gradient(120deg,rgba(13,207,207,.15),rgba(6,109,109,.06));
+  border:1px solid rgba(106,227,225,.44);box-shadow:0 22px 46px -26px rgba(2,82,82,.75),inset 0 1px 0 rgba(255,255,255,.1)}
+.s2a-cta .jew{width:14px;height:14px;flex:none;transform:rotate(45deg);background:linear-gradient(135deg,#fad27d,#F4B740);
+  box-shadow:0 0 0 5px rgba(244,183,64,.16),0 0 18px 3px rgba(244,183,64,.55)}
+.s2a-cta .tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
+.s2a-cta .k{font-family:'Space Mono',monospace;font-weight:700;font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan-light)}
+.s2a-cta .v{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;line-height:1.08;letter-spacing:-.012em;color:#fff}
+.s2a-cta .go{flex:none;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#0DCFCF,#009C9B);color:#012;font-size:19px;font-weight:700;box-shadow:0 10px 24px -8px rgba(13,207,207,.75)}
+.s2a-qrwrap{position:relative;flex:none;display:flex;flex-direction:column;align-items:center;gap:7px}
+.s2a-qr{position:relative;background:#fff;border-radius:10px;padding:7px;box-shadow:0 10px 24px -12px rgba(0,0,0,.65)}
+.s2a-qr img{width:22mm;height:22mm;display:block}
+.s2a-qr::before,.s2a-qr::after,.s2a-qr .c1,.s2a-qr .c2{content:'';position:absolute;width:8px;height:8px;border:1.5px solid var(--cyan-light)}
+.s2a-qr::before{top:-5px;left:-5px;border-right:0;border-bottom:0}
+.s2a-qr::after{top:-5px;right:-5px;border-left:0;border-bottom:0}
+.s2a-qr .c1{bottom:-5px;left:-5px;border-right:0;border-top:0}
+.s2a-qr .c2{bottom:-5px;right:-5px;border-left:0;border-top:0}
+.s2a-scan{font-family:'Space Mono',monospace;font-weight:700;font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan-light)}
+.s2a-links{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.s2a-link{display:flex;flex-direction:column;justify-content:center;gap:5px;padding:11px 14px;border-radius:12px;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14)}
+.s2a-link .k{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan-light)}
+.s2a-link .v{font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:12.5px;color:#fff}
+.s2a-link .v.mono{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.02em}
+/* =====================================================================
+   08 · Back cover — minimalist, classy sign-off.
+   A quiet near-black teal field, one soft glow, a faint keyline, a Fraunces
+   closing line and the brand seal with an airy contact footer. Deliberately
+   calm — the still point that answers the instrument cover.
+   ===================================================================== */
+.bc{position:relative;background:#01131a;color:#eafdfd;overflow:hidden}
+.bc-field{position:absolute;inset:0;z-index:0;background:
+  radial-gradient(56% 40% at 50% 32%, rgba(13,207,207,.13), transparent 72%),
+  radial-gradient(135% 82% at 50% 128%, rgba(6,109,109,.30), transparent 60%),
+  linear-gradient(180deg,#03191f 0%, #02151b 48%, #01111a 100%)}
+.bc-vign{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(140% 120% at 50% 44%, transparent 48%, rgba(0,5,7,.66) 100%)}
+.bc-frame{position:absolute;inset:11mm;z-index:2;pointer-events:none;border:1px solid rgba(106,227,225,.15)}
+.bc-inner{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;padding:24mm;text-align:center}
+.bc-lockup{display:flex;flex-direction:column;align-items:center;margin-top:-6mm}
+.bc-mark{width:15mm;height:15mm;border-radius:50%;box-shadow:0 6px 20px rgba(0,0,0,.5),0 0 0 1px rgba(106,227,225,.22);margin-bottom:15px}
+.bc-brand{font-family:'Space Mono',monospace;font-weight:700;font-size:10.5px;letter-spacing:.46em;text-transform:uppercase;color:#fff;padding-left:.46em;margin-bottom:40px}
+.bc-kicker{font-family:'Space Mono',monospace;font-weight:700;font-size:9.5px;letter-spacing:.4em;text-transform:uppercase;color:var(--cyan-light);padding-left:.4em;margin-bottom:22px}
+.bc-head{font-family:'Fraunces',serif;font-weight:400;font-size:41px;line-height:1.18;letter-spacing:-.005em;color:#fff;max-width:150mm}
+.bc-head .it{font-style:italic;color:var(--cyan-light)}
+.bc-rule{width:42px;height:2px;background:var(--cyan);border-radius:2px;margin:27px 0 25px}
+.bc-sub{font-family:'Hanken Grotesk',sans-serif;font-weight:400;font-size:13px;line-height:1.66;color:rgba(233,253,253,.72);max-width:112mm}
+.bc-bottom{position:absolute;left:24mm;right:24mm;bottom:19mm;z-index:3;display:flex;flex-direction:column;align-items:center;gap:15px}
+.bc-qr{background:#fff;border-radius:9px;padding:6px;box-shadow:0 10px 24px -12px rgba(0,0,0,.6)}
+.bc-qr img{width:16mm;height:16mm;display:block}
+.bc-scan{font-family:'Space Mono',monospace;font-weight:700;font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan-light);padding-left:.22em}
+.bc-links{display:flex;align-items:center;gap:18px;font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:13.5px;color:#fff}
+.bc-links a{color:#fff;text-decoration:none}
+.bc-links .sep{width:4px;height:4px;background:var(--cyan);transform:rotate(45deg);flex:none}
+.bc-foot{width:100%;margin-top:6px;display:flex;justify-content:space-between;align-items:center;
+  font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:.08em;color:rgba(233,253,253,.44);
+  border-top:1px solid rgba(255,255,255,.1);padding-top:5mm}
+
+/* cover · concept statement + operating-loop diagram */
+.s2a-concept{font-family:'Hanken Grotesk',sans-serif;font-weight:400;font-size:14px;line-height:1.58;color:rgba(233,253,253,.78)}
+.s2a-concept b{color:#fff;font-weight:600}
+.s2a-dtitle{display:flex;align-items:center;gap:11px;font-family:'Space Mono',monospace;font-weight:700;font-size:8.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--cyan-light);white-space:nowrap}
+.s2a-dtitle .ln{flex:1;height:1px;min-width:20px;background:linear-gradient(90deg,rgba(106,227,225,.32),transparent)}
+.s2a-lstep{display:flex;flex-direction:column;align-items:center;gap:3px;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.s2a-lstep .n{font-family:'Space Mono',monospace;font-weight:700;font-size:9px;letter-spacing:.06em;color:var(--cyan-light)}
+.s2a-lstep .nm{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:11.5px;letter-spacing:-.01em;color:#fff}
+.s2a-lstep.out .nm{color:#eafefe}
+.s2a-svg .lchev{fill:none;stroke:rgba(106,227,225,.55);stroke-width:.5;stroke-linecap:round;stroke-linejoin:round}
+.s2a-svg .lnr{fill:#06262a;stroke:rgba(106,227,225,.65);stroke-width:.4}
+.s2a-svg .lnc{fill:#8ff0ee}
+/* minimalist front cover title (shares the .bc back-cover system) */
+.bc-title{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:47px;line-height:1.05;letter-spacing:-.02em;color:#fff}
+.bc-title .it{font-family:'Fraunces',serif;font-style:italic;font-weight:500;letter-spacing:-.01em;color:#93f2ef;
+  text-shadow:0 0 24px rgba(13,207,207,.45),0 0 7px rgba(106,227,225,.5)}
+@media print{.s2a,.bc{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+</style>
+</head>
+<body class="screen">
+
+<!-- ==================================================================== 01 · COVER — minimalist title page ==================================================================== -->
+<section class="page bc">
+  <div class="bc-field"></div>
+  <div class="bc-vign"></div>
+  <div class="bc-frame"></div>
+  <div class="bc-inner">
+    <div class="bc-lockup">
+      <img class="bc-mark" src="assets/brand/mark-round.png" alt="InsightsTap"/>
+      <span class="bc-brand">InsightsTap</span>
+      <span class="bc-kicker">Field Playbook · Signal &rarr; Action</span>
+      <h1 class="bc-title">Five<br/><span class="it">Signal-to-Action</span><br/>Plays.</h1>
+      <div class="bc-rule"></div>
+      <p class="bc-sub">Turn five common buyer signals into owner actions, conversations and pipeline &mdash; each run through the same repeatable four-step loop.</p>
+    </div>
+  </div>
+  <div class="bc-bottom">
+    <div class="bc-foot">
+      <span>InsightsTap · Signal-led GTM systems</span>
+      <span>www.insightstap.com</span>
+      <span>01</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== 02 · HOW TO USE + LOOP ==================================================================== -->
+<section class="page wash">
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">The Method</span><h2 class="h1">How to run these plays.</h2><div class="rule"></div></div>
+      <span class="secno">02</span>
+    </div>
+    <p class="lead" style="max-width:174mm;margin-bottom:6mm">Choose one play, define the trigger, add the context that matters, assign ownership, then measure whether the play creates commercial movement. Every play in this book follows the same four-step loop.</p>
+    <div class="region col" style="gap:7mm;justify-content:space-between">
+      <div class="col" style="gap:4mm">
+        <div class="p3-loopcap"><span class="of">THE SIGNAL-TO-ACTION LOOP</span><span class="ln"></span><span class="of">01 &rarr; 04</span></div>
+        <div class="p3-loop">
+          <div class="p3-lstep">
+            <div class="node"><svg viewBox="0 0 24 24"><path d="M2 12h5l2.6-7 3.8 14 2.6-7H22"/></svg></div>
+            <span class="n">01</span><span class="t">Trigger</span>
+            <span class="s">A buyer signal fires &mdash; intent, hiring, a job change, funding or multi-contact activity.</span>
+            <span class="chev"></span><span class="tag">Signal detected</span>
+          </div>
+          <div class="p3-lstep">
+            <div class="node"><svg viewBox="0 0 24 24"><path d="M12 3.4 4 8l8 4.6L20 8 12 3.4z"/><path d="M4 12l8 4.6L20 12"/><path d="M4 16l8 4.6L20 16"/></svg></div>
+            <span class="n">02</span><span class="t">Context</span>
+            <span class="s">Add fit, owner, role and history so the signal is understood &mdash; not just seen.</span>
+            <span class="chev"></span><span class="tag">Enriched</span>
+          </div>
+          <div class="p3-lstep">
+            <div class="node"><svg viewBox="0 0 24 24"><path d="M5 3.5l14.5 6.8-6.4 2.1-2.2 6.4L5 3.5z"/></svg></div>
+            <span class="n">03</span><span class="t">Action</span>
+            <span class="s">Route a clear next step: an owner task with an AI summary and a recommended move.</span>
+            <span class="chev"></span><span class="tag">Owner activated</span>
+          </div>
+          <div class="p3-lstep">
+            <div class="node"><svg viewBox="0 0 24 24"><path d="M4 19.5V11M9.3 19.5V5M14.7 19.5v-6M20 19.5V8M3 19.5h18"/></svg></div>
+            <span class="n">04</span><span class="t">Measure</span>
+            <span class="s">Did the play create tasks, conversations and pipeline? Keep what moves revenue.</span>
+            <span class="tag">Pipeline impact</span>
+          </div>
+        </div>
+      </div>
+      <div class="card soft" style="display:flex;align-items:center;gap:22px;padding:19px 24px">
+        <span class="p3-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.2"/><path d="M8 8a5.5 5.5 0 0 0 0 8M16 8a5.5 5.5 0 0 1 0 8M5.3 5.3a9.3 9.3 0 0 0 0 13.4M18.7 5.3a9.3 9.3 0 0 1 0 13.4"/></svg></span>
+        <p class="quote" style="font-size:16.5px;line-height:1.42;color:var(--ink);flex:1">A signal is only useful when it reaches an owner with the context to understand it &mdash; and a clear next step to act on it.</p>
+        <span class="mono" style="font-size:9.5px;letter-spacing:.09em;color:var(--cyan-dark);flex:none;text-align:right;line-height:1.7">TRIGGER &rsaquo; CONTEXT<br/>&rsaquo; ACTION &rsaquo; MEASURE</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1.34fr 1fr;gap:15px;align-items:stretch">
+        <div class="col" style="gap:9px">
+          <div class="d-cat">The five plays<span class="ln"></span></div>
+          <div class="col" style="border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff">
+            <div class="t-toc-row" style="padding:10.5px 15px"><span class="no">01</span><span class="col" style="gap:1px"><span class="nm">High-intent website visits</span><span class="ds">A target account revisits a high-intent page</span></span><span class="pg">03</span></div>
+            <div class="t-toc-row" style="padding:10.5px 15px"><span class="no">02</span><span class="col" style="gap:1px"><span class="nm">Hiring signal outreach</span><span class="ds">An ICP company hires for relevant roles</span></span><span class="pg">04</span></div>
+            <div class="t-toc-row" style="padding:10.5px 15px"><span class="no">03</span><span class="col" style="gap:1px"><span class="nm">Former champion job change</span><span class="ds">A known champion joins a new company</span></span><span class="pg">05</span></div>
+            <div class="t-toc-row" style="padding:10.5px 15px"><span class="no">04</span><span class="col" style="gap:1px"><span class="nm">Funding or expansion trigger</span><span class="ds">An account raises capital or expands</span></span><span class="pg">06</span></div>
+            <div class="t-toc-row" style="padding:10.5px 15px;border-bottom:0"><span class="no">05</span><span class="col" style="gap:1px"><span class="nm">Multi-stakeholder engagement</span><span class="ds">Several contacts from one account engage</span></span><span class="pg">07</span></div>
+          </div>
+        </div>
+        <div class="card soft" style="display:flex;flex-direction:column;justify-content:center;gap:11px">
+          <span class="kicker">Working document</span>
+          <p class="body" style="font-size:12px">Use this as a practical working document. <b>Print it, duplicate it for each campaign, or gate it behind a form</b> as a lead magnet.</p>
+          <div class="ctag" style="margin-top:2px">&rarr; RUN ONE PLAY AT A TIME</div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span>02 &middot; The Method</span><span><span class="dot">&#9679;</span> www.insightstap.com</span><span>02</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== 03 · PLAY 01 · WEB INTENT ==================================================================== -->
+<section class="page wash">
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">Play 01 &mdash; Web Intent</span><h2 class="h1">High-intent website visits.</h2><div class="rule"></div></div>
+      <span class="secno">03</span>
+    </div>
+    <div class="region col" style="gap:5.5mm;justify-content:space-between">
+      <div class="imgband" style="height:50mm">
+        <img src="assets/unsplash/p3-web.jpg" alt="" style="object-position:center 55%"/>
+        <div class="ov teal"></div>
+        <div class="ct scrim" style="padding:16px 19px;height:100%;display:flex;flex-direction:column;justify-content:flex-end">
+          <span class="cap" style="color:var(--cyan-light);margin-bottom:5px">Web intent &middot; the returning account</span>
+          <p class="h3" style="color:#fff;max-width:152mm;line-height:1.26">They didn&rsquo;t just visit &mdash; they came back. Show the owner why it matters and exactly what to do next.</p>
+        </div>
+      </div>
+      <div class="p3-sig">
+        <div class="p3-cell trig"><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><path d="M2 12h5l2.6-7 3.8 14 2.6-7H22"/></svg>Trigger</span><span class="p3-vl">A target account visits a high-intent page more than once within a defined window.</span></div>
+        <div class="p3-cell"><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><path d="M12 3 3 7.5l9 4.5 9-4.5L12 3z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5 12 21l9-4.5"/></svg>Context to add</span><span class="p3-vl">Account fit, page category, CRM owner, opportunity status, previous engagement, relevant contacts.</span></div>
+        <div class="p3-cell"><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><path d="M5 3.5l14.5 6.8-6.4 2.1-2.2 6.4L5 3.5z"/></svg>Action</span><span class="p3-vl">Create a task for the account owner with an AI-generated account summary and recommended next step.</span></div>
+        <div class="p3-cell why"><span class="qm">&rdquo;</span><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.3"/><path d="M12 2.6v3M12 18.4v3M2.6 12h3M18.4 12h3M5.2 5.2l2.1 2.1M16.7 16.7l2.1 2.1M18.8 5.2l-2.1 2.1M7.3 16.7l-2.1 2.1"/></svg>Why it works</span><span class="p3-vl">Sales doesn&rsquo;t just see &ldquo;someone visited.&rdquo; They see why it matters &mdash; and what to do.</span></div>
+      </div>
+      <div class="col" style="gap:8px">
+        <div class="d-cat">Recommended stack<span class="ln"></span></div>
+        <div class="p3-stack">
+          <div class="p3-tool"><span class="step">01</span><span class="lg"><img src="assets/tech-color/rb2b.svg" alt=""/></span><span class="tx"><span class="nm">RB2B</span><span class="rl">De-anonymize</span></span></div>
+          <div class="p3-tool"><span class="step">02</span><span class="lg"><img src="assets/tech-color/clay.png" alt=""/></span><span class="tx"><span class="nm">Clay</span><span class="rl">Enrich</span></span></div>
+          <div class="p3-tool"><span class="step">03</span><span class="lg"><img src="assets/tech-color/hubspot.svg" alt=""/></span><span class="tx"><span class="nm">HubSpot</span><span class="rl">Route task</span></span></div>
+          <div class="p3-tool"><span class="step">04</span><span class="lg"><img src="assets/tech-color/n8n.svg" alt=""/></span><span class="tx"><span class="nm">n8n</span><span class="rl">Automate</span></span></div>
+        </div>
+      </div>
+      <div>
+        <div class="p3-tbl">
+          <div class="p3-row hd"><span><span class="cn">#</span>Step</span><span>Owner</span><span>Tool / workflow</span><span>Metric</span></div>
+          <div class="p3-row ex"><span class="exlbl">Repeat visit to /pricing detected</span><span>RevOps</span><span class="p3-mono">RB2B &rarr; Clay &rarr; HubSpot task</span><span>% visits &rarr; tasks created</span></div>
+          <div class="p3-row blank"><span></span><span></span><span></span><span></span></div>
+          <div class="p3-row blank"><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="p3-tblcap"><span class="dia"></span><span class="cap">Example row shown &mdash; duplicate this table per campaign and fill in your own steps, owners, tools and metrics.</span></div>
+      </div>
+    </div>
+    <div class="foot"><span>03 &middot; Play 01 &middot; Web Intent</span><span><span class="dot">&#9679;</span> www.insightstap.com</span><span>03</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== 04 · PLAY 02 · HIRING SIGNAL ==================================================================== -->
+<section class="page">
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">Play 02 &mdash; Hiring Signal</span><h2 class="h1">Hiring signal outreach.</h2><div class="rule"></div></div>
+      <span class="secno">04</span>
+    </div>
+    <div class="region col" style="gap:5.5mm;justify-content:space-between">
+      <div class="imgband" style="height:50mm">
+        <img src="assets/unsplash/p3-hiring.jpg" alt="" style="object-position:center 42%"/>
+        <div class="ov teal"></div>
+        <div class="ct scrim" style="padding:16px 19px;height:100%;display:flex;flex-direction:column;justify-content:flex-end">
+          <span class="cap" style="color:var(--cyan-light);margin-bottom:5px">Hiring signal &middot; the growth moment</span>
+          <p class="h3" style="color:#fff;max-width:152mm;line-height:1.26">A new role is a business moment. Reach out about the change &mdash; not with a generic pitch.</p>
+        </div>
+      </div>
+      <div class="p3-sig">
+        <div class="p3-cell trig"><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><path d="M2 12h5l2.6-7 3.8 14 2.6-7H22"/></svg>Trigger</span><span class="p3-vl">A company in your ICP starts hiring for roles connected to your solution.</span></div>
+        <div class="p3-cell"><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><path d="M12 3 3 7.5l9 4.5 9-4.5L12 3z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5 12 21l9-4.5"/></svg>Context to add</span><span class="p3-vl">Role type, department, hiring volume, company size, technology stack, likely pain point.</span></div>
+        <div class="p3-cell"><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><path d="M5 3.5l14.5 6.8-6.4 2.1-2.2 6.4L5 3.5z"/></svg>Action</span><span class="p3-vl">Launch a signal-led outbound play that connects hiring activity to a relevant operational challenge.</span></div>
+        <div class="p3-cell why"><span class="qm">&rdquo;</span><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.3"/><path d="M12 2.6v3M12 18.4v3M2.6 12h3M18.4 12h3M5.2 5.2l2.1 2.1M16.7 16.7l2.1 2.1M18.8 5.2l-2.1 2.1M7.3 16.7l-2.1 2.1"/></svg>Why it works</span><span class="p3-vl">Hiring often shows internal change. Outreach becomes about the business moment, not a generic pitch.</span></div>
+      </div>
+      <div class="col" style="gap:8px">
+        <div class="d-cat">Recommended stack<span class="ln"></span></div>
+        <div class="p3-stack">
+          <div class="p3-tool own"><span class="step">01</span><span class="lg"><img src="assets/brand/mark-round.png" alt=""/></span><span class="tx"><span class="nm">JobFeeder</span><span class="rl">Detect</span></span></div>
+          <div class="p3-tool"><span class="step">02</span><span class="lg"><img src="assets/tech-color/clay.png" alt=""/></span><span class="tx"><span class="nm">Clay</span><span class="rl">Enrich</span></span></div>
+          <div class="p3-tool"><span class="step">03</span><span class="lg"><img src="assets/tech-color/apollo.svg" alt=""/></span><span class="tx"><span class="nm">Apollo</span><span class="rl">Sequence</span></span></div>
+          <div class="p3-tool"><span class="step">04</span><span class="lg"><img src="assets/tech-color/hubspot.svg" alt=""/></span><span class="tx"><span class="nm">HubSpot</span><span class="rl">CRM sync</span></span></div>
+        </div>
+      </div>
+      <div>
+        <div class="p3-tbl">
+          <div class="p3-row hd"><span><span class="cn">#</span>Step</span><span>Owner</span><span>Tool / workflow</span><span>Metric</span></div>
+          <div class="p3-row ex"><span class="exlbl">New ICP role posted</span><span>SDR</span><span class="p3-mono">JobFeeder &rarr; Clay &rarr; Apollo sequence</span><span>Signal &rarr; reply rate</span></div>
+          <div class="p3-row blank"><span></span><span></span><span></span><span></span></div>
+          <div class="p3-row blank"><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="p3-tblcap"><span class="dia"></span><span class="cap">Example row shown &mdash; duplicate this table per campaign and fill in your own steps, owners, tools and metrics.</span></div>
+      </div>
+    </div>
+    <div class="foot"><span>04 &middot; Play 02 &middot; Hiring Signal</span><span><span class="dot">&#9679;</span> www.insightstap.com</span><span>04</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== 05 · PLAY 03 · CHAMPION MOVE ==================================================================== -->
+<section class="page wash">
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">Play 03 &mdash; Champion Move</span><h2 class="h1">Former champion job change.</h2><div class="rule"></div></div>
+      <span class="secno">05</span>
+    </div>
+    <div class="region col" style="gap:5.5mm;justify-content:space-between">
+      <div class="imgband" style="height:50mm">
+        <img src="assets/unsplash/p3-champion.jpg" alt="" style="object-position:center 40%"/>
+        <div class="ov teal"></div>
+        <div class="ct scrim" style="padding:16px 19px;height:100%;display:flex;flex-direction:column;justify-content:flex-end">
+          <span class="cap" style="color:var(--cyan-light);margin-bottom:5px">Champion move &middot; warm reactivation</span>
+          <p class="h3" style="color:#fff;max-width:152mm;line-height:1.26">Your champion just changed companies. The trust already exists &mdash; reach them early.</p>
+        </div>
+      </div>
+      <div class="p3-sig">
+        <div class="p3-cell trig"><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><path d="M2 12h5l2.6-7 3.8 14 2.6-7H22"/></svg>Trigger</span><span class="p3-vl">A past customer, previous buyer, or known champion joins a new company.</span></div>
+        <div class="p3-cell"><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><path d="M12 3 3 7.5l9 4.5 9-4.5L12 3z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5 12 21l9-4.5"/></svg>Context to add</span><span class="p3-vl">Previous relationship, new company fit, new role, growth signals, CRM history.</span></div>
+        <div class="p3-cell"><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><path d="M5 3.5l14.5 6.8-6.4 2.1-2.2 6.4L5 3.5z"/></svg>Action</span><span class="p3-vl">Create a warm reactivation workflow with a founder-led or AE-led message.</span></div>
+        <div class="p3-cell why"><span class="qm">&rdquo;</span><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.3"/><path d="M12 2.6v3M12 18.4v3M2.6 12h3M18.4 12h3M5.2 5.2l2.1 2.1M16.7 16.7l2.1 2.1M18.8 5.2l-2.1 2.1M7.3 16.7l-2.1 2.1"/></svg>Why it works</span><span class="p3-vl">Trust already exists. The system makes sure the team sees the moment early enough.</span></div>
+      </div>
+      <div class="col" style="gap:8px">
+        <div class="d-cat">Recommended stack<span class="ln"></span></div>
+        <div class="p3-stack">
+          <div class="p3-tool"><span class="step">01</span><span class="lg"><img src="assets/tech-color/commonroom.png" alt=""/></span><span class="tx"><span class="nm">Common Room</span><span class="rl">Detect</span></span></div>
+          <div class="p3-tool"><span class="step">02</span><span class="lg"><img src="assets/tech-color/clay.png" alt=""/></span><span class="tx"><span class="nm">Clay</span><span class="rl">Enrich</span></span></div>
+          <div class="p3-tool"><span class="step">03</span><span class="lg"><img src="assets/tech-color/linkedin.svg" alt=""/></span><span class="tx"><span class="nm">LinkedIn</span><span class="rl">Reconnect</span></span></div>
+          <div class="p3-tool"><span class="step">04</span><span class="lg"><img src="assets/tech-color/hubspot.svg" alt=""/></span><span class="tx"><span class="nm">HubSpot</span><span class="rl">Alert</span></span></div>
+        </div>
+      </div>
+      <div>
+        <div class="p3-tbl">
+          <div class="p3-row hd"><span><span class="cn">#</span>Step</span><span>Owner</span><span>Tool / workflow</span><span>Metric</span></div>
+          <div class="p3-row ex"><span class="exlbl">Champion appears at new company</span><span>AE / Founder</span><span class="p3-mono">Common Room &rarr; HubSpot alert</span><span>Reactivation &rarr; meeting rate</span></div>
+          <div class="p3-row blank"><span></span><span></span><span></span><span></span></div>
+          <div class="p3-row blank"><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="p3-tblcap"><span class="dia"></span><span class="cap">Example row shown &mdash; duplicate this table per campaign and fill in your own steps, owners, tools and metrics.</span></div>
+      </div>
+    </div>
+    <div class="foot"><span>05 &middot; Play 03 &middot; Champion Move</span><span><span class="dot">&#9679;</span> www.insightstap.com</span><span>05</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== 06 · PLAY 04 · FUNDING & EXPANSION ==================================================================== -->
+<section class="page">
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">Play 04 &mdash; Funding &amp; Expansion</span><h2 class="h1">Funding or expansion trigger.</h2><div class="rule"></div></div>
+      <span class="secno">06</span>
+    </div>
+    <div class="region col" style="gap:5.5mm;justify-content:space-between">
+      <div class="imgband" style="height:50mm">
+        <img src="assets/unsplash/p3-funding.jpg" alt="" style="object-position:center 40%"/>
+        <div class="ov teal"></div>
+        <div class="ct scrim" style="padding:16px 19px;height:100%;display:flex;flex-direction:column;justify-content:flex-end">
+          <span class="cap" style="color:var(--cyan-light);margin-bottom:5px">Funding &amp; expansion &middot; the urgency window</span>
+          <p class="h3" style="color:#fff;max-width:152mm;line-height:1.26">Fresh capital creates urgency. Respond as one coordinated, multi-channel play.</p>
+        </div>
+      </div>
+      <div class="p3-sig">
+        <div class="p3-cell trig"><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><path d="M2 12h5l2.6-7 3.8 14 2.6-7H22"/></svg>Trigger</span><span class="p3-vl">A target account raises funding, opens a new market, or expands hiring across relevant teams.</span></div>
+        <div class="p3-cell"><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><path d="M12 3 3 7.5l9 4.5 9-4.5L12 3z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5 12 21l9-4.5"/></svg>Context to add</span><span class="p3-vl">Funding amount, expansion type, hiring trend, buying committee roles, commercial relevance.</span></div>
+        <div class="p3-cell"><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><path d="M5 3.5l14.5 6.8-6.4 2.1-2.2 6.4L5 3.5z"/></svg>Action</span><span class="p3-vl">Move the account into a time-sensitive ABM play with ads, sales outreach, and content.</span></div>
+        <div class="p3-cell why"><span class="qm">&rdquo;</span><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.3"/><path d="M12 2.6v3M12 18.4v3M2.6 12h3M18.4 12h3M5.2 5.2l2.1 2.1M16.7 16.7l2.1 2.1M18.8 5.2l-2.1 2.1M7.3 16.7l-2.1 2.1"/></svg>Why it works</span><span class="p3-vl">Funding and expansion create urgency. The response needs to be coordinated across channels.</span></div>
+      </div>
+      <div class="col" style="gap:8px">
+        <div class="d-cat">Recommended stack<span class="ln"></span></div>
+        <div class="p3-stack">
+          <div class="p3-tool"><span class="step">01</span><span class="lg"><img src="assets/tech-color/apollo.svg" alt=""/></span><span class="tx"><span class="nm">Apollo</span><span class="rl">Prospect</span></span></div>
+          <div class="p3-tool"><span class="step">02</span><span class="lg"><img src="assets/tech-color/clay.png" alt=""/></span><span class="tx"><span class="nm">Clay</span><span class="rl">Enrich</span></span></div>
+          <div class="p3-tool"><span class="step">03</span><span class="lg"><img src="assets/tech-color/linkedin.svg" alt=""/></span><span class="tx"><span class="nm">LinkedIn</span><span class="rl">Target ads</span></span></div>
+          <div class="p3-tool"><span class="step">04</span><span class="lg"><img src="assets/tech-color/hubspot.svg" alt=""/></span><span class="tx"><span class="nm">HubSpot</span><span class="rl">Orchestrate</span></span></div>
+        </div>
+      </div>
+      <div>
+        <div class="p3-tbl">
+          <div class="p3-row hd"><span><span class="cn">#</span>Step</span><span>Owner</span><span>Tool / workflow</span><span>Metric</span></div>
+          <div class="p3-row ex"><span class="exlbl">Funding round announced</span><span>Marketing + AE</span><span class="p3-mono">Clay &rarr; LinkedIn Ads + sequence</span><span>ABM accounts &rarr; opps</span></div>
+          <div class="p3-row blank"><span></span><span></span><span></span><span></span></div>
+          <div class="p3-row blank"><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="p3-tblcap"><span class="dia"></span><span class="cap">Example row shown &mdash; duplicate this table per campaign and fill in your own steps, owners, tools and metrics.</span></div>
+      </div>
+    </div>
+    <div class="foot"><span>06 &middot; Play 04 &middot; Funding &amp; Expansion</span><span><span class="dot">&#9679;</span> www.insightstap.com</span><span>06</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== 07 · PLAY 05 · BUYING GROUP ==================================================================== -->
+<section class="page wash">
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:9px"><span class="kicker">Play 05 &mdash; Buying Group</span><h2 class="h1">Multi-stakeholder engagement.</h2><div class="rule"></div></div>
+      <span class="secno">07</span>
+    </div>
+    <div class="region col" style="gap:5.5mm;justify-content:space-between">
+      <div class="imgband" style="height:50mm">
+        <img src="assets/unsplash/p3-group.jpg" alt="" style="object-position:center 40%"/>
+        <div class="ov teal"></div>
+        <div class="ct scrim" style="padding:16px 19px;height:100%;display:flex;flex-direction:column;justify-content:flex-end">
+          <span class="cap" style="color:var(--cyan-light);margin-bottom:5px">Buying group &middot; account-level movement</span>
+          <p class="h3" style="color:#fff;max-width:152mm;line-height:1.26">B2B decisions are made by committees. When the whole account moves, change the play.</p>
+        </div>
+      </div>
+      <div class="p3-sig">
+        <div class="p3-cell trig"><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><path d="M2 12h5l2.6-7 3.8 14 2.6-7H22"/></svg>Trigger</span><span class="p3-vl">Multiple people from the same account engage across content, ads, website, or events in a short period.</span></div>
+        <div class="p3-cell"><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><path d="M12 3 3 7.5l9 4.5 9-4.5L12 3z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5 12 21l9-4.5"/></svg>Context to add</span><span class="p3-vl">Stakeholder roles, engagement type, content theme, account stage, CRM ownership.</span></div>
+        <div class="p3-cell"><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><path d="M5 3.5l14.5 6.8-6.4 2.1-2.2 6.4L5 3.5z"/></svg>Action</span><span class="p3-vl">Upgrade account priority, notify the owner, and recommend a buying-group response.</span></div>
+        <div class="p3-cell why"><span class="qm">&rdquo;</span><span class="p3-lb"><svg class="p3-ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.3"/><path d="M12 2.6v3M12 18.4v3M2.6 12h3M18.4 12h3M5.2 5.2l2.1 2.1M16.7 16.7l2.1 2.1M18.8 5.2l-2.1 2.1M7.3 16.7l-2.1 2.1"/></svg>Why it works</span><span class="p3-vl">B2B deals are not decided by one person. Account-level movement should change the play.</span></div>
+      </div>
+      <div class="col" style="gap:8px">
+        <div class="d-cat">Recommended stack<span class="ln"></span></div>
+        <div class="p3-stack">
+          <div class="p3-tool"><span class="step">01</span><span class="lg"><img src="assets/tech-color/factors.png" alt=""/></span><span class="tx"><span class="nm">Factors</span><span class="rl">Score</span></span></div>
+          <div class="p3-tool"><span class="step">02</span><span class="lg"><img src="assets/tech-color/commonroom.png" alt=""/></span><span class="tx"><span class="nm">Common Room</span><span class="rl">Detect</span></span></div>
+          <div class="p3-tool"><span class="step">03</span><span class="lg"><img src="assets/tech-color/hubspot.svg" alt=""/></span><span class="tx"><span class="nm">HubSpot</span><span class="rl">Deal</span></span></div>
+          <div class="p3-tool"><span class="step">04</span><span class="lg"><img src="assets/tech-color/salesforce.svg" alt=""/></span><span class="tx"><span class="nm">Salesforce</span><span class="rl">CRM</span></span></div>
+        </div>
+      </div>
+      <div>
+        <div class="p3-tbl">
+          <div class="p3-row hd"><span><span class="cn">#</span>Step</span><span>Owner</span><span>Tool / workflow</span><span>Metric</span></div>
+          <div class="p3-row ex"><span class="exlbl">3+ contacts engage in 14 days</span><span>AE</span><span class="p3-mono">Factors &rarr; HubSpot deal</span><span>Account &rarr; buying-group meeting</span></div>
+          <div class="p3-row blank"><span></span><span></span><span></span><span></span></div>
+          <div class="p3-row blank"><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="p3-tblcap"><span class="dia"></span><span class="cap">Example row shown &mdash; duplicate this table per campaign and fill in your own steps, owners, tools and metrics.</span></div>
+      </div>
+    </div>
+    <div class="foot"><span>07 &middot; Play 05 &middot; Buying Group</span><span><span class="dot">&#9679;</span> www.insightstap.com</span><span>07</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== 08 · BACK COVER — minimalist sign-off ==================================================================== -->
+<section class="page bc">
+  <div class="bc-field"></div>
+  <div class="bc-vign"></div>
+  <div class="bc-frame"></div>
+  <div class="bc-inner">
+    <div class="bc-lockup">
+      <img class="bc-mark" src="assets/brand/mark-round.png" alt="InsightsTap"/>
+      <span class="bc-brand">InsightsTap</span>
+      <span class="bc-kicker">Let&rsquo;s Build</span>
+      <h2 class="bc-head">Turn buyer signals<br/>into <span class="it">pipeline.</span></h2>
+      <div class="bc-rule"></div>
+      <p class="bc-sub">Book a 30-minute strategy call and we&rsquo;ll wire these five plays into your CRM, enrichment and outreach as one working system.</p>
+    </div>
+  </div>
+  <div class="bc-bottom">
+    <div class="bc-qr"><img src="assets/qr/book-call.png" alt="Scan to book a strategy call"/></div>
+    <span class="bc-scan">Scan to book a call</span>
+    <div class="bc-links">
+      <a href="https://www.insightstap.com" target="_blank" rel="noopener">www.insightstap.com</a>
+      <span class="sep"></span>
+      <a href="mailto:info@insightstap.com">info@insightstap.com</a>
+    </div>
+    <div class="bc-foot">
+      <span>Signal-led GTM systems</span>
+      <span>Build · Grow · Integrate</span>
+      <span>08</span>
+    </div>
+  </div>
+</section>
+
+</body>
+
+</html>
