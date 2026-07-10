@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Clay Automation Portfolio · Ritesh Osta · InsightsTap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:ital,wght@0,400..700;1,400..500&family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   Clay Automation Portfolio — Ritesh Osta · InsightsTap
+   A4 portrait, 14pp. Built on the InsightsTap brochure kit;
+   palette per insightstap.com/services/hubspot-services-management/clay-services
+   ============================================================ */
+:root{
+  --cyan:#0DCFCF; --cyan-dark:#0A9A9A; --cyan-mid:#0AB8B8; --cyan-light:#5DE0E0; --cyan-wash:#ECFBFB;
+  --ink:#0F172A; --ink-2:#1E293B; --body:#475569; --muted:#64748B; --faint:#94A3B8;
+  --line:#E2E8F0; --line-strong:#CBD5E1; --page-wash:#F8FAFC;
+  --gold:#FFBB00; --gold-tint:#FFD666; --gold-shade:#D99E00; --gold-text:#8A6400;
+  --magenta:#E50082; --magenta-tint:#F76BB8; --magenta-wash:#FDF0F7;
+  --sky:#00BCFF; --sky-wash:#F0FAFF;
+  --red:#F87171; --red-deep:#DC4A4A; --red-tint:#FCA5A5; --red-wash:#FEF2F2;
+  --navy:#0B1220;
+  --pad:14mm;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{background:#d9dee2;font-family:'Hanken Grotesk',sans-serif;color:var(--body)}
+a{color:inherit;text-decoration:none}
+
+/* ---- Page shell ---- */
+.page{position:relative;width:210mm;height:297mm;margin:0 auto;background:#fff;overflow:hidden;page-break-after:always;break-after:page;color:var(--body)}
+.screen .page{margin:8mm auto;box-shadow:0 18px 50px rgba(0,0,0,.22)}
+.inner{position:relative;z-index:3;height:100%;padding:var(--pad);display:flex;flex-direction:column}
+
+/* ---- Typography ---- */
+.kicker{font-family:'Hanken Grotesk',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.16em;font-size:10.5px;color:var(--cyan-dark)}
+.display{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;color:var(--ink);line-height:1.04;letter-spacing:-.015em}
+.h1{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;color:var(--ink);line-height:1.08;letter-spacing:-.01em;font-size:30px}
+.h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;color:var(--ink);line-height:1.15;font-size:21px}
+.h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;color:var(--ink);line-height:1.2;font-size:16px}
+.subh{font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:13px;color:var(--ink)}
+.lead{font-family:'Hanken Grotesk',sans-serif;font-weight:400;font-size:14px;line-height:1.6;color:var(--body)}
+.body{font-family:'Hanken Grotesk',sans-serif;font-weight:400;font-size:12px;line-height:1.58;color:var(--body)}
+.small{font-size:11px;line-height:1.5;color:var(--muted)}
+.quote{font-family:'Fraunces',sans-serif;font-style:italic;font-weight:400;line-height:1.45;color:var(--ink)}
+.cap{font-family:'Hanken Grotesk',sans-serif;font-size:10px;letter-spacing:.02em;color:var(--muted)}
+.mono{font-family:'Space Mono',monospace}
+.cyanc{color:var(--cyan-dark)} .inkc{color:var(--ink)} .goldc{color:var(--gold-text)}
+.magc{color:var(--magenta)} .skyc{color:var(--sky)} .redc{color:var(--red-deep)}
+
+/* ---- Header / footer chrome ---- */
+.head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6mm}
+.head .secno{font-family:'Space Mono',monospace;font-size:11px;color:var(--cyan-dark);letter-spacing:.05em}
+.foot{margin-top:12px;display:flex;justify-content:space-between;align-items:center;
+  font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.04em;color:var(--muted);padding-top:3mm;border-top:1px solid var(--line)}
+.foot .dot{color:var(--cyan)}
+.brandmark{display:flex;align-items:center;gap:7px}
+
+/* ---- Decorative layers ---- */
+.dotgrid{position:absolute;inset:0;z-index:1;background-image:radial-gradient(circle,rgba(13,207,207,.10) 1px,transparent 1px);background-size:22px 22px}
+.dotgrid.w{background-image:radial-gradient(circle,rgba(255,255,255,.09) 1px,transparent 1px)}
+.wash{background:linear-gradient(180deg,#fff 0%,var(--page-wash) 100%)}
+.wash.cy{background:linear-gradient(180deg,#fff 0%,var(--cyan-wash) 100%)}
+/* deck signature: small accent bar hugging the page edge */
+.edgebar{position:absolute;z-index:2;width:2.6mm;border-radius:0 3px 3px 0}
+.edgebar.l{left:0} .edgebar.r{right:0;border-radius:3px 0 0 3px}
+.edgebar.mag{background:var(--magenta)} .edgebar.cyn{background:var(--cyan)} .edgebar.gld{background:var(--gold)} .edgebar.red{background:var(--red)}
+.fx-grain{position:absolute;inset:0;z-index:2;opacity:.05;mix-blend-mode:overlay;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:150px 150px}
+
+/* ---- Dark (navy) pages ---- */
+.dark{color:#DCE7F5;background:
+  radial-gradient(110% 70% at 12% -5%, rgba(13,207,207,.16) 0%, transparent 45%),
+  radial-gradient(90% 80% at 100% 110%, rgba(0,188,255,.10) 0%, transparent 50%),
+  linear-gradient(155deg,#152242 0%, #0E1730 40%, var(--navy) 72%, #070D18 100%)}
+.dark .h1,.dark .h2,.dark .h3,.dark .display{color:#fff}
+.dark .lead,.dark .body{color:rgba(220,231,245,.86)}
+.dark .kicker{color:var(--cyan-light)}
+.dark .foot{color:rgba(220,231,245,.6);border-top-color:rgba(255,255,255,.14)}
+.dark .small{color:rgba(220,231,245,.72)}
+.dark .cap{color:rgba(220,231,245,.6)}
+.dark .head .secno{color:var(--cyan-light)}
+.dark .quote{color:#fff}
+
+/* ---- Components ---- */
+.rule{height:3px;width:46px;background:var(--cyan);border-radius:2px}
+.rule.gold{background:var(--gold)} .rule.mag{background:var(--magenta)} .rule.red{background:var(--red)} .rule.sky{background:var(--sky)}
+.dark .rule{background:var(--cyan-light)}
+.pill{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line-strong);border-radius:999px;padding:5px 12px;font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:11px;color:var(--ink);background:#fff}
+.pill img{height:15px;width:auto;display:block}
+/* Top-Rated Fiverr Pro trust badge */
+.fvbadge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 12px;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.02em;color:var(--gold-text);background:linear-gradient(120deg,#FFF8E5,#FFEDB8);border:1px solid var(--gold-tint);white-space:nowrap}
+.fvbadge .st{color:var(--gold-shade)}
+.dark .fvbadge{color:#241a00;background:linear-gradient(120deg,#FFD666,#FFBB00);border-color:rgba(255,255,255,.35)}
+.dark .fvbadge .st{color:#6e4f00}
+.card{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.card.soft{background:var(--cyan-wash);border-color:transparent;box-shadow:none}
+.card>*{position:relative;z-index:1}
+.dark .card{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.14);backdrop-filter:blur(2px);box-shadow:none}
+.idx{font-family:'Space Mono',monospace;font-size:12px;color:var(--cyan-dark)}
+.bignum{position:absolute;right:14px;bottom:10px;font-family:'Space Mono',monospace;font-weight:700;font-size:54px;line-height:1;color:rgba(13,207,207,.11);letter-spacing:-.04em;z-index:0;pointer-events:none}
+
+/* capability line-icon */
+.cic{width:34px;height:34px;border-radius:9px;background:var(--cyan-wash);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.cic svg{width:18px;height:18px;stroke:var(--cyan-dark);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.cic.red{background:var(--red-wash)} .cic.red svg{stroke:var(--red-deep)}
+.cic.gold{background:#FFF6DC} .cic.gold svg{stroke:var(--gold-shade)}
+.cic.mag{background:var(--magenta-wash)} .cic.mag svg{stroke:var(--magenta)}
+.cic.sky{background:var(--sky-wash)} .cic.sky svg{stroke:#0090C8}
+.dark .cic{background:rgba(255,255,255,.09)} .dark .cic svg{stroke:var(--cyan-light)}
+
+/* stat */
+.statnum{font-family:'Space Mono',monospace;font-weight:700;color:var(--cyan-dark);line-height:1;letter-spacing:-.02em}
+.dark .statnum{color:var(--cyan-light)}
+.statlabel{font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.dark .statlabel{color:rgba(220,231,245,.72)}
+
+/* tech chips */
+.tech{display:inline-flex;align-items:center;gap:7px;padding:5px 11px;border:1px solid var(--line-strong);border-radius:999px;background:#fff;font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:11px;color:var(--ink)}
+.tech img{width:15px;height:15px;object-fit:contain;flex:none}
+.tech.txt{font-family:'Space Mono',monospace;font-size:10px;color:var(--cyan-dark);letter-spacing:.01em}
+.tech.txt::before{content:'';width:6px;height:6px;background:var(--cyan);transform:rotate(45deg);flex:none}
+.dark .tech{background:rgba(255,255,255,.92);border-color:rgba(255,255,255,.3)}
+
+/* helpers */
+.flex{display:flex} .col{display:flex;flex-direction:column} .grow{flex:1} .mt-auto{margin-top:auto}
+.region{flex:1;min-height:0;display:flex;flex-direction:column}
+.fillrows{grid-auto-rows:1fr;align-content:stretch}
+ul.clean{list-style:none}
+ul.clean li{position:relative;padding-left:18px;margin-bottom:9px;line-height:1.45}
+ul.clean li::before{content:'';position:absolute;left:0;top:6px;width:7px;height:7px;border-radius:2px;background:var(--cyan);transform:rotate(45deg)}
+ul.clean li:last-child{margin-bottom:0}
+.ctag{display:flex;align-items:center;gap:7px;margin-top:13px;padding-top:11px;border-top:1px solid var(--line);font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.03em;color:var(--cyan-dark)}
+.dark .ctag{border-top-color:rgba(255,255,255,.16);color:var(--cyan-light)}
+
+/* ---- Imagery ---- */
+.tile{position:relative;overflow:hidden;border-radius:12px;background:var(--cyan-wash)}
+.tile>img{display:block;width:100%;height:100%;object-fit:cover}
+.tile .gr{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(11,18,32,0) 42%,rgba(11,18,32,.86))}
+.tile .lbl{position:absolute;left:13px;right:13px;bottom:11px;z-index:2;color:#fff;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:12px;letter-spacing:.01em;line-height:1.25;text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.tile .lbl .s{display:block;font-family:'Space Mono',monospace;font-weight:400;font-size:8.5px;letter-spacing:.06em;color:var(--cyan-light);margin-top:3px;text-transform:uppercase}
+.tile .tag{position:absolute;left:10px;top:10px;z-index:2;font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:.06em;color:#fff;background:rgba(11,18,32,.55);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:3px 9px;backdrop-filter:blur(2px)}
+.imgband{position:relative;overflow:hidden;border-radius:14px;min-height:0}
+.imgband>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.imgband .ov{position:absolute;inset:0;z-index:1}
+.imgband .ov.navy{background:linear-gradient(120deg,rgba(11,18,32,.78) 0%,rgba(15,23,42,.42) 55%,rgba(11,18,32,.22) 100%)}
+.imgband .ov.soft{background:linear-gradient(180deg,rgba(11,18,32,.06) 40%,rgba(11,18,32,.55) 100%)}
+.imgband .ct{position:relative;z-index:2}
+
+/* ============================================================
+   cp-* — Clay-portfolio page helpers
+   ============================================================ */
+
+/* -- key-value spec rows (P02) -- */
+.cp-kv{display:grid;grid-template-columns:17mm 1fr;align-items:center;gap:14px;padding:13px 16px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.cp-kv .k{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.cp-kv .v{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:14px;color:var(--ink)}
+.cp-kv .v a{color:var(--cyan-dark)}
+
+/* -- stat trio (P06/07/08/09) -- */
+.cp-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cp-stat{display:flex;align-items:center;gap:13px;padding:13px 16px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.cp-stat .cic{width:38px;height:38px;border-radius:50%}
+.cp-stat .statnum{font-size:31px}
+.cp-stat .statlabel{font-size:9.5px;letter-spacing:.05em;line-height:1.35;margin-top:3px}
+
+/* -- data table (P07/P09) -- */
+.cp-tbl{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+.cp-tbl table{width:100%;border-collapse:collapse}
+.cp-tbl th{background:var(--ink);color:#fff;font-family:'Space Mono',monospace;font-weight:700;font-size:10px;letter-spacing:.08em;text-transform:uppercase;text-align:left;padding:12px 18px}
+.cp-tbl td{font-family:'Hanken Grotesk',sans-serif;font-size:13px;color:var(--ink-2);padding:14.5px 18px;border-top:1px solid var(--line)}
+.cp-tbl td:first-child{font-weight:600;color:var(--ink)}
+.cp-tbl.roomy td{padding:19px 18px;font-size:15px}
+.cp-tbl td:last-child,.cp-tbl th:last-child{text-align:left}
+.cp-tbl tr td em{font-style:normal;color:var(--muted)}
+
+/* -- glass logo cells (P06/P08) -- */
+.cp-logos{display:grid;gap:9px}
+.cp-cell{position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:13px;
+  padding:12px 12px 42px;border-radius:13px;background:#fff;
+  border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 8px 18px -12px rgba(10,154,154,.35),0 1px 2px rgba(15,23,42,.04)}
+.cp-cell::before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(152deg,rgba(255,255,255,.6) 0%,rgba(255,255,255,0) 42%)}
+.cp-cell::after{content:'';position:absolute;top:8px;right:8px;width:5px;height:5px;z-index:2;background:var(--cyan);transform:rotate(45deg);box-shadow:0 0 0 3px rgba(13,207,207,.12)}
+.cp-cell img{position:relative;z-index:1;max-height:26px;max-width:78%;object-fit:contain;display:block;mix-blend-mode:multiply}
+.cp-cell .c{position:relative;z-index:2;font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 11px;background:#fff;white-space:nowrap;margin-top:6px}
+/* page-6 variant — compact horizontal list rows: logo left, category pill right */
+.cp-logos.rows .cp-cell{flex-direction:row;justify-content:space-between;gap:14px;padding:12px 20px}
+.cp-logos.rows .cp-cell img{height:40px;max-height:none;max-width:52%;object-position:left center}
+.cp-logos.rows .cp-cell .c{margin:0 14px 0 0}
+
+/* -- takeaway keyline band -- */
+.cp-take{position:relative;display:flex;align-items:center;gap:14px;padding:15px 20px;border-radius:14px;overflow:hidden;
+  background:radial-gradient(120% 140% at 0% 50%, rgba(13,207,207,.13) 0%, transparent 60%),var(--cyan-wash);
+  border:1px solid rgba(13,207,207,.25)}
+.cp-take::before{content:'';position:absolute;left:0;top:14%;bottom:14%;width:3px;background:linear-gradient(180deg,var(--cyan),var(--cyan-dark))}
+.cp-take .dia{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);flex:none;box-shadow:0 0 0 4px rgba(255,187,0,.16)}
+.cp-take .q{font-family:'Fraunces',sans-serif;font-style:italic;font-size:14.5px;line-height:1.45;color:var(--ink)}
+
+/* -- credential row (P05) -- */
+.cp-cred{display:flex;align-items:center;gap:13px;padding:12px 16px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+/* fill-column: list cards stretch evenly to consume the column height — no dead bands */
+.cp-fill>.card,.cp-fill>.cp-cred,.cp-fill>.cp-ba{flex:1;min-height:0}
+.cp-fill-steps>.cp-step{flex:1}
+/* context cards — soft cyan gradient washes so single-line panels read as intentional color fields */
+.cp-ctxgrid .cp-cred{border-color:#C2EDED;background:linear-gradient(135deg,#fff 10%,#E9FCFC 62%,#D8F7F7 100%)}
+.cp-ctxgrid .cp-cred:last-child{border-color:rgba(10,184,184,.4);background:linear-gradient(115deg,#D8F7F7 0%,#fff 42%,var(--sky-wash) 100%)}
+.cp-cred .t{font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:14px;color:var(--ink)}
+.cp-cred .chip{margin-left:auto;font-family:'Space Mono',monospace;font-size:8px;letter-spacing:.08em;color:var(--magenta);background:var(--magenta-wash);border:1px solid rgba(229,0,130,.25);border-radius:999px;padding:3px 8px;white-space:nowrap}
+
+/* -- DARK loop step (P10) -- */
+.cp-spine{position:absolute;left:19px;top:10px;bottom:10px;width:2px;z-index:0;
+  background:linear-gradient(180deg,rgba(0,188,255,.5),rgba(13,207,207,.55) 34%,rgba(229,0,130,.5) 66%,rgba(255,187,0,.55))}
+.cp-step{position:relative;display:grid;grid-template-columns:54px 1fr auto;gap:16px;align-items:center;min-height:26mm;
+  border-radius:14px;padding:14px 20px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.14)}
+.cp-step.hero{min-height:34mm;padding:18px 22px;background:rgba(13,207,207,.10);border-color:rgba(93,224,224,.45);box-shadow:0 0 0 1px rgba(93,224,224,.18),0 14px 34px -18px rgba(13,207,207,.5)}
+.cp-step .ltr{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:42px;line-height:.9;color:#fff;text-align:center}
+.cp-step .nm{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;color:#fff}
+.cp-step .ds{font-family:'Hanken Grotesk',sans-serif;font-size:13px;line-height:1.5;color:rgba(220,231,245,.85);margin-top:2px;max-width:96mm}
+.cp-step .acc{position:absolute;left:0;top:50%;height:34px;transform:translateY(-50%);width:3px;border-radius:0 2px 2px 0}
+.cp-step .tools{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.cp-step .tl{font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:.1em;color:rgba(220,231,245,.78);text-transform:uppercase}
+.cp-chev{display:flex;justify-content:center;padding:4px 0}
+.cp-chev svg{width:18px;height:18px;stroke:rgba(220,231,245,.6);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* -- numbered flow card (P11) -- */
+.cp-flow{display:grid;grid-template-columns:36px 1fr;gap:14px;align-items:center;align-content:center;min-height:20mm;padding:12px 16px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.cp-flow .no{font-family:'Space Mono',monospace;font-weight:700;font-size:14px;color:#0090C8;background:var(--sky-wash);border-radius:8px;width:36px;height:36px;display:flex;align-items:center;justify-content:center}
+.cp-flow .tx{font-family:'Hanken Grotesk',sans-serif;font-size:15px;line-height:1.55;color:var(--ink-2)}
+.cp-flow .tx b{color:var(--ink);font-weight:600}
+.cp-warn{position:relative;display:flex;align-items:center;gap:13px;padding:12px 15px;border-radius:12px;overflow:hidden;
+  background:var(--red-wash);border:1px solid rgba(248,113,113,.4)}
+.cp-warn::before{content:'';position:absolute;left:0;top:12%;bottom:12%;width:3px;background:var(--red)}
+.cp-warn .tx{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:14.5px;color:#8E2323}
+
+/* -- before/after row (P12/P13) -- */
+.cp-ba{display:flex;align-items:center;gap:13px;padding:12px 16px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.cp-ba .t{font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:14.5px;color:var(--ink-2)}
+.cp-ba .cic{width:32px;height:32px}
+.cp-ba.neg{border-color:#FBDBDB;background:linear-gradient(120deg,#fff 62%,var(--red-wash) 100%)}
+.cp-ba.pos{border-color:#C9EFEF;background:linear-gradient(120deg,#fff 62%,var(--cyan-wash) 100%)}
+.cp-badge{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.14em;color:#fff;border-radius:999px;padding:5px 13px}
+.cp-badge.red{background:var(--red-deep)} .cp-badge.cyn{background:var(--cyan-dark)}
+
+/* -- link/resource cards (P05/P14) -- */
+.cp-link{display:flex;flex-direction:column;gap:4px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16)}
+.cp-link .k{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:13px;color:#fff}
+.cp-link .v{font-family:'Hanken Grotesk',sans-serif;font-size:11px;color:var(--cyan-light)}
+.cp-link .v.g{color:var(--gold-tint)}
+a.cp-link{transition:none}
+
+/* ============================================================
+   mn-* — minimal bookend pages (cover + closer)
+   Flat navy field, hairline inset frame, type-led. One accent.
+   ============================================================ */
+.mn{background:
+  radial-gradient(85% 60% at 88% -8%, rgba(13,207,207,.09) 0%, transparent 55%),
+  var(--navy)}
+.mn-frame{position:absolute;inset:8mm;z-index:1;border:1px solid rgba(220,231,245,.15);border-radius:4px;pointer-events:none}
+.mn-frame::before{content:'';position:absolute;left:-1px;top:-1px;width:26px;height:26px;border-left:1.5px solid rgba(93,224,224,.65);border-top:1.5px solid rgba(93,224,224,.65);border-top-left-radius:4px}
+.mn-frame::after{content:'';position:absolute;right:-1px;bottom:-1px;width:26px;height:26px;border-right:1.5px solid rgba(93,224,224,.65);border-bottom:1.5px solid rgba(93,224,224,.65);border-bottom-right-radius:4px}
+.mn .inner{padding:24mm 22mm}
+.mn-eyebrow{display:flex;align-items:center;gap:11px}
+.mn-eyebrow .dia{width:6px;height:6px;background:var(--cyan);transform:rotate(45deg);flex:none}
+.mn-eyebrow .tx{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.3em;color:rgba(220,231,245,.76)}
+.mn-eyebrow .ln{flex:1;height:1px;background:linear-gradient(90deg,rgba(220,231,245,.2),transparent)}
+.mn-head{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:66px;line-height:1.04;letter-spacing:-.024em;color:#fff}
+.mn-head .m{display:block}
+.mn-head .dot{color:var(--magenta)}
+.mn-sub{font-family:'Fraunces',sans-serif;font-style:italic;font-size:17px;line-height:1.55;color:rgba(220,231,245,.78);max-width:136mm;text-wrap:balance}
+.mn-rule{height:2px;width:52px;background:var(--cyan);border-radius:2px}
+.mn-plate{display:inline-flex;align-items:center;justify-content:center;background:#fff;border-radius:9px;padding:7px 13px;border:1px solid rgba(220,231,245,.28)}
+.mn-plate img{height:7mm;width:auto;display:block}
+/* cover colophon — quiet 3-column editorial credits strip */
+.mn-meta{display:grid;grid-template-columns:1.25fr 1.25fr 1fr;gap:10mm;padding-top:7mm;border-top:1px solid rgba(220,231,245,.14)}
+.mn-meta .q{display:block;font-family:'Space Mono',monospace;font-weight:700;font-size:8px;letter-spacing:.24em;text-transform:uppercase;color:rgba(93,224,224,.72);margin-bottom:7px}
+.mn-meta .a{display:block;font-family:'Hanken Grotesk',sans-serif;font-size:11.5px;line-height:1.55;color:rgba(220,231,245,.9)}
+.mn-meta .a .dim{color:rgba(220,231,245,.5)}
+.mn-base{display:flex;justify-content:space-between;align-items:center;padding-top:5mm;border-top:1px solid rgba(220,231,245,.14);
+  font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(220,231,245,.78)}
+.mn-base a{color:var(--cyan-light)}
+/* minimal link index rows (closer) */
+/* closer — fine directory: dotted leaders, right-set values, quiet arrows */
+.mn-gp{font-family:'Space Mono',monospace;font-weight:700;font-size:8.5px;letter-spacing:.26em;color:rgba(93,224,224,.78);
+  padding-bottom:11px;border-bottom:1px solid rgba(220,231,245,.16);margin-bottom:5px}
+.mn-row{display:flex;align-items:baseline;gap:13px;padding:12px 0}
+.mn-row .k{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:13.5px;color:#fff;flex:none}
+.mn-row .ld{flex:1;border-bottom:1px dotted rgba(220,231,245,.24);transform:translateY(-3px)}
+.mn-row .v{font-family:'Hanken Grotesk',sans-serif;font-size:11px;color:rgba(220,231,245,.62);flex:none;text-align:right}
+.mn-row .v .hl{color:var(--cyan-light)}
+.mn-row .ar{font-family:'Space Mono',monospace;font-size:10.5px;color:var(--cyan-light);flex:none;width:15px;text-align:right}
+.mn-row.hero{padding:14px 0}
+.mn-row.hero .k{font-size:16px}
+
+@media print{
+  body{background:#fff}
+  .screen .page{margin:0;box-shadow:none}
+  .page{margin:0}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  img{image-rendering:auto}
+}
+@page{size:A4 portrait;margin:0}
+</style>
+</head>
+<body class="screen">
+
+<!-- ==================================================================== 01 · COVER (minimal) ==================================================================== -->
+<section class="page dark mn">
+  <div class="mn-frame"></div>
+  <div class="fx-grain"></div>
+  <div class="inner">
+    <div class="flex" style="justify-content:space-between;align-items:center">
+      <img src="assets/brand/logo-white.png" alt="InsightsTap" style="height:9mm;width:auto;margin-left:-1mm" />
+      <span class="mn-plate"><img src="assets/clay/logo-clay.png" alt="Clay" /></span>
+    </div>
+    <div class="col grow" style="justify-content:center;gap:9mm;padding-bottom:8mm">
+      <h1 class="mn-head">Clay<span class="m">Automation<span class="dot">.</span></span></h1>
+      <div class="mn-rule"></div>
+      <p class="mn-sub">Clay-powered prospect enrichment for signal-led B2B outbound &mdash; the systems, workflows and results behind a modern outbound engine.</p>
+    </div>
+    <div class="mn-meta">
+      <div><span class="q">Prepared by</span><span class="a">Ritesh Osta<br/><span class="dim">Clay Certified GTM Strategist</span></span></div>
+      <div><span class="q">Practice</span><span class="a">InsightsTap<br/><span class="dim">B2B GTM Growth Partner</span></span></div>
+      <div><span class="q">Contact</span><span class="a">insightstap.com<br/><span class="dim">info@insightstap.com</span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== 02 · CLAY EXPERT ==================================================================== -->
+<section class="page wash">
+  <div class="dotgrid" style="opacity:.5"></div>
+  <span class="edgebar mag l" style="top:24mm;height:30mm"></span>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:10px"><h2 class="h1">Clay Expert</h2><div class="rule"></div></div>
+      <span class="secno">02</span>
+    </div>
+    <div class="region" style="flex-direction:row;gap:8mm">
+      <div class="tile" style="width:88mm;flex:none;border:1px solid var(--line)">
+        <img src="assets/clay/photo-ritesh-portrait.jpg" alt="Ritesh Osta" style="object-position:52% 18%;transform:scaleX(-1)" />
+        <div class="gr"></div>
+        <span class="lbl">Ritesh Osta<span class="s">Clay Certified GTM Strategist</span></span>
+      </div>
+      <div class="col grow" style="gap:5mm;min-width:0">
+        <div class="col" style="gap:4mm">
+          <div class="cp-kv"><span class="k">Full Name</span><span class="v">Ritesh Osta</span></div>
+          <div class="cp-kv"><span class="k">Title</span><span class="v">Clay Certified GTM Strategist</span></div>
+          <div class="cp-kv"><span class="k">Brand</span><span class="v"><img src="assets/brand/logo-primary.png" alt="InsightsTap" style="height:5mm;width:auto;display:block" /></span></div>
+          <div class="cp-kv"><span class="k">Website</span><span class="v"><a href="http://insightstap.com/">insightstap.com</a></span></div>
+        </div>
+        <div><span class="fvbadge" style="font-size:11.5px;padding:7px 15px"><span class="st">&#9733;</span> Top Rated Fiverr Pro &mdash; 5.0 (45 reviews)</span></div>
+        <div class="imgband grow" style="border:1px solid var(--line)">
+          <img src="assets/clay/photo-cover-boardroom.jpg" alt="Clay-powered GTM session" style="object-position:center 30%" />
+          <div class="ov soft"></div>
+          <span class="ct mono" style="position:absolute;left:15px;bottom:13px;font-size:8.5px;letter-spacing:.1em;color:#fff">CLAY-POWERED &middot; SIGNAL-LED B2B OUTBOUND</span>
+        </div>
+        <a class="card" href="https://youtu.be/RF-5xnJzN18" style="display:flex;align-items:center;gap:15px;padding:14px 16px;border-color:var(--gold-tint);background:linear-gradient(120deg,#fff 55%,#FFF6DC 100%)">
+          <span class="cic gold" style="width:36px;height:36px;border-radius:50%"><svg viewBox="0 0 24 24"><path d="M8 5.5l11 6.5-11 6.5V5.5z" fill="var(--gold-shade)" stroke="none"/></svg></span>
+          <span class="col" style="gap:2px">
+            <span class="h3">Watch the Full Clay Demo</span>
+            <span class="mono" style="font-size:9px;letter-spacing:.06em;color:#6B4E00">YOUTU.BE/RF-5XNJZN18</span>
+          </span>
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;margin-left:auto;stroke:var(--gold-shade);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="foot"><span>The Expert</span><span class="brandmark"><img src="assets/brand/mark-round.png" style="height:4mm;width:4mm" alt="" /> www.insightstap.com</span><span>02</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== 03 · THE PROBLEM ==================================================================== -->
+<section class="page wash">
+  <span class="edgebar red l" style="top:24mm;height:30mm"></span>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:10px"><h2 class="h1">The problem that <span class="magc">Clay solves</span>.</h2><div class="rule red"></div></div>
+      <span class="secno">03</span>
+    </div>
+    <div class="imgband" style="flex:1 1 auto;min-height:118mm;max-height:138mm">
+      <img src="assets/clay/photo-problem-meeting.jpg" alt="Team stuck in manual prospect research" style="object-position:center 32%" />
+      <div class="ov navy"></div>
+      <div class="ct" style="position:absolute;left:16px;bottom:13px;right:16px">
+        <span class="mono" style="font-size:8.5px;letter-spacing:.1em;color:#fff">MANUAL PROSPECTING &middot; 01&ndash;04</span>
+        <p style="font-family:'Fraunces',serif;font-style:italic;font-size:15px;color:#fff;margin-top:4px;text-shadow:0 1px 10px rgba(0,0,0,.5)">Four ways manual prospecting breaks.</p>
+      </div>
+    </div>
+    <div class="region" style="margin-top:6mm;flex:none">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5mm">
+        <div class="card" style="padding:14px 16px;display:flex;flex-direction:column;justify-content:flex-start;gap:9px;min-height:32mm">
+          <span class="bignum" style="color:rgba(220,74,74,.10);font-size:40px;bottom:8px;right:12px">01</span>
+          <span class="cic red"><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg></span>
+          <h3 class="h3" style="font-size:16px">Copy-pasting from LinkedIn:</h3>
+          <p class="body" style="font-size:12.5px">Hours lost to manual research with no consistency or scale.</p>
+        </div>
+        <div class="card" style="padding:14px 16px;display:flex;flex-direction:column;justify-content:flex-start;gap:9px;min-height:32mm">
+          <span class="bignum" style="color:rgba(220,74,74,.10);font-size:40px;bottom:8px;right:12px">02</span>
+          <span class="cic red"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></span>
+          <h3 class="h3" style="font-size:16px">Downloading stale CSVs:</h3>
+          <p class="body" style="font-size:12.5px">Data is outdated before you even open the file.</p>
+        </div>
+        <div class="card" style="padding:14px 16px;display:flex;flex-direction:column;justify-content:flex-start;gap:9px;min-height:32mm">
+          <span class="bignum" style="color:rgba(220,74,74,.10);font-size:40px;bottom:8px;right:12px">03</span>
+          <span class="cic red"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><path d="M3.5 20c.6-3.6 2.8-5.5 5.5-5.5 1.5 0 2.9.6 4 1.7"/><path d="M16 15l5 5M21 15l-5 5"/></svg></span>
+          <h3 class="h3" style="font-size:16px">Wrong contacts reached:</h3>
+          <p class="body" style="font-size:12.5px">No context = generic outreach = ignored messages.</p>
+        </div>
+        <div class="card" style="padding:14px 16px;display:flex;flex-direction:column;justify-content:flex-start;gap:9px;min-height:32mm">
+          <span class="bignum" style="color:rgba(220,74,74,.10);font-size:40px;bottom:8px;right:12px">04</span>
+          <span class="cic red"><svg viewBox="0 0 24 24"><path d="M4 4h16l-6 8v6l-4 2v-8L4 4z"/></svg></span>
+          <h3 class="h3" style="font-size:16px">Pipeline remains empty:</h3>
+          <p class="body" style="font-size:12.5px">Effort invested, deals never materialise.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot" style="margin-top:auto"><span>The Problem</span><span class="brandmark"><img src="assets/brand/mark-round.png" style="height:4mm;width:4mm" alt="" /> www.insightstap.com</span><span>03</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== 04 · WHAT IS CLAY ==================================================================== -->
+<section class="page">
+  <div class="dotgrid" style="opacity:.5"></div>
+  <span class="edgebar cyn l" style="top:24mm;height:30mm"></span>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:10px"><h2 class="h1">What is Clay</h2><div class="rule"></div></div>
+      <span class="secno">04</span>
+    </div>
+    <p class="lead" style="margin:-2mm 0 6mm;font-size:15px"><b class="inkc" style="font-weight:600">Clay is the enrichment backbone of modern GTM.</b></p>
+    <div class="region" style="flex-direction:row;gap:8mm">
+      <div class="col grow cp-fill" style="gap:5mm">
+        <div class="card soft" style="display:flex;align-items:center;gap:15px;padding:12px 16px;min-height:20mm">
+          <span class="cic"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.55 3.36 2.8 7.5 2.8s7.5-1.25 7.5-2.8v-6"/><path d="M4.5 11.5v6c0 1.55 3.36 2.8 7.5 2.8s7.5-1.25 7.5-2.8v-6"/></svg></span>
+          <p class="body" style="font-size:14px;color:var(--ink-2)">Pulls data from <b style="font-weight:600;color:var(--ink)">dozens of enrichment sources</b> simultaneously</p>
+        </div>
+        <div class="card soft" style="display:flex;align-items:center;gap:15px;padding:12px 16px;min-height:20mm">
+          <span class="cic"><svg viewBox="0 0 24 24"><path d="M13 2 4.8 13.2h6L10.4 22l8.8-11.2h-6L13 2z"/></svg></span>
+          <p class="body" style="font-size:14px;color:var(--ink-2)">Turns a basic list into a fully enriched, <b style="font-weight:600;color:var(--ink)">ready-to-contact pipeline &mdash; in minutes</b></p>
+        </div>
+        <div class="card soft" style="display:flex;align-items:center;gap:15px;padding:12px 16px;min-height:20mm">
+          <span class="cic"><svg viewBox="0 0 24 24"><path d="M4 21V5a1.5 1.5 0 0 1 1.5-1.5H12V21"/><path d="M12 8.5h6.5A1.5 1.5 0 0 1 20 10v11"/><path d="M2.8 21h18.4"/><path d="M7 7.4h2M7 11h2M7 14.6h2M15 12h2M15 15.6h2"/></svg></span>
+          <p class="body" style="font-size:14px;color:var(--ink-2)"><b style="font-weight:600;color:var(--ink)">Company data:</b> industry, size, description, website, location</p>
+        </div>
+        <div class="card soft" style="display:flex;align-items:center;gap:15px;padding:12px 16px;min-height:20mm">
+          <span class="cic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M5 20.2c.8-4.1 3.5-6.2 7-6.2s6.2 2.1 7 6.2"/></svg></span>
+          <p class="body" style="font-size:14px;color:var(--ink-2)"><b style="font-weight:600;color:var(--ink)">People data:</b> names, titles, emails, LinkedIn, decision-maker context</p>
+        </div>
+        <div class="card soft" style="display:flex;align-items:center;gap:15px;padding:12px 16px;min-height:20mm">
+          <span class="cic"><svg viewBox="0 0 24 24"><path d="M4 19.5V11M9.3 19.5V5.5M14.7 19.5v-8M20 19.5V8.5M3 19.5h18"/></svg></span>
+          <p class="body" style="font-size:14px;color:var(--ink-2)"><b style="font-weight:600;color:var(--ink)">Automated, scalable,</b> and deeply personalised at scale</p>
+        </div>
+        <div class="cp-take" style="margin-top:auto;flex:none">
+          <span class="dia"></span>
+          <p class="q">From a raw list to a ready-to-contact pipeline &mdash; <b style="font-style:normal;font-weight:600;color:var(--ink)">in minutes, not days</b>.</p>
+        </div>
+      </div>
+      <div class="tile" style="width:84mm;flex:none;border:1px solid var(--line)">
+        <img src="assets/clay/photo-what-is-clay.jpg" alt="GTM team working from an enriched pipeline" style="object-position:68% 30%" />
+        <div class="gr"></div>
+        <span class="pill" style="position:absolute;left:10px;top:10px;z-index:2"><img src="assets/tech-color/clay.png" alt="Clay" /><span style="font-weight:600">Clay</span></span>
+        <span class="lbl">The enrichment backbone<span class="s">of modern GTM</span></span>
+      </div>
+    </div>
+    <div class="foot"><span>What Is Clay</span><span class="brandmark"><img src="assets/brand/mark-round.png" style="height:4mm;width:4mm" alt="" /> www.insightstap.com</span><span>04</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== 05 · WHY I USE CLAY ==================================================================== -->
+<section class="page wash">
+  <span class="edgebar gld l" style="top:24mm;height:30mm"></span>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:10px"><h2 class="h1">Why I Use Clay</h2><div class="rule gold"></div></div>
+      <span class="secno">05</span>
+    </div>
+    <div class="region" style="flex-direction:row;gap:8mm">
+      <div class="tile" style="width:82mm;flex:none;border:1px solid var(--line)">
+        <img src="assets/clay/photo-why-clay.jpg" alt="Reviewing Clay-driven campaign performance" style="object-position:center 35%" />
+      </div>
+      <div class="col grow cp-fill" style="gap:3.5mm;min-width:0">
+        <div class="cp-cred">
+          <span class="cic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.4-2.9 8-7 10-4.1-2-7-5.6-7-10V6l7-3z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></span>
+          <span class="t">Clay Certified GTM Strategist</span>
+        </div>
+        <div class="cp-cred">
+          <span class="cic"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M8.8 13.4 7 21l5-2.6L17 21l-1.8-7.6"/></svg></span>
+          <span class="t">18+ Years Industry Experience</span>
+        </div>
+        <div class="cp-cred" style="border-color:var(--gold-tint);background:linear-gradient(120deg,#fff 55%,#FFF8E5 100%)">
+          <span class="cic gold"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9L12 3.5z"/></svg></span>
+          <span class="t">Top Rated Fiverr Pro &mdash; 5.0 <span class="goldc">&#9733;</span> (45 reviews)</span>
+        </div>
+        <div class="cp-cred">
+          <span class="cic sky"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1.2"/></svg></span>
+          <span class="t">Signal-Led Outbound Specialists</span>
+        </div>
+        <div class="cp-cred">
+          <span class="cic"><svg viewBox="0 0 24 24"><path d="M10 4h-4a2 2 0 0 0-2 2v4h2.2a1.8 1.8 0 1 1 0 3.6H4v4a2 2 0 0 0 2 2h4v-2.2a1.8 1.8 0 1 1 3.6 0V20h4a2 2 0 0 0 2-2v-4h-2.2a1.8 1.8 0 1 1 0-3.6H20V6a2 2 0 0 0-2-2h-4v2.2a1.8 1.8 0 1 1-3.6 0V4z"/></svg></span>
+          <span class="t">HubSpot + Smartlead Integration Experts</span>
+        </div>
+        <div class="cp-cred" style="border-color:rgba(229,0,130,.3);background:linear-gradient(120deg,#fff 58%,var(--magenta-wash) 100%)">
+          <span class="cic mag"><svg viewBox="0 0 24 24"><path d="M8 12c0-2 1.4-3.6 3.2-3.6 2.6 0 3 3.6 5.6 3.6 1.8 0 3.2-1.6 3.2-3.6S18.6 4.8 16.8 4.8c-2.6 0-3 3.6-5.6 3.6M8 12c0 2-1.4 3.6-3.2 3.6S1.6 14 1.6 12s1.4-3.6 3.2-3.6"/><path d="M8 12c0 2 1.4 3.6 3.2 3.6 2.6 0 3-3.6 5.6-3.6"/></svg></span>
+          <span class="t">DARK Loop Framework</span>
+          <span class="chip">PROPRIETARY</span>
+        </div>
+        <div class="card col" style="gap:0;flex:none;padding:12px 20px;margin-top:auto;background:linear-gradient(135deg,var(--cyan) 0%,var(--cyan-dark) 78%);border:none;box-shadow:0 12px 26px -14px rgba(13,207,207,.65)">
+          <a class="mono flex" href="http://www.fiverr.com/riteshosta" style="align-items:center;justify-content:space-between;padding:11px 2px;font-size:11.5px;letter-spacing:.02em;color:#053B3A;font-weight:700;border-bottom:1px solid rgba(4,48,47,.22)">fiverr.com/@riteshosta<span>&rarr;</span></a>
+          <a class="mono flex" href="http://insightstap.com/b2b/clay-agency" style="align-items:center;justify-content:space-between;padding:11px 2px;font-size:11.5px;letter-spacing:.02em;color:#053B3A;font-weight:700;border-bottom:1px solid rgba(4,48,47,.22)">visit insightstap.com<span>&rarr;</span></a>
+          <a class="mono flex" href="https://insightstap.us/meetings/ritesh-ota" style="align-items:center;justify-content:space-between;padding:11px 2px;font-size:11.5px;letter-spacing:.02em;color:#053B3A;font-weight:700">Book a Free Call<span>&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span>Credentials</span><span class="brandmark"><img src="assets/brand/mark-round.png" style="height:4mm;width:4mm" alt="" /> www.insightstap.com</span><span>05</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== 06 · COMPANY DISCOVERY AT SCALE ==================================================================== -->
+<section class="page">
+  <div class="dotgrid" style="opacity:.5"></div>
+  <span class="edgebar cyn l" style="top:24mm;height:30mm"></span>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:10px"><h2 class="h1">Company discovery at scale.</h2><div class="rule"></div></div>
+      <span class="secno">06</span>
+    </div>
+    <div class="cp-stats" style="flex:none">
+      <div class="cp-stat">
+        <span class="cic"><svg viewBox="0 0 24 24"><path d="M4 21V5a1.5 1.5 0 0 1 1.5-1.5H12V21"/><path d="M12 8.5h6.5A1.5 1.5 0 0 1 20 10v11"/><path d="M2.8 21h18.4"/></svg></span>
+        <div class="col"><span class="statnum">5</span><span class="statlabel">Companies identified from brief</span></div>
+      </div>
+      <div class="cp-stat">
+        <span class="cic"><svg viewBox="0 0 24 24"><path d="M3.5 17.5 9 12l3.6 3.6 7-7.6"/><path d="M15 8h4.8v4.8"/></svg></span>
+        <div class="col"><span class="statnum">28</span><span class="statlabel">Columns enriched out&nbsp;of&nbsp;30</span></div>
+      </div>
+      <div class="cp-stat">
+        <span class="cic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.4 2"/></svg></span>
+        <div class="col"><span class="statnum">0</span><span class="statlabel">Hours of manual research</span></div>
+      </div>
+    </div>
+    <div class="flex grow" style="gap:7mm;margin-top:6mm;min-height:0">
+      <div class="col" style="flex:1.18;gap:3mm">
+        <span class="subh mono" style="font-size:10px;letter-spacing:.12em;color:var(--ink)">COMPANIES DISCOVERED</span>
+        <div class="cp-logos rows grow" style="grid-template-columns:1fr;grid-template-rows:repeat(5,1fr)">
+          <div class="cp-cell"><img src="assets/clay/logo-clinton-st-baking.png" alt="Clinton St. Baking Company &amp; Restaurant" /><span class="c">Restaurant / Caf&eacute;</span></div>
+          <div class="cp-cell"><img src="assets/clay/logo-ivan-ramen.png" alt="Ivan Ramen" /><span class="c">Restaurant</span></div>
+          <div class="cp-cell"><img src="assets/clay/logo-pause.png" alt="Pause" /><span class="c">Caf&eacute;</span></div>
+          <div class="cp-cell"><img src="assets/clay/logo-the-delancey.png" alt="The Delancey NYC" /><span class="c">Venue / Bar</span></div>
+          <div class="cp-cell"><img src="assets/clay/logo-misi.png" alt="Misi" style="max-height:64px;max-width:none" /><span class="c">Restaurant</span></div>
+        </div>
+      </div>
+      <div class="col" style="flex:1;gap:3mm">
+        <span class="subh mono" style="font-size:10px;letter-spacing:.12em;color:var(--ink)">DATA FIELDS ENRICHED AUTOMATICALLY</span>
+        <div class="card soft grow" style="padding:18px 20px;display:flex;flex-direction:column">
+          <div style="flex:1;display:flex;flex-direction:column;justify-content:space-evenly">
+            <div class="flex" style="align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid rgba(10,154,154,.15)"><span class="cic" style="width:30px;height:30px;background:#fff"><svg viewBox="0 0 24 24"><path d="M4 21V5a1.5 1.5 0 0 1 1.5-1.5H12V21"/><path d="M12 8.5h6.5A1.5 1.5 0 0 1 20 10v11"/><path d="M2.8 21h18.4"/></svg></span><span style="font-size:14px;color:var(--ink-2)">Company Name</span></div>
+            <div class="flex" style="align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid rgba(10,154,154,.15)"><span class="cic" style="width:30px;height:30px;background:#fff"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17"/><path d="M12 3.5c2.6 2.3 4 5.2 4 8.5s-1.4 6.2-4 8.5c-2.6-2.3-4-5.2-4-8.5s1.4-6.2 4-8.5z"/></svg></span><span style="font-size:14px;color:var(--ink-2)">Website URL</span></div>
+            <div class="flex" style="align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid rgba(10,154,154,.15)"><span class="cic" style="width:30px;height:30px;background:#fff"><svg viewBox="0 0 24 24"><path d="M12 21s-6.5-5.3-6.5-10a6.5 6.5 0 0 1 13 0c0 4.7-6.5 10-6.5 10z"/><circle cx="12" cy="10.6" r="2.3"/></svg></span><span style="font-size:14px;color:var(--ink-2)">Google Maps Data</span></div>
+            <div class="flex" style="align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid rgba(10,154,154,.15)"><span class="cic" style="width:30px;height:30px;background:#fff"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></span><span style="font-size:14px;color:var(--ink-2)">Business Description</span></div>
+            <div class="flex" style="align-items:center;gap:12px;padding:9px 0"><span class="cic" style="width:30px;height:30px;background:#fff"><svg viewBox="0 0 24 24"><path d="M3.5 12.5 11 20a2 2 0 0 0 2.8 0l6.2-6.2a2 2 0 0 0 0-2.8L12.5 3.5H5.5a2 2 0 0 0-2 2v7z"/><circle cx="8.5" cy="8.5" r="1.4"/></svg></span><span style="font-size:14px;color:var(--ink-2)">Location &amp; Category</span></div>
+          </div>
+          <div class="ctag" style="margin-top:auto">28 / 30 COLUMNS ENRICHED</div>
+        </div>
+      </div>
+    </div>
+    <div class="cp-take" style="margin-top:7mm;flex:none;padding:18px 22px">
+      <span class="dia"></span>
+      <p class="q" style="font-size:15.5px">The foundation is set. Names, websites, descriptions, locations &mdash; all pulled automatically.</p>
+    </div>
+    <div class="foot"><span>Case Study 01</span><span class="brandmark"><img src="assets/brand/mark-round.png" style="height:4mm;width:4mm" alt="" /> www.insightstap.com</span><span>06</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== 07 · PEOPLE ENRICHMENT — RESTAURANTS ==================================================================== -->
+<section class="page wash">
+  <span class="edgebar mag l" style="top:24mm;height:30mm"></span>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:10px"><h2 class="h1">People enrichment: context at contact level.</h2><div class="rule"></div></div>
+      <span class="secno">07</span>
+    </div>
+    <div class="cp-stats" style="flex:none">
+      <div class="cp-stat">
+        <span class="cic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="10" cy="10" r="2.2"/><path d="M6.6 17.4c.6-2 1.9-3 3.4-3s2.8 1 3.4 3"/><path d="M15.5 9h2.5M15.5 12.6h2.5"/></svg></span>
+        <div class="col"><span class="statnum">15</span><span class="statlabel">Contacts found</span></div>
+      </div>
+      <div class="cp-stat">
+        <span class="cic"><svg viewBox="0 0 24 24"><path d="M3.5 17.5 9 12l3.6 3.6 7-7.6"/><path d="M15 8h4.8v4.8"/></svg></span>
+        <div class="col"><span class="statnum">95%</span><span class="statlabel">Table completion rate</span></div>
+      </div>
+      <div class="cp-stat">
+        <span class="cic"><svg viewBox="0 0 24 24"><path d="M4 21V5a1.5 1.5 0 0 1 1.5-1.5H12V21"/><path d="M12 8.5h6.5A1.5 1.5 0 0 1 20 10v11"/><path d="M2.8 21h18.4"/></svg></span>
+        <div class="col"><span class="statnum">5</span><span class="statlabel">Source companies</span></div>
+      </div>
+    </div>
+    <div class="cp-tbl" style="margin-top:7mm;flex:none">
+      <table>
+        <thead><tr><th style="width:34%">Full Name</th><th style="width:30%">Job Title</th><th>Company</th></tr></thead>
+        <tbody>
+          <tr><td>Akiko Thurnauer</td><td>Chef</td><td>Clinton St. Baking</td></tr>
+          <tr><td>Christin Chan</td><td>Hostess</td><td>Ivan Ramen</td></tr>
+          <tr><td>Jonathan Martinez</td><td>Server</td><td>Misi</td></tr>
+          <tr><td>Latoya Hutchinson</td><td>Kitchen Manager</td><td>Pause Cafe</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="region col" style="margin-top:7mm;gap:4mm">
+      <span class="subh mono" style="font-size:10px;letter-spacing:.12em;color:var(--ink)">WHY CONTEXT MATTERS</span>
+      <div class="grow cp-ctxgrid" style="display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:4mm">
+        <div class="cp-cred"><span class="cic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M5 20.2c.8-4.1 3.5-6.2 7-6.2s6.2 2.1 7 6.2"/></svg></span><span class="t" style="font-weight:500">Know <b style="font-weight:700;color:var(--ink)">WHO</b> they are</span></div>
+        <div class="cp-cred"><span class="cic"><svg viewBox="0 0 24 24"><path d="M9 6.5h11M9 12h11M9 17.5h11"/><path d="M4 6.5h.5M4 12h.5M4 17.5h.5"/></svg></span><span class="t" style="font-weight:500">Know <b style="font-weight:700;color:var(--ink)">WHAT</b> they do</span></div>
+        <div class="cp-cred"><span class="cic"><svg viewBox="0 0 24 24"><path d="M12 21s-6.5-5.3-6.5-10a6.5 6.5 0 0 1 13 0c0 4.7-6.5 10-6.5 10z"/><circle cx="12" cy="10.6" r="2.3"/></svg></span><span class="t" style="font-weight:500">Know <b style="font-weight:700;color:var(--ink)">WHERE</b> they work</span></div>
+        <div class="cp-cred"><span class="cic"><svg viewBox="0 0 24 24"><path d="M4 19.5V11M9.3 19.5V5.5M14.7 19.5v-8M20 19.5V8.5"/></svg></span><span class="t" style="font-weight:500">Personalise outreach at scale</span></div>
+        <div class="cp-cred" style="grid-column:1/-1"><span class="cic"><svg viewBox="0 0 24 24"><path d="M5 12l4.5 4.5L19 7"/></svg></span><span class="t" style="font-weight:500">Drive outreach that actually converts</span></div>
+      </div>
+    </div>
+    <div class="cp-take" style="margin-top:7mm;flex:none">
+      <span class="dia" style="background:var(--magenta);box-shadow:0 0 0 4px rgba(229,0,130,.14)"></span>
+      <p class="q">This is not just a contact list. This is <b class="magc" style="font-style:normal;font-weight:600">CONTEXT</b> &mdash; the fuel of personalised outbound.</p>
+    </div>
+    <div class="foot"><span>Case Study 01</span><span class="brandmark"><img src="assets/brand/mark-round.png" style="height:4mm;width:4mm" alt="" /> www.insightstap.com</span><span>07</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== 08 · ICP TARGETING AT SCALE ==================================================================== -->
+<section class="page">
+  <div class="dotgrid" style="opacity:.5"></div>
+  <span class="edgebar cyn l" style="top:24mm;height:30mm"></span>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:10px"><h2 class="h1">Company data: ICP targeting at scale.</h2><div class="rule sky"></div></div>
+      <span class="secno">08</span>
+    </div>
+    <div class="cp-stats" style="flex:none">
+      <div class="cp-stat">
+        <span class="cic sky"><svg viewBox="0 0 24 24"><path d="M4 21V5a1.5 1.5 0 0 1 1.5-1.5H12V21"/><path d="M12 8.5h6.5A1.5 1.5 0 0 1 20 10v11"/><path d="M2.8 21h18.4"/></svg></span>
+        <div class="col"><span class="statnum">50</span><span class="statlabel">Companies in dataset</span></div>
+      </div>
+      <div class="cp-stat">
+        <span class="cic sky"><svg viewBox="0 0 24 24"><path d="M3.5 17.5 9 12l3.6 3.6 7-7.6"/><path d="M15 8h4.8v4.8"/></svg></span>
+        <div class="col"><span class="statnum">16</span><span class="statlabel">Columns enriched (of&nbsp;18)</span></div>
+      </div>
+      <div class="cp-stat">
+        <span class="cic sky"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 4.5V2.8M12 21.2v-1.7M4.5 12H2.8M21.2 12h-1.7M6.7 6.7 5.5 5.5M18.5 18.5l-1.2-1.2M6.7 17.3l-1.2 1.2M18.5 5.5l-1.2 1.2"/></svg></span>
+        <div class="col"><span class="statnum">1</span><span class="statlabel">Automated workflow</span></div>
+      </div>
+    </div>
+    <div class="region col" style="gap:6mm;margin-top:7mm">
+      <div class="flex" style="align-items:center;gap:12px"><span class="subh mono" style="font-size:10px;letter-spacing:.12em;color:var(--ink)">SAMPLE ICP COMPANIES IDENTIFIED</span><span style="flex:1;height:1px;background:var(--line)"></span></div>
+      <div class="cp-logos" style="flex:none;grid-template-columns:repeat(12,1fr);grid-auto-rows:52mm">
+        <div class="cp-cell" style="grid-column:span 3"><img src="assets/clay/logo-deeplearning-ai.png" alt="DeepLearning.AI" style="max-height:48px" /><span class="c">AI Education</span></div>
+        <div class="cp-cell" style="grid-column:span 3"><img src="assets/clay/logo-bytebytego.png" alt="ByteByteGo" style="max-height:48px" /><span class="c">Tech Content</span></div>
+        <div class="cp-cell" style="grid-column:span 3"><img src="assets/clay/logo-venturebeat.png" alt="VentureBeat" style="max-height:48px" /><span class="c">Media / Tech</span></div>
+        <div class="cp-cell" style="grid-column:span 3"><img src="assets/clay/logo-talentify.png" alt="Talentify" style="max-height:48px" /><span class="c">HR Tech</span></div>
+        <div class="cp-cell" style="grid-column:span 4"><img src="assets/clay/logo-simera.png" alt="Simera" style="max-height:52px" /><span class="c">Talent Platform</span></div>
+        <div class="cp-cell" style="grid-column:span 4"><img src="assets/clay/logo-bigrio.png" alt="BigRio" style="max-height:52px" /><span class="c">AI Consulting</span></div>
+        <div class="cp-cell" style="grid-column:span 4"><img src="assets/clay/logo-artstation.png" alt="ArtStation" style="max-height:52px" /><span class="c">Design Platform</span></div>
+      </div>
+      <div class="cp-take" style="flex:none">
+        <span class="dia" style="background:#0090C8;box-shadow:0 0 0 4px rgba(0,144,200,.14)"></span>
+        <p class="q">Fifty ICP companies identified, scored and segmented &mdash; before a single email was written.</p>
+      </div>
+      <div class="col" style="flex:1;gap:5mm;justify-content:center;background:var(--ink);border-radius:16px;padding:26px 30px;margin-top:auto">
+        <div class="flex" style="align-items:center;gap:12px">
+          <span style="width:7px;height:7px;background:var(--cyan);transform:rotate(45deg);flex:none"></span>
+          <span class="mono" style="font-size:10px;letter-spacing:.2em;color:var(--cyan-light)">FIELDS ENRICHED</span>
+          <span style="flex:1;height:1px;background:rgba(255,255,255,.16)"></span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px 20px">
+          <span class="mono" style="font-size:12px;color:#E7F0FA"><span style="color:var(--cyan)">&#9670;</span>&nbsp; Industry</span>
+          <span class="mono" style="font-size:12px;color:#E7F0FA"><span style="color:var(--cyan)">&#9670;</span>&nbsp; Company Size</span>
+          <span class="mono" style="font-size:12px;color:#E7F0FA"><span style="color:var(--cyan)">&#9670;</span>&nbsp; Description</span>
+          <span class="mono" style="font-size:12px;color:#E7F0FA"><span style="color:var(--cyan)">&#9670;</span>&nbsp; Website</span>
+          <span class="mono" style="font-size:12px;color:#E7F0FA"><span style="color:var(--cyan)">&#9670;</span>&nbsp; Funding Status</span>
+          <span class="mono" style="font-size:12px;color:#E7F0FA"><span style="color:var(--cyan)">&#9670;</span>&nbsp; Location</span>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span>Case Study 02</span><span class="brandmark"><img src="assets/brand/mark-round.png" style="height:4mm;width:4mm" alt="" /> www.insightstap.com</span><span>08</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== 09 · PEOPLE ENRICHMENT — ICP ==================================================================== -->
+<section class="page wash">
+  <span class="edgebar mag l" style="top:24mm;height:30mm"></span>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:10px"><h2 class="h1">People enrichment: context at contact level.</h2><div class="rule"></div></div>
+      <span class="secno">09</span>
+    </div>
+    <div class="cp-stats" style="flex:none">
+      <div class="cp-stat">
+        <span class="cic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="10" cy="10" r="2.2"/><path d="M6.6 17.4c.6-2 1.9-3 3.4-3s2.8 1 3.4 3"/><path d="M15.5 9h2.5M15.5 12.6h2.5"/></svg></span>
+        <div class="col"><span class="statnum">44</span><span class="statlabel">Contacts found</span></div>
+      </div>
+      <div class="cp-stat">
+        <span class="cic"><svg viewBox="0 0 24 24"><path d="M3.5 17.5 9 12l3.6 3.6 7-7.6"/><path d="M15 8h4.8v4.8"/></svg></span>
+        <div class="col"><span class="statnum">22</span><span class="statlabel" style="white-space:nowrap">Columns enriched (of&nbsp;46)</span></div>
+      </div>
+      <div class="cp-stat">
+        <span class="cic"><svg viewBox="0 0 24 24"><circle cx="8.6" cy="8.4" r="3.1"/><path d="M3 19.6c.6-3.4 2.7-5.2 5.6-5.2 1.8 0 3.3.7 4.4 1.9"/><circle cx="16.4" cy="9.6" r="2.5"/><path d="M13.6 19.6c.5-2.7 2.2-4.2 4.6-4.2 1.5 0 2.7.5 3.6 1.5"/></svg></span>
+        <div class="col"><span class="statnum">100%</span><span class="statlabel">Decision makers</span></div>
+      </div>
+    </div>
+    <div class="region" style="margin-top:2mm">
+      <div class="cp-tbl roomy" style="margin-top:6mm">
+        <table>
+          <thead><tr><th style="width:34%">Full Name</th><th style="width:30%">Job Title</th><th>Company</th></tr></thead>
+          <tbody>
+            <tr><td>Andrew Ng</td><td>Founder</td><td>DeepLearning.AI</td></tr>
+            <tr><td>Alex Xu</td><td>Co-Founder</td><td>ByteByteGo</td></tr>
+            <tr><td>David Fano</td><td>Founder &amp; CEO</td><td>Teal</td></tr>
+            <tr><td>Kimberly Bryant</td><td>Founder</td><td>Black Girls CODE</td></tr>
+            <tr><td>Clifton Harness</td><td>Co-Founder &amp; CEO</td><td>Evidation Health</td></tr>
+            <tr><td>Ubaidullah C.</td><td>Head of Talent</td><td>Simera</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <span class="cap mono" style="margin-top:3mm">Showing 6 of 44 enriched contacts &mdash; full sheet delivered in Google Sheets</span>
+      <div class="cp-take" style="flex:none;margin-top:auto;margin-bottom:6mm">
+        <span class="dia" style="background:var(--magenta);box-shadow:0 0 0 4px rgba(229,0,130,.14)"></span>
+        <p class="q">Not random contacts. The <b style="font-style:normal;font-weight:600;color:var(--ink);border-bottom:2px solid var(--magenta)">RIGHT</b> people, at the <b style="font-style:normal;font-weight:600;color:var(--ink);border-bottom:2px solid var(--magenta)">RIGHT</b> companies, enriched with the <b style="font-style:normal;font-weight:600;color:var(--ink);border-bottom:2px solid var(--magenta)">RIGHT</b> context.</p>
+      </div>
+    </div>
+    <div class="foot"><span>Case Study 02</span><span class="brandmark"><img src="assets/brand/mark-round.png" style="height:4mm;width:4mm" alt="" /> www.insightstap.com</span><span>09</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== 10 · THE DARK LOOP + IN PRACTICE ==================================================================== -->
+<section class="page dark">
+  <div class="dotgrid w" style="opacity:.6"></div>
+  <div class="fx-grain"></div>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:10px"><h2 class="h1" style="max-width:170mm">The DARK Loop &mdash; how Clay fits our GTM&nbsp;engine.</h2><div class="rule"></div></div>
+      <span class="secno">10</span>
+    </div>
+    <p class="lead" style="margin:-2mm 0 7mm;max-width:168mm">Clay is not standalone. It powers the <b style="color:#fff;font-weight:600">Augment</b> layer of our full signal-led outbound system.</p>
+    <div class="region col cp-fill-steps" style="gap:10px;position:relative;padding-left:0">
+      <div class="cp-step">
+        <span class="acc" style="background:rgba(148,163,184,.45)"></span>
+        <span class="ltr">D</span>
+        <div class="col"><span class="nm">Detect</span><span class="ds">Buying signals, intent data, trigger events</span></div>
+        <div class="tools"><span class="tl">Tool</span><span class="tech txt" style="color:#0090C8">Signals Layer</span></div>
+      </div>
+      <div class="cp-chev"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+      <div class="cp-step hero">
+        <span class="acc" style="background:var(--cyan)"></span>
+        <span class="ltr" style="color:var(--cyan-light)">A</span>
+        <div class="col"><span class="nm">Augment <span class="mono" style="font-weight:700;font-size:8px;letter-spacing:.1em;color:#fff;background:linear-gradient(120deg,var(--magenta),#AA0062);border-radius:999px;padding:3.5px 11px;margin-left:10px;vertical-align:3px;box-shadow:0 4px 14px -4px rgba(229,0,130,.65)">CLAY POWERS THIS LAYER</span></span><span class="ds" style="font-size:13.5px">Clay enriches + structures all signal data</span></div>
+        <div class="tools"><span class="tl">Tool</span><span class="tech"><img src="assets/tech-color/clay.png" alt="" />Clay (Core Engine)</span></div>
+      </div>
+      <div class="cp-chev"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+      <div class="cp-step">
+        <span class="acc" style="background:rgba(148,163,184,.45)"></span>
+        <span class="ltr">R</span>
+        <div class="col"><span class="nm">Reach</span><span class="ds">Sequences on Smartlead or Reply.io</span></div>
+        <div class="tools"><span class="tl">Tool</span><span class="tech"><img src="assets/tech-color/smartlead.png" alt="" />Smartlead / Reply.io</span></div>
+      </div>
+      <div class="cp-chev"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+      <div class="cp-step">
+        <span class="acc" style="background:rgba(148,163,184,.45)"></span>
+        <span class="ltr">K</span>
+        <div class="col"><span class="nm">Optimise</span><span class="ds">Sync &amp; track everything back in HubSpot</span></div>
+        <div class="tools"><span class="tl">Tool</span><span class="tech"><img src="assets/tech-color/hubspot.svg" alt="" />HubSpot</span></div>
+      </div>
+      <div class="cp-warn" style="flex:none;margin-top:14px;background:rgba(220,74,74,.14);border-color:rgba(248,113,113,.45)">
+        <span class="cic red" style="background:rgba(255,255,255,.94)"><svg viewBox="0 0 24 24"><path d="M9.5 14.5 5.8 18.2a2.55 2.55 0 0 1-3.6-3.6l3.7-3.7"/><path d="M14.5 9.5l3.7-3.7a2.55 2.55 0 0 1 3.6 3.6l-3.7 3.7"/><path d="M4 4l16 16" stroke="var(--red-deep)"/></svg></span>
+        <span class="tx" style="color:#FCA5A5">Without Clay in the middle &mdash; the loop&nbsp;breaks</span>
+      </div>
+      <div style="margin-top:auto;position:relative;overflow:hidden;display:flex;align-items:center;gap:14px;padding:15px 20px;border-radius:14px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.14)">
+        <span style="position:absolute;left:0;top:14%;bottom:14%;width:3px;background:linear-gradient(180deg,var(--cyan),var(--cyan-dark))"></span>
+        <span style="width:8px;height:8px;background:var(--cyan);transform:rotate(45deg);flex:none;box-shadow:0 0 0 4px rgba(13,207,207,.16)"></span>
+        <p style="font-family:'Fraunces',serif;font-style:italic;font-size:14.5px;line-height:1.45;color:#fff">One loop &mdash; signals in, booked meetings out.</p>
+      </div>
+    </div>
+    <div class="foot"><span>Framework</span><span class="brandmark"><img src="assets/brand/mark-round.png" style="height:4mm;width:4mm" alt="" /> www.insightstap.com</span><span>10</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== 11 · BEFORE / AFTER ==================================================================== -->
+<section class="page wash">
+  <span class="edgebar red l" style="top:24mm;height:30mm"></span>
+  <div class="inner">
+    <div class="head">
+      <div class="col" style="gap:10px"><h2 class="h1">From <span class="redc">manual &amp; broken</span> to <span class="cyanc">Clay-powered</span>.</h2><div class="rule"></div></div>
+      <span class="secno">11</span>
+    </div>
+    <div class="region" style="flex-direction:row;gap:0">
+      <div class="col grow cp-fill" style="gap:5mm;padding-right:7mm">
+        <div><span class="cp-badge red">BEFORE</span></div>
+        <div class="cp-ba neg" style="min-height:19mm"><span class="cic red"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17"/></svg></span><span class="t">Manually copy-pasting LinkedIn profiles</span></div>
+        <div class="cp-ba neg" style="min-height:19mm"><span class="cic red"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17"/></svg></span><span class="t">Downloading stale CSV lists</span></div>
+        <div class="cp-ba neg" style="min-height:19mm"><span class="cic red"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17"/></svg></span><span class="t">Generic, context-free outreach</span></div>
+        <div class="cp-ba neg" style="min-height:19mm"><span class="cic red"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17"/></svg></span><span class="t">Days of research for 50 contacts</span></div>
+        <div class="cp-ba neg" style="min-height:19mm"><span class="cic red"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17"/></svg></span><span class="t">No buying signal detection</span></div>
+        <div class="cp-ba neg" style="min-height:19mm"><span class="cic red"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17"/></svg></span><span class="t">CRM data out of sync</span></div>
+        <div class="cp-warn" style="margin-top:6mm;flex:none;min-height:26mm">
+          <span class="cic red" style="background:#fff"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.4 2"/></svg></span>
+          <span class="tx">Net effect: 2&ndash;3 days of manual research per 50-contact list &mdash; and every buying signal missed</span>
+        </div>
+      </div>
+      <div class="col grow cp-fill" style="gap:5mm;padding-left:7mm;border-left:1px solid var(--line-strong)">
+        <div><span class="cp-badge cyn">AFTER</span></div>
+        <div class="cp-ba pos" style="min-height:19mm"><span class="cic"><svg viewBox="0 0 24 24"><path d="M5 12l4.5 4.5L19 7"/></svg></span><span class="t">Automated enrichment from <b style="font-weight:700;color:var(--ink)">30+ sources</b></span></div>
+        <div class="cp-ba pos" style="min-height:19mm"><span class="cic"><svg viewBox="0 0 24 24"><path d="M5 12l4.5 4.5L19 7"/></svg></span><span class="t">Live, enriched pipeline <b style="font-weight:700;color:var(--ink)">in minutes</b></span></div>
+        <div class="cp-ba pos" style="min-height:19mm"><span class="cic"><svg viewBox="0 0 24 24"><path d="M5 12l4.5 4.5L19 7"/></svg></span><span class="t">Hyper-personalised at scale</span></div>
+        <div class="cp-ba pos" style="min-height:19mm;border-color:var(--gold-tint);background:linear-gradient(120deg,#fff 62%,#FFF8E5 100%)"><span class="cic gold"><svg viewBox="0 0 24 24"><path d="M5 12l4.5 4.5L19 7"/></svg></span><span class="t"><b style="font-weight:700;color:var(--ink)">50 decision-makers</b> enriched in one run</span></div>
+        <div class="cp-ba pos" style="min-height:19mm"><span class="cic"><svg viewBox="0 0 24 24"><path d="M5 12l4.5 4.5L19 7"/></svg></span><span class="t">Signal-triggered outbound sequences</span></div>
+        <div class="cp-ba pos" style="min-height:19mm"><span class="cic"><svg viewBox="0 0 24 24"><path d="M5 12l4.5 4.5L19 7"/></svg></span><span class="t">HubSpot synced and updated automatically</span></div>
+        <div class="cp-take" style="margin-top:6mm;flex:none;min-height:26mm">
+          <span class="dia"></span>
+          <p class="q"><b style="font-style:normal;font-weight:600;color:var(--ink)">50 decision-makers enriched in one run</b> &mdash; days of research collapsed into minutes.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span>Before / After</span><span class="brandmark"><img src="assets/brand/mark-round.png" style="height:4mm;width:4mm" alt="" /> www.insightstap.com</span><span>11</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== 12 · CLOSER — READY TO BUILD WITH CLAY? (minimal) ==================================================================== -->
+<section class="page dark mn">
+  <div class="mn-frame"></div>
+  <div class="fx-grain"></div>
+  <div class="inner">
+    <div class="col" style="gap:7mm;margin-top:11mm">
+      <h2 class="mn-head" style="font-size:54px">Ready to build<br/>with Clay<span class="dot">?</span></h2>
+      <div class="mn-rule"></div>
+      <p class="mn-sub">Clay-powered. Outcome-focused. Let&rsquo;s build your outbound engine.</p>
+    </div>
+    <div class="col grow" style="justify-content:center;gap:11mm;margin-top:8mm">
+      <div class="col">
+        <div class="mn-gp">WATCH &middot; BOOK &middot; VISIT</div>
+        <a class="mn-row hero" href="https://youtu.be/SIteAX5s0Og?si=OlNZrX0SM_fPBAaE">
+          <span class="k">Watch the Full Clay Demo</span>
+          <span class="ld"></span>
+          <span class="v">Play the walkthrough</span>
+          <span class="ar" style="font-size:9px">&#9654;</span>
+        </a>
+        <a class="mn-row hero" href="https://insightstap.us/meetings/ritesh-ota">
+          <span class="k">Book a Free Strategy Call</span>
+          <span class="ld"></span>
+          <span class="v">Schedule now</span>
+          <span class="ar">&rarr;</span>
+        </a>
+        <a class="mn-row hero" href="http://insightstap.com/">
+          <span class="k">insightstap.com</span>
+          <span class="ld"></span>
+          <span class="v">B2B GTM Growth Partner</span>
+          <span class="ar">&rarr;</span>
+        </a>
+      </div>
+      <div class="col">
+        <div class="mn-gp">CONNECT &middot; PROOF &middot; RESOURCES</div>
+        <a class="mn-row" href="http://www.fiverr.com/riteshosta">
+          <span class="k">Fiverr Pro Profile</span>
+          <span class="ld"></span>
+          <span class="v">@riteshosta &mdash; 5.0 <span style="color:var(--gold)">&#9733;</span> 45 reviews</span>
+          <span class="ar">&rarr;</span>
+        </a>
+        <a class="mn-row" href="http://www.linkedin.com/in/riteshosta1/">
+          <span class="k">LinkedIn Profile</span>
+          <span class="ld"></span>
+          <span class="v">Connect with Ritesh Osta</span>
+          <span class="ar">&rarr;</span>
+        </a>
+        <a class="mn-row" href="https://docs.google.com/spreadsheets/d/1tKWLQWVbphAcYQXWvTE75hcl_4mTB0h8/edit?gid=708254758#gid=708254758">
+          <span class="k">Cold Email SOP</span>
+          <span class="ld"></span>
+          <span class="v">Download our outbound playbook</span>
+          <span class="ar">&darr;</span>
+        </a>
+        <a class="mn-row" href="http://insightstap.com/analytics">
+          <span class="k">Analytics &amp; Paid Ads</span>
+          <span class="ld"></span>
+          <span class="v">See our campaign performance data</span>
+          <span class="ar">&rarr;</span>
+        </a>
+        <a class="mn-row" href="http://insightstap.com/portfolio">
+          <span class="k">View Portfolio</span>
+          <span class="ld"></span>
+          <span class="v">ABM, Cold Email &amp; GTM Case Studies</span>
+          <span class="ar">&rarr;</span>
+        </a>
+      </div>
+    </div>
+    <div class="flex" style="justify-content:space-between;align-items:flex-end;margin-top:8mm">
+      <div class="col" style="gap:4mm">
+        <img src="assets/brand/logo-white.png" alt="InsightsTap" style="height:8mm;width:auto;align-self:flex-start;margin-left:-0.9mm" />
+        <a class="mono" href="https://insightstap.com/Contact" style="font-size:9px;letter-spacing:.14em;color:rgba(220,231,245,.55)">INSIGHTSTAP.COM &middot; B2B GTM GROWTH PARTNER</a>
+      </div>
+      <a class="flex" href="https://insightstap.us/meetings/ritesh-ota" style="align-items:center;gap:12px">
+        <span class="col" style="gap:2px;text-align:right">
+          <span class="mono" style="font-size:8.5px;letter-spacing:.14em;color:var(--cyan-light)">SCAN TO BOOK</span>
+          <span class="mono" style="font-size:8.5px;letter-spacing:.14em;color:rgba(220,231,245,.5)">A FREE CALL</span>
+        </span>
+        <img src="assets/qr/book-call.png" alt="QR — book a call" style="width:16mm;height:16mm;border-radius:7px;background:#fff;padding:3px" />
+      </a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
